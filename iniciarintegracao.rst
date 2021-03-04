@@ -1,5 +1,5 @@
-﻿Iniciando a Integração
-=====================
+﻿Geração do Access Token
++++++++++++++++++++++++
 
 Solicitação de Configuração
 +++++++++++++++++++++++++++
