@@ -116,7 +116,8 @@ Este exemplo é composto por 3 arquivos:
 3. assinar.php - Implementação do handshake OAuth, assim como a utilização dos dois endpoints acima. Como resultado, uma página conforme a figura abaixo será apresentada, mostrando o certificado emitido para o usuário autenticado e a assinatura.
 
 
-[[IMAGEM AQUI INCLUIR]]
+.. image:: image.png
+   :width: 600
 
 
 Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
