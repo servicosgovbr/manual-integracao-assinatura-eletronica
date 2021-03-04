@@ -119,7 +119,6 @@ Este exemplo é composto por 3 arquivos:
 
 
 .. image:: image.png
-   :width: 600
 
 
 Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
