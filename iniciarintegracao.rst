@@ -1,5 +1,22 @@
-﻿API de assinatura digital GovBR
+﻿Iniciando a Integração
 ================================
+
+Solicitação de Configuração
+++++++++++++++++++++++++++++++++
+
+É premissa de toda aplicação que irá consumir os serviços da API do assinador estar integrada ao sistema Login Único. No entanto, a autorização de acesso utilizado pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme Lei 14.063 Art.4º). O usuário tem que autorizar o ITI a deixar a aplicação assinar em nome do usuário e isso é realizado durante o fluxo de autorização OAuth da API de assinatura.
+
+Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. Essa liberação ocorre por meio de envio das informações listadas abaixo: 
+
+1. URL de retorno para cadastramento da aplicação 
+2. Chave PGP - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada Informações sobre como gerar chaves PGP e envio da chave pública, pode ser verificado em Link tutorial; 
+3. Endereço de e-mail do destinatário para recebimento das credenciais; 
+4. Volumetria estimada da quantidade de documentos que serão assinados. 
+
+Essas informações deverão ser encaminhadas para os integrantes da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME) por e-mail de um representante legal do órgão ou entidade dona do serviço a ser integrado.
+
+API de assinatura digital gov.br
+++++++++++++++++++++++++++++++++
 
 Este documento visa detalhar a estrutura da API REST para assinatura digital usando certificados avançados gov.br.
 
