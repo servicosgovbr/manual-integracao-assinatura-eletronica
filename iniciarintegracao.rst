@@ -9,7 +9,7 @@ Solicitação de Configuração
 Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. Essa liberação ocorre por meio de envio das informações listadas abaixo: 
 
 1. **URL de retorno para cadastramento da aplicação**
-2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas em `Tutorial geração de chaves PGP`_; 
+2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas em `Tutorial para geração de chaves PGP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial.pdf>`_ 
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria estimada da quantidade de documentos que serão assinados**. 
 
@@ -161,4 +161,3 @@ e acessar o endereço http://127.0.0.1:8080
 .. _`Documento verificar Código de Compensação dos Bancos` : arquivos/TabelaBacen.pdf
 .. _`Login Único`: https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/index.html
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
-.. _`Tutorial geração de chaves PGP`: arquivos/Tutorial.pdf
