@@ -64,7 +64,7 @@ Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP G
 
 .. code-block:: console
 
-		https:// govbr-uws.homologacao.ufsc.br/CloudCertService/certificadoPublico 
+		https://govbr-uws.homologacao.ufsc.br/CloudCertService/certificadoPublico 
 
 Deve-se enviar o cabeçalho Authorization  com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
 
@@ -83,7 +83,7 @@ Para assinar digitalmente um HASH SHA-256 usando a chave privada do usuário, de
 
 .. code-block:: console
 
-		https:// govbr-uws.homologacao.ufsc.br/CloudCertService/assinarRaw
+		https://govbr-uws.homologacao.ufsc.br/CloudCertService/assinarRaw
 
 Deve-se enviar o cabeçalho Authorization com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
 
@@ -107,7 +107,7 @@ Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 usa
 
 .. code-block:: console
 
-		https:// govbr-uws.homologacao.ufsc.br/CloudCertService/assinarPKCS7
+		https://govbr-uws.homologacao.ufsc.br/CloudCertService/assinarPKCS7
 
 Deve-se enviar o cabeçalho Authorization com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
 
