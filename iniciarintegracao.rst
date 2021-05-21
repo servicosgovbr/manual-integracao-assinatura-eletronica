@@ -9,7 +9,7 @@ Solicitação de Configuração
 Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. Essa liberação ocorre por meio de envio das informações listadas abaixo: 
 
 1. **URL de retorno para cadastramento da aplicação**
-2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas em `Tutorial para geração de chaves PGP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/blob/main/arquivos/Tutorial%20para%20gera%C3%A7%C3%A3o%20chave%20PGP.pdf>`_ 
+2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas em `Tutorial para geração de chaves PGP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20para%20gera%C3%A7%C3%A3o%20chave%20PGP.pdf>`_ 
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria estimada da quantidade de documentos que serão assinados**. 
 
