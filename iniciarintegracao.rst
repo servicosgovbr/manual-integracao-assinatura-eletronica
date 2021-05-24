@@ -18,7 +18,7 @@ Essas informações deverão ser encaminhadas para os integrantes da Secretaria 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
 
-Este documento visa detalhar a estrutura da API REST para assinatura digital usando certificados avançados gov.br.
+Este documento detalha a estrutura da API REST para assinatura digital usando certificados avançados gov.br.
 
 A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e protocolo HTTP para acesso aos endpoints. Assim sendo, o uso da API envolve duas etapas:
 
@@ -46,9 +46,9 @@ A URL usada para redirecionar o usuário para o formulário de autorização, co
 
 		https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<clientId>
 
-Nesse endereço, o servidor OAuth autentica o usuário e pede a autorização expressa do mesmo para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS. **IMPORTANTE: EM HOMOLOGAÇÃO**, NÃO SERÁ ENVIADO SMS, DEVE-SE USAR O CÓDIGO **12345**.
+Nesse endereço, o servidor OAuth faz a autenticação e pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS. **IMPORTANTE: EM HOMOLOGAÇÃO**, NÃO SERÁ ENVIADO SMS, DEVE-SE USAR O CÓDIGO **12345**.
 
-Após a autorização ser dada pelo usuário, o servidor OAuth redireciona o mesmo para o endereço <URI de redirecionamento> especificado, e passa, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor OAuth, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser usado na fase seguinte do protocolo OAuth, pela aplicação, para pedir um Access Token ao servidor OAuth, com a seguinte requisição HTTP com método POST:
+Após a autorização, o servidor OAuth redireciona o usuário para o endereço <URI de redirecionamento> especificado e passa, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor OAuth, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser usado na fase seguinte do protocolo OAuth, pela aplicação, para pedir um Access Token ao servidor OAuth, com a seguinte requisição HTTP com método POST:
 
 .. code-block:: console
 
