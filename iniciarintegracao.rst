@@ -20,7 +20,7 @@ API de assinatura digital gov.br
 
 Este documento detalha a estrutura da API REST para assinatura digital usando certificados avançados gov.br.
 
-A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e protocolo HTTP para acesso aos endpoints. Assim sendo, o uso da API envolve duas etapas:
+A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e o protocolo HTTP para acesso aos endpoints. Deste modo, o uso da API envolve duas etapas:
 
 1. Geração do token de acesso OAuth (Access Token)
 
