@@ -6,14 +6,23 @@ Solicitação de Configuração
 
 É premissa de toda aplicação que irá consumir os serviços da API do assinador estar integrada ao sistema `Login Único`_. No entanto, a autorização de acesso utilizado pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário tem que autorizar o ITI a deixar a aplicação assinar em nome do usuário e isso é realizado durante o fluxo de autorização OAuth da API de assinatura, por esse motivo é que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
-Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. Essa liberação ocorre por meio de envio das informações listadas abaixo: 
+Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
 
 1. **URL de retorno para cadastramento da aplicação**
 2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas em `Tutorial para geração de chaves PGP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20para%20gera%C3%A7%C3%A3o%20chave%20PGP.pdf>`_ 
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
-4. **Volumetria estimada da quantidade de documentos que serão assinados**. 
+4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
 
 Essas informações deverão ser encaminhadas para os integrantes da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME) por e-mail de um representante legal do órgão ou entidade dona do serviço a ser integrado.
+
+A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
+
+Orientações para testes em ambiente de homologação 
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para poder realizar a assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro.
+
+Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste tutorial . Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf) 
 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
@@ -161,3 +170,4 @@ e acessar o endereço http://127.0.0.1:8080
 .. _`Documento verificar Código de Compensação dos Bancos` : arquivos/TabelaBacen.pdf
 .. _`Login Único`: https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/index.html
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
+.. -`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
