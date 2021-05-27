@@ -22,7 +22,7 @@ Orientações para testes em ambiente de homologação
 
 De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para poder realizar a assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro.
 
-Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste tutorial . Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf) 
+Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/blob/48c6ea0b4df49a68e453a3c7b5562660e057aa68/arquivos/Tutorial.pdf>`_ . Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf) 
 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
@@ -170,4 +170,4 @@ e acessar o endereço http://127.0.0.1:8080
 .. _`Documento verificar Código de Compensação dos Bancos` : arquivos/TabelaBacen.pdf
 .. _`Login Único`: https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/index.html
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
-.. -`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
+.. _`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
