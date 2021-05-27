@@ -13,16 +13,14 @@ Para utilização da API de assinatura digital gov.br, há necessidade de libera
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
 
-Essas informações deverão ser encaminhadas para os integrantes da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME) por e-mail de um representante legal do órgão ou entidade dona do serviço a ser integrado.
-
-A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
+Essas informações deverão ser encaminhadas para os integrantes da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME) por e-mail de um representante legal do órgão ou entidade dona do serviço a ser integrado. A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
 
 Orientações para testes em ambiente de homologação 
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para poder realizar a assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro.
+De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro.
 
-Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/blob/48c6ea0b4df49a68e453a3c7b5562660e057aa68/arquivos/Tutorial.pdf>`_ . Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf) 
+Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20-%20ID%20Prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf) 
 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
