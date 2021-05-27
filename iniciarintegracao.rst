@@ -63,7 +63,9 @@ Após a autorização, o servidor OAuth redireciona o usuário para o endereço 
 
 O <URI de redirecionamento> deve ser exatamente o mesmo valor passado na requisição “authorize” anterior. O servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
 
-**Importante**: O servidor OAuth está delegando a autenticação ao ambiente de **Staging** do gov.br
+**Importante**: O servidor OAuth de homologação está delegando a autenticação ao ambiente de **Staging** do gov.br
+
+**Importante**: O Access Token gerado autoriza o uso da chave privada do cidadão para a confecção de **uma** única assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI.
 
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
