@@ -13,7 +13,7 @@ Para utilização da API de assinatura digital gov.br, há necessidade de libera
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
 
-Essas informações deverão ser encaminhadas para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME) por e-mail de um representante legal do órgão ou entidade dona do serviço a ser integrado. A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
+Essas informações deverão ser encaminhadas, para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME), por e-mail do representante legal do órgão ou entidade dona do serviço a ser integrado. A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
 
 Orientações para testes em ambiente de homologação 
 +++++++++++++++++++++++++++++++++++++++++++++++++++
