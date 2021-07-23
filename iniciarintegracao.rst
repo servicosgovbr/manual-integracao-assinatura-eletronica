@@ -170,9 +170,20 @@ Como criar um par de chaves PGP
 
 Faça o download do aplicativo Gpg4win em: https://gpg4win.org/download.html
 O Gpg4win é um pacote de instalação para qualquer versão do Windows, que inclui o software de criptografia GnuPG. Siga abaixo as instruções detalhadas de como gerar um par de chaves PGP:
+
 1. Após o download, execute a instalação e deixe os seguintes componentes marcados conforme imagem abaixo:
 
 .. image:: images/pgp1.png
+
+2. Concluída a instalação, execute o **Kleopatra** para a criação do par de chaves. Kleopatra é uma ferramenta do KDE para gerenciamento de certificados X.509, chaves PGP e também para gerenciamento de certificados de servidores. A janela principal deverá se parecer com a seguinte:
+
+.. image:: images/pgp2.png
+
+3.Para criar novo par de chave, vá até o item do Menu **Arquivo** → **Novo Par de chaves...** selecione **Criar um par de chaves OpenPGP pessoal**. Na tela seguinte informe os detalhes **Nome** e **Email**, marque a opção para proteger a chave com senha e clique em **Configurações avançadas...**
+
+
+
+
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
