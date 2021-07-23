@@ -166,10 +166,13 @@ e acessar o endereço http://127.0.0.1:8080
 Como criar um par de chaves PGP
 +++++++++++++++++++++++++++++++
 
-**GnuPG para Windows** Faça o download do aplicativo Gpg4win em https://gpg4win.org/download.html
-Gpg4win é um pacote de instalação para qualquer versão do Windows, que inclui o software de criptografia GnuPG. Siga abaixo as instruções detalhadas de como gerar um par de chaves PGP:
+**GnuPG para Windows** 
 
+Faça o download do aplicativo Gpg4win em: https://gpg4win.org/download.html
+O Gpg4win é um pacote de instalação para qualquer versão do Windows, que inclui o software de criptografia GnuPG. Siga abaixo as instruções detalhadas de como gerar um par de chaves PGP:
+1. Após o download, execute a instalação e deixe os seguintes componentes marcados conforme imagem abaixo:
 
+.. image:: images/pgp1.png
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
