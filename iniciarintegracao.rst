@@ -4,11 +4,11 @@
 Solicitação de Configuração
 ++++++++++++++++++++++++++++++++
 
-É premissa de toda aplicação que irá consumir os serviços da API do assinador estar integrada ao sistema `Login Único`_. No entanto, a autorização de acesso utilizado pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário tem que autorizar o ITI a deixar a aplicação assinar em nome do usuário e isso é realizado durante o fluxo de autorização OAuth da API de assinatura, por esse motivo é que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+É premissa de toda aplicação que irá consumir os serviços da API de assinatura estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. No entanto, a autorização de acesso utilizado pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário tem que autorizar o ITI a deixar a aplicação assinar em nome do usuário e isso é realizado durante o fluxo de autorização OAuth da API de assinatura, por esse motivo é que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
-Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
+Para utilização da API de assinatura digital gov.br, há necessidade da liberação de credenciais dos ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
 
-1. **URL de retorno para cadastramento da aplicação**
+1. **URL de retorno para cadastramento da aplicação cliente**
 2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro.
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
@@ -25,12 +25,12 @@ Saiba como adquirir a identidade "Ouro" ou "Prata” acessando o link https://co
 
 Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20-%20ID%20Prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf). 
 
-**Importante**: Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI (https://verificador.iti.br/). Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em https://govbr-assina.homologacao.ufsc.br/. 
+**Importante**: Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI (https://verificador.iti.br/). Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://govbr-assina.homologacao.ufsc.br/. 
 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
 
-Este documento detalha a estrutura da API REST para assinatura digital usando certificados avançados gov.br.
+A partir de agora, será feita uma revisão sobre a arquitetura de serviço, alguns conceitos utilizados pela plataforma e os detalhes da estrutura da API REST para assinatura digital usando certificados avançados gov.br.
 
 A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e o protocolo HTTP para acesso aos endpoints. Deste modo, o uso da API envolve duas etapas:
 
@@ -220,8 +220,7 @@ Praticamente todas as distribuições do Linux trazem o GnuPG instalado e para c
 
 		Chaves pública e privada criadas e assinadas.
 
-		pub rsa3072 2021-04-30 [SC] [expira: 2023-04-30] 269C3D6B65B150A9B349170D5882F501CC722AA
-        uid Fulano de Tal <fulanodetal@email.com>
+		pub rsa3072 2021-04-30 [SC] [expira: 2023-04-30] 269C3D6B65B150A9B349170D5882F501CC722AA uid Fulano de Tal <fulanodetal@email.com>
         sub rsa3072 2021-04-30 [E] [expira: 2023-04-30]
 		
 2. Para enviar um documento ou um e-mail cifrado com sua chave, é necessário que a pessoa tenha a sua chave pública. Partindo do ponto que a pessoa fez um pedido da sua chave pública, então é necessário criar um arquivo
@@ -252,6 +251,7 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 .. code-block:: console
 	
 		$ gpg -d NomeArquivo.gpg > ArquivoTextoClaro
+
 		gpg: criptografado com 3072-bit RSA chave, ID 4628820328759F85, criado 2021-04-24 "Fulano de Tal <fulanodetal@email.com>"
 
 
