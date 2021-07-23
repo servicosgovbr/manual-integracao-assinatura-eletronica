@@ -30,7 +30,7 @@ Ao realizar testes, no ambiente de homologação, o testador deve criar uma cont
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
 
-A partir de agora, será feita uma revisão sobre a arquitetura de serviço, alguns conceitos utilizados pela plataforma e os detalhes da estrutura da API REST para assinatura digital usando certificados avançados gov.br.
+A partir de agora, será feita uma revisão sobre a arquitetura de serviço, alguns conceitos utilizados pela plataforma e os detalhes da estrutura da API REST para assinatura digital utilizando certificados avançados gov.br.
 
 A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e o protocolo HTTP para acesso aos endpoints. Deste modo, o uso da API envolve duas etapas:
 
