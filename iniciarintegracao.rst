@@ -208,14 +208,13 @@ Praticamente todas as distribuições do Linux trazem o GnuPG instalado e para c
 
 	    O GnuPG precisa construir uma ID de usuário para identificar sua chave.
 
-		Nome completo: Fulano de Tal
-		Endereço de correio eletrônico: fulanodetal@email.com
-		Você selecionou este identificador de usuário:
-		"Fulano de Tal <fulanodetal@email.com>"
+		Nome completo: **Fulano de Tal**
+		Endereço de correio eletrônico: **fulanodetal@email.com**
+		Você selecionou este identificador de usuário: "Fulano de Tal <fulanodetal@email.com>"
 		Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
 
-	Precisamos gerar muitos bytes aleatórios. É uma boa ideia realizar outra atividade (digitar no teclado, mover o mouse, usar os discos)
-    durante a geração dos números primos; isso dá ao gerador de números aleatórios uma chance melhor de conseguir entropia suficiente.
+		Precisamos gerar muitos bytes aleatórios. É uma boa ideia realizar outra atividade (digitar no teclado, mover o mouse, usar os discos)
+    	durante a geração dos números primos; isso dá ao gerador de números aleatórios uma chance melhor de conseguir entropia suficiente.
 
 		gpg: /home/user/.gnupg/trustdb.gpg: banco de dados de confiabilidade criado
         gpg: chave D5882F501CC722AA marcada como plenamente confiável
@@ -233,7 +232,7 @@ com a chave e passar o arquivo para o solicitante (por exemplo, podemos passar p
 
 .. code-block:: console
 	
-		$gpg --export 269C3D6B65B150A9B449170D5882F501CC722AA> MinhaChave.asc
+		$ gpg --export 269C3D6B65B150A9B449170D5882F501CC722AA> MinhaChave.asc
 
 Onde "269C3D6B65B150A9B349170D5882F501CC722AA" é o ID da chave (da chave que criamos aqui no exemplo, substitua pelo seu ID) e **MinhaChave.asc** é o nome do arquivo onde será gravada a chave (pode ser outro nome).
 Agora basta enviar o arquivo com a chave pública para a pessoa e então ela poderá criptografar um e-mail ou um documento com a sua chave pública. Se foi criptografado com a sua chave pública, somente a sua chave privada será capaz de decodificar o documento (e a frase secreta de sua chave será requisitada).
@@ -251,7 +250,7 @@ Agora basta enviar o arquivo com a chave pública para a pessoa e então ela pod
 		Recipientes atuais: rsa3072/4628820328759F85 2021-04-30 "Fulano de Tal <fulanodetal@email.com>"
 		Entre com o ID do usuário. Final com uma linha vazia: <Enter>
 
-4. Para **decifrar** um documento que foi criptografado por Fulano de Tal basta seguir os passos abaixo, substituindo **NomeArquivo.gpg** pelo nome do arquivo cifrado. Será solicitada a frase secreta da chave privada de Fulano de tal, basta inseri-la. Um arquivo com nome **ArquivoTextoClaro** será criado na mesma pasta. Este arquivo contêm os dados decifrados.		
+4. Para **decifrar** um documento que foi criptografado com a sua chave pública basta seguir os passos abaixo, substituindo **NomeArquivo.gpg** pelo nome do arquivo cifrado. Será solicitada a frase secreta de sua chave privada. Um arquivo com nome **ArquivoTextoClaro** será criado na mesma pasta. Este arquivo contêm as informações decifradas.		
 
 .. code-block:: console
 	
