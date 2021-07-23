@@ -175,18 +175,18 @@ O Gpg4win é um pacote de instalação para qualquer versão do Windows, que inc
 
 .. image:: images/pgp1.png
 
-2. Concluída a instalação, execute o **Kleopatra** para a criação do par de chaves. Kleopatra é uma ferramenta do KDE para gerenciamento de certificados X.509, chaves PGP e também para gerenciamento de certificados de servidores. A janela principal deverá se parecer com a seguinte:
+2. Concluída a instalação, execute o **Kleopatra** para a criação do par de chaves. Kleopatra é uma ferramenta para gerenciamento de certificados X.509, chaves PGP e também para gerenciamento de certificados de servidores. A janela principal deverá se parecer com a seguinte:
 
 .. image:: images/pgp2.png
 
-3. Para criar novo par de chave, vá até o item do Menu **Arquivo** → **Novo Par de chaves...** selecione **Criar um par de chaves OpenPGP pessoal**. Na tela seguinte informe os detalhes **Nome** e **Email**, marque a opção para proteger a chave com senha e clique em **Configurações avançadas...**
+3. Para criar novo par de chaves (pública e privada), vá até o item do Menu **Arquivo** → **Novo Par de chaves...** selecione **Criar um par de chaves OpenPGP pessoal**. Na tela seguinte informe os detalhes **Nome** e **Email**, marque a opção para proteger a chave com senha e clique em **Configurações avançadas...**
 
-4. Escolha as opções para tamanho das chaves e defina uma data de validade para o par de chaves. Esta data pode ser alterada depois. Após confirmação da tela abaixo, abrirá uma janela para informar a senha. O ideal é colocar uma senha forte, que deve conter pelo menos 8 caracteres, 1 digito ou caractere especial.
+4. Escolha as opções para o tipo do par de chaves e defina uma data de validade. Esta data pode ser alterada depois. Após confirmação da tela abaixo, abrirá uma janela para informar a senha. O ideal é colocar uma senha forte, que deve conter pelo menos 8 caracteres, 1 digito ou caractere especial.
 
 .. image:: images/pgp3.png
 
-5. Após criado o par de chave, você pode enviar sua chave pública por email clicando em **Enviar chave pública por e-mail...** ou pode clicar em **Terminar** e exportar a sua chave pública para enviá-la por email posteriormente. Para exportar sua chave pública e enviá-la em anexo ao seu email, clique com
-botão direito na sua chave depois em **Exportar...**
+5. Após concluído, o sistema permite o envio da chave pública por email clicando em **Enviar chave pública por e-mail...** ou o usuário tem a opção de clicar em **Terminar** e exportar a chave pública para enviá-la por email posteriormente. Para exportar a chave pública e enviá-la anexo ao email, clique com
+botão direito na chave criada e depois clique em **Exportar...**
 
 **GnuPG para Linux** 
 
@@ -213,9 +213,6 @@ Praticamente todas as distribuições do Linux trazem o GnuPG instalado e para c
 		Você selecionou este identificador de usuário: "Fulano de Tal <fulanodetal@email.com>"
 		Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
 
-		Precisamos gerar muitos bytes aleatórios. É uma boa ideia realizar outra atividade (digitar no teclado, mover o mouse, usar os discos)
-    	durante a geração dos números primos; isso dá ao gerador de números aleatórios uma chance melhor de conseguir entropia suficiente.
-
 		gpg: /home/user/.gnupg/trustdb.gpg: banco de dados de confiabilidade criado
         gpg: chave D5882F501CC722AA marcada como plenamente confiável
         gpg: directory '/home/user/.gnupg/openpgp-revocs.d' created
@@ -234,8 +231,8 @@ com a chave e passar o arquivo para o solicitante (por exemplo, podemos passar p
 	
 		$ gpg --export 269C3D6B65B150A9B449170D5882F501CC722AA> MinhaChave.asc
 
-Onde "269C3D6B65B150A9B349170D5882F501CC722AA" é o ID da chave (da chave que criamos aqui no exemplo, substitua pelo seu ID) e **MinhaChave.asc** é o nome do arquivo onde será gravada a chave (pode ser outro nome).
-Agora basta enviar o arquivo com a chave pública para a pessoa e então ela poderá criptografar um e-mail ou um documento com a sua chave pública. Se foi criptografado com a sua chave pública, somente a sua chave privada será capaz de decodificar o documento (e a frase secreta de sua chave será requisitada).
+A sequência de números e letras "269C3D6B65B150A9B349170D5882F501CC722AA" é o ID da chave (da chave que criamos aqui no exemplo, substitua pelo seu ID) e **MinhaChave.asc** é o nome do arquivo onde será gravada a chave (pode ser outro nome).
+O próximo passo é o envio do arquivo com a chave pública para a pessoa e então ela poderá criptografar um e-mail ou um documento com a sua chave pública. Se foi criptografado com a sua chave pública, somente a sua chave privada será capaz de decodificar o documento e a frase secreta de sua chave será requisitada.
 
 
 3. Para **encriptar** um documento com a chave pública de ‘Fulano de Tal’ basta seguir os comandos abaixo, substituindo **NomeArquivo** pelo nome do arquivo a ser criptografado. Um arquivo com nome **NomeArquivo.gpg** será criado na pasta atual. Este arquivo com dados criptografados só poderá ser decifrado pela chave privada de ‘Fulano de Tal’.
