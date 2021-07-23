@@ -9,7 +9,7 @@ Solicitação de Configuração
 Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
 
 1. **URL de retorno para cadastramento da aplicação**
-2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas em `Tutorial para geração de chaves PGP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20para%20gera%C3%A7%C3%A3o%20chave%20PGP.pdf>`_ 
+2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no ultimo tópico do roteiro.
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
 
@@ -162,6 +162,14 @@ Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
 		docker-compose up -d
 
 e acessar o endereço http://127.0.0.1:8080
+
+Como criar um par de chaves PGP
++++++++++++++++++++++++++++++++
+
+**GnuPG para Windows** Faça o download do aplicativo Gpg4win em https://gpg4win.org/download.html
+Gpg4win é um pacote de instalação para qualquer versão do Windows, que inclui o software de criptografia GnuPG. Siga abaixo as instruções detalhadas de como gerar um par de chaves PGP:
+
+
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
