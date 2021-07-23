@@ -9,7 +9,7 @@ Solicitação de Configuração
 Para utilização da API de assinatura digital gov.br, há necessidade de liberar os ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
 
 1. **URL de retorno para cadastramento da aplicação**
-2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no ultimo tópico do roteiro.
+2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico Deste roteiro.
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
 
@@ -179,10 +179,14 @@ O Gpg4win é um pacote de instalação para qualquer versão do Windows, que inc
 
 .. image:: images/pgp2.png
 
-3.Para criar novo par de chave, vá até o item do Menu **Arquivo** → **Novo Par de chaves...** selecione **Criar um par de chaves OpenPGP pessoal**. Na tela seguinte informe os detalhes **Nome** e **Email**, marque a opção para proteger a chave com senha e clique em **Configurações avançadas...**
+3. Para criar novo par de chave, vá até o item do Menu **Arquivo** → **Novo Par de chaves...** selecione **Criar um par de chaves OpenPGP pessoal**. Na tela seguinte informe os detalhes **Nome** e **Email**, marque a opção para proteger a chave com senha e clique em **Configurações avançadas...**
 
+4. Escolha as opções para tamanho das chaves e defina uma data de validade para o par de chaves. Esta data pode ser alterada depois. Após confirmação da tela abaixo, abrirá uma janela para informar a senha. O ideal é colocar uma senha forte, que deve conter pelo menos 8 caracteres, 1 digito ou caractere especial.
 
+.. image:: images/pgp3.png
 
+5. Após criado o par de chave, você pode enviar sua chave pública por email clicando em **Enviar chave pública por e-mail...** ou pode clicar em **Terminar** e exportar a sua chave pública para enviá-la por email posteriormente. Para exportar sua chave pública e enviá-la em anexo ao seu email, clique com
+botão direito na sua chave depois em **Exportar...**
 
 
 .. |site externo| image:: images/site-ext.gif
