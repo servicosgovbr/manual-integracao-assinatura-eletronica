@@ -4,7 +4,7 @@
 Solicitação de Configuração
 ++++++++++++++++++++++++++++++++
 
-É premissa de toda aplicação que irá consumir os serviços da API de assinatura estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. No entanto, a autorização de acesso utilizado pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário tem que autorizar o ITI a deixar a aplicação assinar em nome do usuário e isso é realizado durante o fluxo de autorização OAuth da API de assinatura, por esse motivo é que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+É premissa de toda aplicação que irá consumir os serviços da API de assinatura estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. No entanto, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura, por esse motivo é que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
 Para utilização da API de assinatura digital gov.br, há necessidade da liberação de credenciais dos ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
 
