@@ -139,7 +139,7 @@ Deve-se enviar o cabeçalho Authorization com o tipo de autorização Bearer e o
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://govbr-verifier.homologacao.ufsc.br.
 
 Assinaturas PKCS#7 e PDF
-++++++++++++++++++++****
++++++++++++++++++++++++++
 
 Existem duas formas principais de assinar um documento PDF:
 
