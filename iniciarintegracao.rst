@@ -256,20 +256,7 @@ com a chave e passar o arquivo para o solicitante (por exemplo, podemos passar p
 A sequência de números e letras "269C3D6B65B150A9B349170D5882F501CC722AA" é o ID da chave (da chave que criamos aqui no exemplo, substitua pelo seu ID) e **MinhaChave.asc** é o nome do arquivo onde será gravada a chave (pode ser outro nome).
 O próximo passo é o envio do arquivo com a chave pública para a pessoa e então ela poderá criptografar um e-mail ou um documento com a sua chave pública. Se foi criptografado com a sua chave pública, somente a sua chave privada será capaz de decodificar o documento e a frase secreta de sua chave será requisitada.
 
-
-3. Para **encriptar** um documento com a chave pública de ‘Fulano de Tal’ basta seguir os comandos abaixo, substituindo **NomeArquivo** pelo nome do arquivo a ser criptografado. Um arquivo com nome **NomeArquivo.gpg** será criado na pasta atual. Este arquivo com dados criptografados só poderá ser decifrado pela chave privada de ‘Fulano de Tal’.
-
-.. code-block:: console
-	
-		$ gpg -e NomeArquivo
-
-		Você não especificou um ID de usuário. (pode-se usar "-r")
-		Recipientes atuais:
-		Entre com o ID do usuário. Final com uma linha vazia: Fulano de Tal
-		Recipientes atuais: rsa3072/4628820328759F85 2021-04-30 "Fulano de Tal <fulanodetal@email.com>"
-		Entre com o ID do usuário. Final com uma linha vazia: <Enter>
-
-4. Para **decifrar** um documento que foi criptografado com a sua chave pública basta seguir os passos abaixo, substituindo **NomeArquivo.gpg** pelo nome do arquivo cifrado. Será solicitada a frase secreta de sua chave privada. Um arquivo com nome **ArquivoTextoClaro** será criado na mesma pasta. Este arquivo contêm as informações decifradas.		
+3. Para **decifrar** um documento que foi criptografado com a sua chave pública basta seguir os passos abaixo, substituindo **NomeArquivo.gpg** pelo nome do arquivo cifrado. Será solicitada a frase secreta de sua chave privada. Um arquivo com nome **ArquivoTextoClaro** será criado na mesma pasta. Este arquivo contêm as informações decifradas.		
 
 .. code-block:: console
 	
