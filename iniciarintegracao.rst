@@ -18,10 +18,10 @@ Essas informações deverão ser encaminhadas, para o e-mail **int-assinatura-go
 Orientações para testes em ambiente de homologação 
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma Gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso ele não possua este nível de identidade, a aplicação cliente deverá comunicar que ele precisa adquirir e que após a obtenção deverá acessar novamente a aplicação para realizar a assinatura. O link que direcionará para área logada do Gov.br deverá estar presente na mensagem da aplicação. Segue abaixo um exemplo de mensagem e o link correto: 
-
+De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma Gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso ele não possua este nível de identidade, a aplicação cliente deverá comunicar que ele precisa adquirir e que após a obtenção deverá acessar novamente a aplicação para realizar a assinatura. O link que direcionará para área logada do Gov.br deverá estar presente na mensagem da aplicação. Segue um exemplo de mensagem:                             
 "Prezado solicitante, para realizar a(s) assinatura(s) é necessário que a sua identidade na plataforma Gov.Br seja "Prata" ou "Ouro". 
-Saiba como adquirir a identidade "Ouro" ou "Prata” acessando o link https://contas.acesso.gov.br/privacidade."
+
+Para a obtenção das identidades requeridas por meio do qual o cidadão terá acesso ao serviço de assinatura e a outros serviços, a aplicação cliente deve direcionar o usuário ao serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
 Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20-%20ID%20Prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf). 
 
