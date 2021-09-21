@@ -77,14 +77,15 @@ Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP G
 
 .. code-block:: console
 
-		https://govbr-uws.homologacao.ufsc.br/CloudCertService/certificadoPublico 
+		
+		https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/certificadoPublico
 
 Deve-se enviar o cabeçalho Authorization  com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
 
 .. code-block:: console
 
-		GET /CloudCertService/certificadoPublico HTTP/1.1
-		Host: govbr-uws.homologacao.ufsc.br 
+		GET /externo/v2/certificadoPublico HTTP/1.1
+		Host: govbr-assinatura-api.homologacao.ufsc.br 
 		Authorization: Bearer <Access token>
 
 Será retornado o certificado digital em formato PEM na resposta.
@@ -96,14 +97,14 @@ Para assinar digitalmente um HASH SHA-256 usando a chave privada do usuário, de
 
 .. code-block:: console
 
-		https://govbr-uws.homologacao.ufsc.br/CloudCertService/assinarRaw
+		https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarRaw
 
 Deve-se enviar o cabeçalho Authorization com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
 
 .. code-block:: console
 
-		POST /CloudCertService/assinarRaw HTTP/1.1
-		Host: govbr-uws.homologacao.ufsc.br
+		POST /externo/v2/assinarRaw HTTP/1.1
+		Host: govbr-assinatura-api.homologacao.ufsc.br 
 		Content-Type: application/json	
 		Authorization: Bearer <Access token>
 		Content-Type: application/json
@@ -120,14 +121,14 @@ Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 usa
 
 .. code-block:: console
 
-		https://govbr-uws.homologacao.ufsc.br/CloudCertService/assinarPKCS7
+		https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarPKCS7
 
 Deve-se enviar o cabeçalho Authorization com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
 
 .. code-block:: console
 
-		POST /CloudCertService/assinarPKCS7 HTTP/1.1
-		Host: govbr-uws.homologacao.ufsc.br
+		POST /externo/v2/assinarPKCS7 HTTP/1.1
+		Host: govbr-assinatura-api.homologacao.ufsc.br 
 		Content-Type: application/json	
 		Authorization: Bearer <Access token>
 		Content-Type: application/json
