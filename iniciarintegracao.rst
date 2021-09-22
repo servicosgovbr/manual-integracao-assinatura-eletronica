@@ -44,6 +44,7 @@ Para geração do Access Token é necessário redirecionar o navegador do usuár
 =================  ======================================================================
 **Variavél**  	   **Valor**
 -----------------  ----------------------------------------------------------------------
+**servidor_OAuth** https://sistemas.homologacao.ufsc.br/govbr/oauth2.0
 **client_id**	   devLocal
 **secret**		   younIrtyij3
 **redirect_uri**   http://127.0.0.1:*/**
