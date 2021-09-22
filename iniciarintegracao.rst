@@ -85,20 +85,21 @@ O <URI de redirecionamento> deve ser exatamente o mesmo valor passado na requisi
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
 
-Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP Get para o seguinte end-point:
+Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP GET para endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/certificadoPublico enviando o cabeçalho Authorization com o tipo de autorização Bearer e o access token obtido anteriormente. Segue abaixo o parâmetro do Header para requisição:
 
-.. code-block:: console
+==================  ======================================================================
+**Paramêtros**  	**Valor**
+------------------  ----------------------------------------------------------------------
+**Authorization**   Bearer <access token>
+==================  ======================================================================
 
-		
-		https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/certificadoPublico
-
-Deve-se enviar o cabeçalho Authorization  com o tipo de autorização Bearer e o Access Token obtido anteriormente. Exemplo de requisição:
+Exemplo de requisição:
 
 .. code-block:: console
 
 		GET /externo/v2/certificadoPublico HTTP/1.1
 		Host: govbr-assinatura-api.homologacao.ufsc.br 
-		Authorization: Bearer <Access token>
+		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
 Será retornado o certificado digital em formato PEM na resposta.
 
