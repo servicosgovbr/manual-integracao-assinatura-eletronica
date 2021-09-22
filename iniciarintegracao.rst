@@ -106,7 +106,7 @@ Será retornado o certificado digital em formato PEM na resposta.
 Realização da assinatura digital Raw de um HASH SHA-256
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para assinar digitalmente um HASH SHA-256 usando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o seguinte endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarRaw enviando os seguintes paramêtros especificados na tabela abaixo:
+Para assinar digitalmente um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o seguinte endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarRaw enviando os seguintes paramêtros especificados na tabela abaixo:
 
 ==================  ======================================================================
 **Paramêtros**  	**Valor**
@@ -138,7 +138,7 @@ Será retornada a assinatura digital SHA256-RSA codificada em Base64 na resposta
 Realização da assinatura digital de um HASH SHA-256 em PKCS#7
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 usando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarPKCS7 enviando os seguintes paramêtros:
+Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarPKCS7 enviando os seguintes paramêtros:
 
 ==================  ======================================================================
 **Paramêtros**  	**Valor**
