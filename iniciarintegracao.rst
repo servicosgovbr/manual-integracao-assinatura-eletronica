@@ -41,6 +41,13 @@ Geração do Access Token
 
 Para geração do Access Token é necessário redirecionar o navegador do usuário para o endereço de autorização do servidor OAuth, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor OAuth. As seguintes credencias podem ser usadas para testes:
 
+=================  ======================================================================
+**Variavél**  	   **Valor**
+-----------------  ----------------------------------------------------------------------
+**client_id**	   devLocal
+**secret**		   younIrtyij3
+****redirect_uri**** http://127.0.0.1:*/**
+
 .. code-block:: console
 
 		Servidor OAuth = https://sistemas.homologacao.ufsc.br/govbr/oauth2.0
