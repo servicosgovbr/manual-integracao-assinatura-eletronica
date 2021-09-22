@@ -47,16 +47,8 @@ Para geração do Access Token é necessário redirecionar o navegador do usuár
 **Servidor OAuth**  https://sistemas.homologacao.ufsc.br/govbr/oauth2.0
 **client_id**       devLocal
 **secret**          younIrtyij3
-**redirect_uri**    http://127.0.0.1:*/**
+**redirect_uri**    http://127.0.0.1:x/xx
 ==================  ======================================================================
-
-
-.. code-block:: console
-
-		Servidor OAuth = https://sistemas.homologacao.ufsc.br/govbr/oauth2.0
-		Client ID= devLocal
-		Secret = younIrtyij3
-		URI de redirecionamento = http://127.0.0.1:*/**
 
 As credenciais para Client ID “devLocal” estão configuradas no servidor OAuth para aceitar qualquer aplicação executando localmente (host 127.0.0.1, qualquer porta, qualquer caminho). Aplicações remotas não poderão usar essas credenciais de teste.
 
