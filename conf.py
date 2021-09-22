@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Roteiro de Integracão Assinatura API Service'
+project = 'Roteiro de Integracão API Assinaturas avançadas gov.br'
 copyright = '2021, Lívia'
 author = 'Lívia'
 
