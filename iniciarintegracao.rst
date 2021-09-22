@@ -46,7 +46,8 @@ Para geração do Access Token é necessário redirecionar o navegador do usuár
 -----------------  ----------------------------------------------------------------------
 **client_id**	   devLocal
 **secret**		   younIrtyij3
-****redirect_uri**** http://127.0.0.1:*/**
+**redirect_uri**   http://127.0.0.1:*/**
+=================  ======================================================================
 
 .. code-block:: console
 
