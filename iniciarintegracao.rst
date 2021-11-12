@@ -85,7 +85,7 @@ O <URI de redirecionamento> deve ser exatamente o mesmo valor passado na requisi
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
 
-Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP GET para endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/certificadoPublico enviando o cabeçalho Authorization com o tipo de autorização Bearer e o access token obtido anteriormente. Segue abaixo o parâmetro do Header para requisição:
+Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP GET para endereço https://assinatura-api.staging.iti.br/externo/v2/certificadoPublico enviando o cabeçalho Authorization com o tipo de autorização Bearer e o access token obtido anteriormente. Segue abaixo o parâmetro do Header para requisição:
 
 ==================  ======================================================================
 **Paramêtros**  	**Valor**
@@ -98,7 +98,7 @@ Exemplo de requisição:
 .. code-block:: console
 
 		GET /externo/v2/certificadoPublico HTTP/1.1
-		Host: govbr-assinatura-api.homologacao.ufsc.br 
+		Host: assinatura-api.staging.iti.br 
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
 Será retornado o certificado digital em formato PEM na resposta.
@@ -106,7 +106,7 @@ Será retornado o certificado digital em formato PEM na resposta.
 Realização da assinatura digital Raw de um HASH SHA-256
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para assinar digitalmente um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o seguinte endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarRaw enviando os seguintes paramêtros especificados na tabela abaixo:
+Para assinar digitalmente um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o seguinte endereço https://assinatura-api.staging.iti.br/externo/v2/assinarRaw enviando os seguintes paramêtros especificados na tabela abaixo:
 
 ==================  ======================================================================
 **Paramêtros**  	**Valor**
@@ -126,7 +126,7 @@ Exemplo de requisição:
 .. code-block:: console
 
 		POST /externo/v2/assinarRaw HTTP/1.1
-		Host: govbr-assinatura-api.homologacao.ufsc.br 
+		Host: assinatura-api.staging.iti.br 
 		Content-Type: application/json	
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
@@ -138,7 +138,7 @@ Será retornada a assinatura digital SHA256-RSA codificada em Base64 na resposta
 Realização da assinatura digital de um HASH SHA-256 em PKCS#7
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o endereço https://govbr-assinatura-api.homologacao.ufsc.br/externo/v2/assinarPKCS7 enviando os seguintes paramêtros:
+Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 enviando os seguintes paramêtros:
 
 ==================  ======================================================================
 **Paramêtros**  	**Valor**
@@ -158,7 +158,7 @@ Exemplo de requisição:
 .. code-block:: console
 
 		POST /externo/v2/assinarPKCS7 HTTP/1.1
-		Host: govbr-assinatura-api.homologacao.ufsc.br 
+		Host: assinatura-api.staging.iti.br 
 		Content-Type: application/json	
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
