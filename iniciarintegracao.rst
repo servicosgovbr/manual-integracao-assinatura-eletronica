@@ -164,7 +164,7 @@ Exemplo de requisição:
 
 		{"hashBase64":"OTI2OWJjNWNkNDBkMjMzNDg3NGNhMDAyZDk2ZDA2ZDlmMTViYzQ2Y2I2ZTI0OWUyMmVlNTAwNjYzNjViMTViZA=="}
 
-Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://govbr-verifier.homologacao.ufsc.br.
+Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
 
 Assinaturas PKCS#7 e PDF
 +++++++++++++++++++++++++
