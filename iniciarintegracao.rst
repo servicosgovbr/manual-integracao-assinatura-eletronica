@@ -194,7 +194,7 @@ Exemplo de aplicação
 
 Logo abaixo, encontra-se um pequeno exemplo PHP para prova de conceito.
 
-`Download Exemplo PHP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/downloadFiles/exemploApiPhp.zip>`_
+`Download Exemplo PHP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/downloadFiles/exemploApiPhpITI.zip>`_
 
 Este exemplo é composto por 3 arquivos:
 
