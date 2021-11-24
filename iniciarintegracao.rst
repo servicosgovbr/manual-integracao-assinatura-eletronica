@@ -130,7 +130,7 @@ Exemplo de requisição:
 		Content-Type: application/json	
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
-		{"hashBase64":"OTI2OWJjNWNkNDBkMjMzNDg3NGNhMDAyZDk2ZDA2ZDlmMTViYzQ2Y2I2ZTI0OWUyMmVlNTAwNjYzNjViMTViZA=="}
+		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 
 Será retornada a assinatura digital SHA256-RSA codificada em Base64 na resposta.
@@ -162,7 +162,7 @@ Exemplo de requisição:
 		Content-Type: application/json	
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
-		{"hashBase64":"OTI2OWJjNWNkNDBkMjMzNDg3NGNhMDAyZDk2ZDA2ZDlmMTViYzQ2Y2I2ZTI0OWUyMmVlNTAwNjYzNjViMTViZA=="}
+		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
 
