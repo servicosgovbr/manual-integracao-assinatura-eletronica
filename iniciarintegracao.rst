@@ -166,6 +166,66 @@ Exemplo de requisição:
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
 
+API de Verificação de Conformidade do Padrão de Assinaturas Digitais
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado. Se destina à comunidade e organizações públicas e privadas que desenvolvem que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
+Esta API contém dois serviços que utilizam o cabeçalho Content-Type sendo multipart/form-data, conforme especificado na tabela abaixo:
+
+==================  ======================================================================
+**Cabeçalho**       **Valor**
+------------------  ----------------------------------------------------------------------
+**Content-Type**    multipart/form-data       
+==================  ======================================================================
+
+Requisição POST https://verificador.staging.iti.br/inicio 
+
+Realiza uma análise preliminar sobre os artefatos de assinatura digital identificando se o arquivo contém pelo menos uma assinatura e se a assinatura é destacada. Body da requisição especificados na tabela abaixo:
+
+=====================  ======================================================================
+**Request body**       **Valor**
+---------------------  ----------------------------------------------------------------------
+**signature_files[]**  Array de arquivos de assinatura     
+=====================  ======================================================================
+**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!      
+=====================  ======================================================================
+
+Exemplo de requisição:
+
+.. code-block:: console
+
+		POST 'https://verificador.staging.iti.br/inicio' \
+		--header 'Content-Type: multipart/form-data' \
+		--form 'signature_files[]=@"/path/to/file/response.p7s"' \
+		--form 'detached_files[]=""'
+
+Requisição POST https://verificador.staging.iti.br/report 
+
+Realiza a verificação de assinaturas digitais em arquivos retornando o relatório de verificação de assinaturas no formato desejado. Body da requisição especificados na tabela abaixo:
+
+=====================  ======================================================================
+**Request body**       **Valor**
+---------------------  ----------------------------------------------------------------------
+**report_type**        Formato desejado do relatório de saída (json/xml/pdf)   
+=====================  ======================================================================
+**signature_files[]**  Array de arquivos de assinatura         
+=====================  ======================================================================
+**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!
+=====================  ======================================================================
+
+OBS: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
+
+Exemplo de requisição:
+
+.. code-block:: console
+
+		POST 'https://verificador.staging.iti.br/report' \
+		--header 'Content-Type: multipart/form-data' \
+		--form 'report_type="json"' \
+		--form 'signature_files[]=@"/path/to/file/response.p7s"' \
+		--form 'detached_files[]=""'
+
+
 Assinaturas PKCS#7 e PDF
 +++++++++++++++++++++++++
 
