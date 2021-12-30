@@ -185,11 +185,10 @@ Realiza uma análise preliminar sobre os artefatos de assinatura digital identif
 =====================  ======================================================================
 **Request body**       **Valor**
 ---------------------  ----------------------------------------------------------------------
-**signature_files[]**  Array de arquivos de assinatura     
+**signature_files[]**  Array de arquivos de assinatura  
+**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!
 =====================  ======================================================================
-**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!      
-=====================  ======================================================================
-
+         
 Exemplo de requisição:
 
 .. code-block:: console
@@ -206,14 +205,12 @@ Realiza a verificação de assinaturas digitais em arquivos retornando o relató
 =====================  ======================================================================
 **Request body**       **Valor**
 ---------------------  ----------------------------------------------------------------------
-**report_type**        Formato desejado do relatório de saída (json/xml/pdf)   
-=====================  ======================================================================
-**signature_files[]**  Array de arquivos de assinatura         
-=====================  ======================================================================
-**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!      
+**report_type**        Formato desejado do relatório de saída (json/xml/pdf)  
+**signature_files[]**  Array de arquivos de assinatura 
+**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!  
 =====================  ======================================================================
 
-*OBS:* O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
+**Observação**: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
 
 Exemplo de requisição:
 
