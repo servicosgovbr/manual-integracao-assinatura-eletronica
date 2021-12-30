@@ -169,7 +169,7 @@ Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do 
 API de Verificação de Conformidade do Padrão de Assinaturas Digitais
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado. Se destina à comunidade e organizações públicas e privadas que desenvolvem que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
+Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado.Se destinam à comunidade e organizações públicas e privadas que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
 Esta API contém dois serviços que utilizam o cabeçalho Content-Type sendo multipart/form-data, conforme especificado na tabela abaixo:
 
 ==================  ======================================================================
