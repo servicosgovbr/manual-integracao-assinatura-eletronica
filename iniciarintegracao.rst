@@ -178,7 +178,7 @@ Esta API contém dois serviços que utilizam o cabeçalho Content-Type sendo mul
 **Content-Type**    multipart/form-data       
 ==================  ======================================================================
 
-Requisição POST https://verificador.staging.iti.br/inicio 
+* Requisição POST https://verificador.staging.iti.br/inicio 
 
 Realiza uma análise preliminar sobre os artefatos de assinatura digital identificando se o arquivo contém pelo menos uma assinatura e se a assinatura é destacada. Body da requisição especificados na tabela abaixo:
 
@@ -199,7 +199,7 @@ Exemplo de requisição:
 		--form 'signature_files[]=@"/path/to/file/response.p7s"' \
 		--form 'detached_files[]=""'
 
-Requisição POST https://verificador.staging.iti.br/report 
+* Requisição POST https://verificador.staging.iti.br/report 
 
 Realiza a verificação de assinaturas digitais em arquivos retornando o relatório de verificação de assinaturas no formato desejado. Body da requisição especificados na tabela abaixo:
 
@@ -210,10 +210,10 @@ Realiza a verificação de assinaturas digitais em arquivos retornando o relató
 =====================  ======================================================================
 **signature_files[]**  Array de arquivos de assinatura         
 =====================  ======================================================================
-**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!
+**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!      
 =====================  ======================================================================
 
-OBS: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
+*OBS:* O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
 
 Exemplo de requisição:
 
