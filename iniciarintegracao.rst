@@ -4,24 +4,26 @@
 Solicitação de Configuração
 ++++++++++++++++++++++++++++++++
 
-É premissa de toda aplicação que irá consumir os serviços da API de assinatura estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. No entanto, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura, por esse motivo é que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+É premissa de toda aplicação, que irá consumir os serviços da API de assinatura avançada, estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura, por esse motivo que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
-Para utilização da API de assinatura digital gov.br, há necessidade da liberação de credenciais dos ambientes para que a aplicação cliente possa utilizar. A liberação do ambiente de homologação ocorre por meio de envio das informações listadas abaixo: 
+Para consumir os serviços da API de assinatura digital gov.br, há necessidade da liberação de credencial do ambiente de homologação. Esta liberação ocorre por meio de envio das informações listadas abaixo: 
 
 1. **URL de retorno para cadastramento da aplicação cliente**
-2. **Chave PGP** - A chave PGP é solicitada para transmissão das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro.
+2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro.
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
+5. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
+6. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
 
-Essas informações deverão ser encaminhadas, para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME), por e-mail de um representante legal do órgão ou entidade dona do serviço a ser integrado. A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
+Essas informações deverão ser encaminhadas, para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME), por e-mail de um representante legal do órgão ou entidade responsável pelo serviço a ser integrado. A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
 
 Orientações para testes em ambiente de homologação 
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso ele não possua este nível de identidade, a aplicação cliente deverá comunicar que ele precisa adquirir e que após a obtenção deverá acessar novamente a aplicação para realizar a assinatura. Segue um exemplo de mensagem:                             
+De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso o usuário não possua este nível de identidade, a aplicação cliente deverá emitir mensagem informando ao usuário. Segue um exemplo de mensagem:                             
 "Prezado solicitante, para realizar a(s) assinatura(s) é necessário que a sua identidade na plataforma gov.br seja "Prata" ou "Ouro". Para a obtenção das identidades digitais requeridas por meio do qual o cidadão terá acesso ao serviço de assinatura e a outros serviços, a aplicação cliente deve direcionar o usuário ao serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
-Ao realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20-%20ID%20Prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta para qualquer CPF (gerador de CPF: https://www.4devs.com.br/gerador_de_cpf). 
+Para realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20-%20ID%20Prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta teste para qualquer CPF. 
 
 **Importante**: Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI (https://verificador.iti.br/). Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br/. 
 
