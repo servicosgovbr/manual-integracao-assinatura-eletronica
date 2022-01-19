@@ -4,7 +4,7 @@
 Solicitação de Configuração
 ++++++++++++++++++++++++++++++++
 
-É premissa de toda aplicação, que irá consumir os serviços da API de assinatura avançada, estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário (Conforme `Lei n° 14.063`_ Art.4º). O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura, por esse motivo que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+É premissa de toda aplicação, que irá consumir os serviços da API de assinatura avançada, estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
 Para consumir os serviços da API de assinatura digital gov.br, há necessidade da liberação de credencial do ambiente de homologação. Esta liberação ocorre por meio de envio das informações listadas abaixo: 
 
@@ -25,7 +25,7 @@ De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da pl
 
 Para realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20-%20ID%20Prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta teste para qualquer CPF. 
 
-**Importante**: Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI (https://verificador.iti.br/). Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br/. 
+**Importante**: Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.br/. Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br/. 
 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
@@ -172,7 +172,7 @@ API de Verificação de Conformidade do Padrão de Assinaturas Digitais
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado.Se destinam à comunidade e organizações públicas e privadas que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
-Esta API contém dois serviços que utilizam o cabeçalho Content-Type sendo multipart/form-data, conforme especificado na tabela abaixo:
+Esta API contém dois serviços que utilizam o cabeçalho Content-Type: multipart/form-data, conforme especificado na tabela abaixo:
 
 ==================  ======================================================================
 **Cabeçalho**       **Valor**
