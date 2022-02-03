@@ -105,37 +105,6 @@ Exemplo de requisição:
 
 Será retornado o certificado digital em formato PEM na resposta.
 
-Realização da assinatura digital Raw de um HASH SHA-256
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Para assinar digitalmente um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o seguinte endereço https://assinatura-api.staging.iti.br/externo/v2/assinarRaw enviando os seguintes paramêtros especificados na tabela abaixo:
-
-==================  ======================================================================
-**Paramêtros**  	**Valor**
-------------------  ----------------------------------------------------------------------
-**Content-Type**    application/json       
-**Authorization**   Bearer <access token>
-==================  ======================================================================
-
-Body da requisição:
-
-.. code-block:: JSON
-
-	{ "hashBase64": "<Hash SHA256 codificado em Base64>"} 
-
-Exemplo de requisição:
-
-.. code-block:: console
-
-		POST /externo/v2/assinarRaw HTTP/1.1
-		Host: assinatura-api.staging.iti.br 
-		Content-Type: application/json	
-		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
-
-		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
-
-
-Será retornada a assinatura digital SHA256-RSA codificada em Base64 na resposta.
 
 Realização da assinatura digital de um HASH SHA-256 em PKCS#7
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
