@@ -23,9 +23,13 @@ Orientações para testes em ambiente de homologação
 De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso o usuário não possua este nível de identidade, a aplicação cliente deverá emitir mensagem informando ao usuário. Segue um exemplo de mensagem:                             
 "Prezado solicitante, para realizar a(s) assinatura(s) é necessário que a sua identidade na plataforma gov.br seja "Prata" ou "Ouro". Para a obtenção das identidades digitais requeridas por meio do qual o cidadão terá acesso ao serviço de assinatura e a outros serviços, a aplicação cliente deve direcionar o usuário ao serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
-Para realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20conta%20prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta teste para qualquer CPF. 
+Para realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20conta%20prata.pdf>`_. 
 
-**Importante**: Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.br/. Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br/. 
+.. note:: No ambiente de testes é possível criar conta teste para qualquer CPF. 
+
+.. attention:: 
+  Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.br/.
+  Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br/. 
 
 API de assinatura digital gov.br
 ++++++++++++++++++++++++++++++++
@@ -60,7 +64,10 @@ A URL usada para redirecionar o usuário para o formulário de autorização, co
 
 	https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
 
-Neste endereço, o servidor OAuth faz a autenticação e pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS. **IMPORTANTE: EM HOMOLOGAÇÃO**, NÃO SERÁ ENVIADO SMS, DEVE-SE USAR O CÓDIGO **12345**.
+Neste endereço, o servidor OAuth faz a autenticação e pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS. 
+
+.. important::
+  **EM HOMOLOGAÇÃO**, NÃO SERÁ ENVIADO SMS, DEVE-SE USAR O CÓDIGO **12345**.
 
 Após a autorização, o servidor OAuth redireciona o usuário para o endereço <URI de redirecionamento> especificado e passa, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor OAuth, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser usado na fase seguinte do protocolo OAuth, pela aplicação, para pedir um Access Token ao servidor OAuth, com a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as seguintes informações:
 
@@ -80,9 +87,11 @@ Após a autorização, o servidor OAuth redireciona o usuário para o endereço 
 
 O <URI de redirecionamento> deve ser exatamente o mesmo valor passado na requisição “authorize” anterior. O servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
 
-**Importante**: O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br
+.. important::
+  O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br
 
-**Importante**: O access token gerado autoriza o uso da chave privada do usuário para a confecção de **uma** única assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI.
+.. important::
+  O access token gerado autoriza o uso da chave privada do usuário para a confecção de **uma** única assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI.
 
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
@@ -181,7 +190,8 @@ Realiza a verificação de assinaturas digitais em arquivos retornando o relató
 **detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!  
 =====================  ======================================================================
 
-**Observação**: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
+.. note::
+  O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
 
 Exemplo de requisição:
 
