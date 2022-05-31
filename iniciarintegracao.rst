@@ -55,7 +55,8 @@ Para geração do Access Token é necessário redirecionar o navegador do usuár
 
 As credenciais para o client_id “devLocal” estão configuradas no servidor OAuth para aceitar qualquer aplicação executando localmente (host 127.0.0.1, qualquer porta, qualquer caminho). Aplicações remotas não poderão usar essas credenciais de teste.
 
-**Paramêtro scope**: Deve-se utilizar o valor **sign** para gerar um token que permite a assinatura de **um** hash. Para gerar um token que permita a assinatura de **mais de um hash**, deve ser utilizado o valor **signature_session**. Importante destacar que o token gerado pode ser utilizado apenas uma vez.
+**Paramêtro scope**: Deve-se utilizar o valor **sign** para gerar um token que permite a assinatura de **um** hash. Neste caso, o token gerado pode ser utilizado apenas uma vez em operações de assinatura.
+Para gerar um token que permita a assinatura de **mais de um hash**, deve ser utilizado o valor **signature_session**. Neste caso o Token gerado pode ser utilizado repetidas vezes em operações de assinatura durante sua validade.
 
 A URL usada para redirecionar o usuário para o formulário de autorização, conforme a especificação do OAuth 2.0, é a seguinte:
 
@@ -140,8 +141,8 @@ Exemplo de requisição:
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
 
-**Assinatura em Lote**: Para gerar mais de um pacote PKCS#7 que contém a assinatura digital de mais de um HASH SHA-256, deve-se seguir as orientações do tópico **Geração do Access Token** para solicitação do token que permita esta operação.
-Após obtenção deste token deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 por cada hash a ser assinado, enviando os mesmo paramêtros informados acima. No código de **Exemplo de aplicação** pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 para cada hash enviado na requisição ao serviço.
+**Assinatura em Lote**: Para gerar várias assinaturas digitais (vários pacotes PKCS#7) de vários HASH SHA-256, deve-se seguir as orientações do tópico **Geração do Access Token** para solicitação de **UM** token com scope que permita esta operação.
+Após obtenção deste Token deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 para cada HASH a ser assinado. Deve-se utilizar o mesmo o Token. No código de Exemplo de aplicação pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 para cada hash enviado na requisição ao serviço.
 
 API de Verificação de Conformidade do Padrão de Assinaturas Digitais
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
