@@ -44,7 +44,7 @@ Geração do Access Token
 Para geração do Access Token é necessário redirecionar o navegador do usuário para o endereço de autorização do servidor OAuth, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor OAuth. As seguintes credencias podem ser usadas para testes:
 
 ==================  ======================================================================
-**Paramêtros**  	**Valor**
+**Parâmetro**  	    **Valor**
 ------------------  ----------------------------------------------------------------------
 **Servidor OAuth**  https://cas.staging.iti.br/oauth2.0
 **client_id**       devLocal
@@ -55,7 +55,7 @@ Para geração do Access Token é necessário redirecionar o navegador do usuár
 
 As credenciais para o client_id “devLocal” estão configuradas no servidor OAuth para aceitar qualquer aplicação executando localmente (host 127.0.0.1, qualquer porta, qualquer caminho). Aplicações remotas não poderão usar essas credenciais de teste.
 
-**Paramêtro scope**: Deve-se utilizar o valor **sign** para gerar um token que permite a assinatura de **um** hash. Neste caso, o token gerado pode ser utilizado apenas uma vez em operações de assinatura.
+**Parâmetro scope**: Deve-se utilizar o valor **sign** para gerar um token que permite a assinatura de **um** hash. Neste caso, o token gerado pode ser utilizado apenas uma vez em operações de assinatura.
 Para gerar um token que permita a assinatura de **mais de um hash**, deve ser utilizado o valor **signature_session**. Neste caso o Token gerado pode ser utilizado repetidas vezes em operações de assinatura durante sua validade.
 
 A URL usada para redirecionar o usuário para o formulário de autorização, conforme a especificação do OAuth 2.0, é a seguinte:
@@ -69,7 +69,7 @@ Neste endereço, o servidor OAuth faz a autenticação e pede a autorização ex
 Após a autorização, o servidor OAuth redireciona o usuário para o endereço <URI de redirecionamento> especificado e passa, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor OAuth, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser usado na fase seguinte do protocolo OAuth, pela aplicação, para pedir um Access Token ao servidor OAuth, com a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as seguintes informações:
 
 ==================  ======================================================================
-**Paramêtros**  	**Valor**
+**Parâmetros**  	**Valor**
 ------------------  ----------------------------------------------------------------------
 **code**            Código de autenticação gerado pelo provedor. Será utilizado para obtenção do Token de Resposta. Possui tempo de expiração e só pode ser utilizado uma única vez.
 **client_id**       devLocal
@@ -94,7 +94,7 @@ Obtenção do certificado do usuário
 Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP GET para endereço https://assinatura-api.staging.iti.br/externo/v2/certificadoPublico enviando o cabeçalho Authorization com o tipo de autorização Bearer e o access token obtido anteriormente. Segue abaixo o parâmetro do Header para requisição:
 
 ==================  ======================================================================
-**Paramêtros**  	**Valor**
+**Parâmetro**  	**Valor**
 ------------------  ----------------------------------------------------------------------
 **Authorization**   Bearer <access token>
 ==================  ======================================================================
@@ -113,10 +113,10 @@ Será retornado o certificado digital em formato PEM na resposta.
 Realização da assinatura digital de um HASH SHA-256 em PKCS#7
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 enviando os seguintes paramêtros:
+Para gerar um pacote PKCS#7 contendo a assinatura digital de um HASH SHA-256 utilizando a chave privada do usuário, deve-se fazer uma requisição HTTP POST para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 enviando os seguintes parâmetros:
 
 ==================  ======================================================================
-**Paramêtros**  	**Valor**
+**Parâmetros**  	**Valor**
 ------------------  ----------------------------------------------------------------------
 **Content-Type**    application/json       
 **Authorization**   Bearer <access token>
