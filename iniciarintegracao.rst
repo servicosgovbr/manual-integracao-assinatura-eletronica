@@ -8,7 +8,7 @@ Solicitação de Configuração
 
 Para consumir os serviços da API de assinatura digital gov.br, há necessidade da liberação de credencial do ambiente de homologação. Esta liberação ocorre por meio de envio das informações listadas abaixo: 
 
-1. **URL de retorno para cadastramento da aplicação cliente**
+1. **URL de retorno para cadastro da aplicação cliente**
 2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro.
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
 4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
@@ -49,10 +49,13 @@ Para geração do Access Token é necessário redirecionar o navegador do usuár
 **Servidor OAuth**  https://cas.staging.iti.br/oauth2.0
 **client_id**       devLocal
 **secret**          younIrtyij3
+**scope**           sign ou signature_session
 **redirect_uri**    http://127.0.0.1:x/xx
 ==================  ======================================================================
 
 As credenciais para o client_id “devLocal” estão configuradas no servidor OAuth para aceitar qualquer aplicação executando localmente (host 127.0.0.1, qualquer porta, qualquer caminho). Aplicações remotas não poderão usar essas credenciais de teste.
+
+**Paramêtro scope**: Deve-se utilizar o valor **sign** para gerar um token que permite a assinatura de **um** hash. Para gerar um token que permita a assinatura de **mais de um hash**, deve ser utilizado o valor **signature_session**. Importante destacar que o token gerado deve ser utilizado apenas uma vez.
 
 A URL usada para redirecionar o usuário para o formulário de autorização, conforme a especificação do OAuth 2.0, é a seguinte:
 
@@ -136,6 +139,9 @@ Exemplo de requisição:
 		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
+
+**Assinatura em Lote**: Para gerar mais de um pacote PKCS#7 que contem a assinatura digital de mais de um HASH SHA-256, deve-se seguir as orientações do tópico Geração do Access Token para solicitação do token que permita esta operação.
+Após obtenção deste token deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 por cada hash a ser assinado, enviando os mesmo paramêtros informados acima. No código de Exemplo de aplicação pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 para cada hash enviado na requisição do serviço.
 
 API de Verificação de Conformidade do Padrão de Assinaturas Digitais
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
