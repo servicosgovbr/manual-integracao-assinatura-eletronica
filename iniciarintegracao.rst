@@ -232,6 +232,26 @@ O padrão PDF possui a funcionalidade chamada **Atualização Incremental**. Ess
 
 A possibilidade de alteração visual em documentos previamente assinados pode causar confusão por parte de cidadãos e órgãos públicos no momento da validação e verificação de documentos assinados. Por esta razão a partir da Versão 1.5 do PDF, foi introduzido um mecanismo para proteção e controle de alterações passíveis de serem realizadas em documentos PDF assinados. Esse mecanismo é chamado **MDP (modification detection and prevention - DocMDP)**, e permite que a primeira pessoa a assinar o documento, ou seja, o autor, possa especificar quais alterações poderão ser realizadas em futuras atualizações incrementais.
 
+Recomenda-se fortemente que a **primeira assinatura realizada** em um documento PDF seja configurada da seguinte forma:
+
+1. Incluir entrada *Reference*, com uma referência indireta a um Dicionário *“Signature Reference”*. Exemplo:
+
+.. code-block:: console
+
+		166 0 obj
+		<<
+		/Type /Sig
+		/Filter /Adobe.PPKLite
+		/SubFilter /adbe.pkcs7.detached
+		/M (D:20220705145549-03'00')
+		/Reference [168 0 R]
+		/Contents <24730....>
+		/ByteRange [0 36705 55651 8985] 
+		>>
+		Endobj
+		
+2. O dicionário *“Signature Reference”* conter as entradas *“Transform Method”* com o valor DocMDP; e, *“TransformParams”* com uma referência indireta para um dicionário de *TransformParams*. Exemplo:
+
 
 Exemplo de aplicação
 ++++++++++++++++++++
