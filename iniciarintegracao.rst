@@ -223,6 +223,16 @@ A assinatura envelopada, por sua vez, inclui dentro do próprio arquivo PDF o pa
 
 O detalhamento de como preparar o documento, calcular os *bytes-ranges* utilizados no computo do hash e como embutir o arquivo PKCS7 no arquivo previamente preparado podem ser encontrados na especificação ISO 32000-1:2008. Existem bibliotecas que automatizam esse procedimento de acordo com o padrão (ex: PDFBox para Java e iText para C#).
 
+Recomendações para Assinaturas Digitais em PDF
+++++++++++++++++++++++++++++++++++++++++++++++
+
+O PDF foi especificado e desenvolvido pela empresa Adobe System. A partir da versão PDF 1.6, a Adobe utiliza o padrão ISO 32000-1 em sua especificação. Este padrão define a especificação do formato digital para representação de um documento PDF de forma que permita aos usuários trocar e visualizar documentos independente do ambiente que eles foram criados. Resumidamente, a especificação define a estrutura do conteúdo do arquivo PDF, como este conteúdo pode ser interpretado, acessado, atualizado e armazenado dentro do arquivo.
+
+O padrão PDF possui a funcionalidade chamada **Atualização Incremental**. Essa funcionalidade permite que o PDF seja modificado acrescentando novas informações após o fim do arquivo. A assinatura de PDF é realizada incorporando uma assinatura digital ao fim do PDF utilizando o mecanismo de Atualização Incremental. Este tipo de implementação protege contra modificação todas as informações anteriores a Assinatura Digital a ser realizada e a própria Assinatura Digital incluída no arquivo. Entretanto, ela não impede que novas Atualizações Incrementais sejam realizadas, alterando visualmente o PDF após uma assinatura ter sido incluída. Ainda assim, sempre é possível recuperar a versão que foi efetivamente assinada, e esta versão não pode ser modificada de forma alguma.
+
+A possibilidade de alteração visual em documentos previamente assinados pode causar confusão por parte de cidadãos e órgãos públicos no momento da validação e verificação de documentos assinados. Por esta razão a partir da Versão 1.5 do PDF, foi introduzido um mecanismo para proteção e controle de alterações passíveis de serem realizadas em documentos PDF assinados. Esse mecanismo é chamado **MDP (modification detection and prevention - DocMDP)**, e permite que a primeira pessoa a assinar o documento, ou seja, o autor, possa especificar quais alterações poderão ser realizadas em futuras atualizações incrementais.
+
+
 Exemplo de aplicação
 ++++++++++++++++++++
 
