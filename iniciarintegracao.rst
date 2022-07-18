@@ -278,7 +278,7 @@ Outros valores de *P* possíveis de serem usados:
 
 * **P = 1** -> Nenhuma alteração é admitida; 
 * **P = 2** -> Alterações permitidas em formulários, templates e inclusão de novas assinaturas; e
-* **P = 3** - Além das permissões admitidas para P = 2, admite-se também anotações, deleções e modificações.
+* **P = 3** -> Além das permissões admitidas para P = 2, admite-se também anotações, deleções e modificações.
 
 Exemplo de aplicação
 ++++++++++++++++++++
