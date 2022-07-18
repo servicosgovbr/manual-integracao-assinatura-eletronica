@@ -252,6 +252,33 @@ Recomenda-se fortemente que a **primeira assinatura realizada** em um documento 
 		
 2. O dicionário *“Signature Reference”* conter as entradas *“Transform Method”* com o valor DocMDP; e, *“TransformParams”* com uma referência indireta para um dicionário de *TransformParams*. Exemplo:
 
+.. code-block:: console
+
+		168 0 obj
+		<<
+		/Type /SigRef
+		/TransformMethod /DocMDP
+		/TransformParams 170 0 R
+		>>
+		
+3. O dicionário *“TransformParams”* com uma entrada *P* com valor 2 e entrada *V* com valor 1.2.
+
+.. code-block:: console
+
+		170 0 obj
+		<<
+		/Type /TransformParams
+		/P 2
+		/V /1.2
+		>>
+
+**Importante**: Não é recomendado o uso do dicionário */Perms* com entrada */DocMDP* por questões de compatibilidade com o Adobe. Ao configurar a primeira assinatura desta forma apenas serão permitidas as seguintes alterações: **Preenchimento de formulários, templates e inclusão de novas assinaturas**.
+
+Outros valores de *P* possíveis de serem usados: 
+
+* **P = 1** - Nenhuma alteração é admitida; 
+* **P = 2** - Alterações permitidas em formulários, templates e inclusão de novas assinaturas; e
+* **P = 3** - Além das permissões admitidas para P = 2, admite-se também anotações, deleções e modificações.
 
 Exemplo de aplicação
 ++++++++++++++++++++
