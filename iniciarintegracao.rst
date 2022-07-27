@@ -11,7 +11,7 @@ Para consumir os serviços da API de assinatura digital gov.br, há necessidade 
 1. **URL de retorno para cadastro da aplicação cliente**
 2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro.
 3. **Endereço de e-mail do destinatário** para recebimento das credenciais; 
-4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. 
+4. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não prejudicar as demais aplicações habilitadas.
 5. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
 6. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
 
