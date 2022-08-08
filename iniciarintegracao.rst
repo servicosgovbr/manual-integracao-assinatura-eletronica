@@ -15,7 +15,7 @@ Para consumir os serviços da API de assinatura digital gov.br, há necessidade 
 5. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
 6. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
 
-Essas informações deverão ser encaminhadas, para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME), por e-mail de um representante legal do órgão ou entidade responsável pelo serviço a ser integrado. A liberação do ambiente de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
+Essas informações deverão ser encaminhadas para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME), por e-mail de um representante legal do órgão ou entidade responsável pelo serviço a ser integrado. A liberação das credenciais de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
 
 Orientações para testes em ambiente de homologação 
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -90,9 +90,11 @@ Após a autorização, o servidor OAuth redireciona o usuário para o endereço 
 
 O <URI de redirecionamento> deve ser exatamente o mesmo valor passado na requisição “authorize” anterior. O servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
 
-**Importante**: O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br
+.. note::
+  O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
 
-**Importante**: No caso de scope igual a sign, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma única assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso de scope igual a signature_session (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de várias assinaturas eletrônicas avançadas durante o prazo de validade do token.
+
+**Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias** assinaturas eletrônicas avançadas durante o prazo de validade do token.
 
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
@@ -113,7 +115,17 @@ Exemplo de requisição:
 		Host: assinatura-api.staging.iti.br 
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
-Será retornado o certificado digital em formato PEM na resposta.
+Será retornado o certificado digital em formato PEM na resposta, conforme exemplo abaixo:
+
+.. code-block:: console
+
+		
+Se usuário não possuir nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
+Response: **403**
+
+.. code-block:: console
+
+		Cidadão não possui a identidade (Prata ou Ouro) necessária para uso da assinatura eletrônica digital.
 
 
 Realização da assinatura digital de um HASH SHA-256 em PKCS#7
@@ -146,6 +158,13 @@ Exemplo de requisição:
 		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
+Do mesmo modo do serviço para obtenção do certificado, se o usuário não possuir nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
+Response: **403**
+
+.. code-block:: console
+
+		Cidadão não possui a identidade (Prata ou Ouro) necessária para uso da assinatura eletrônica digital.
+
 
 **Assinatura em Lote**: Para gerar múltiplos pacotes PKCS#7, cada qual correspondente a assinatura digital de um HASH SHA-256 distinto (correspondentes a diferentes documentos), deve-se seguir as orientações do tópico **Geração do Access Token** para solicitação do token que permita esta operação (scope signature_session). Após a obtenção deste token, deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 para cada hash a ser assinado, enviando os mesmo parâmetros informados acima. No código de **Exemplo de aplicação** pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 correspondente a cada hash enviado na requisição ao serviço.
 
