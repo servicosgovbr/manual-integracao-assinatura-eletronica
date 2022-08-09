@@ -153,7 +153,7 @@ Exemplo de requisição:
 		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
-Do mesmo modo do serviço para obtenção do certificado, se o usuário não possuir nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
+Do mesmo modo do serviço para obtenção do certificado, caso o usuário não tenha nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
 Response: **403**
 
 .. code-block:: console
