@@ -115,12 +115,7 @@ Exemplo de requisição:
 		Host: assinatura-api.staging.iti.br 
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
-Será retornado o certificado digital em formato PEM na resposta, conforme exemplo abaixo:
-
-.. code-block:: console
-
-		
-Se usuário não possuir nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
+Será retornado o certificado digital em formato PEM na resposta. Se usuário não possuir nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
 Response: **403**
 
 .. code-block:: console
