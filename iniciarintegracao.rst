@@ -167,7 +167,10 @@ API de Verificação de Conformidade do Padrão de Assinaturas Digitais
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado.Se destinam à comunidade e organizações públicas e privadas que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
-Esta API contém dois serviços que utilizam o cabeçalho Content-Type: multipart/form-data, conforme especificado na tabela abaixo:
+ 
+* Requisição POST https://verificador.staging.iti.br/report 
+
+Realiza a verificação de assinaturas digitais em arquivos retornando o relatório de verificação de assinaturas no formato desejado. Body e header da requisição especificados na tabela abaixo:
 
 ==================  ======================================================================
 **Cabeçalho**       **Valor**
@@ -175,17 +178,13 @@ Esta API contém dois serviços que utilizam o cabeçalho Content-Type: multipar
 **Content-Type**    multipart/form-data       
 ==================  ======================================================================
 
-* Requisição POST https://verificador.staging.iti.br/report 
-
-Realiza a verificação de assinaturas digitais em arquivos retornando o relatório de verificação de assinaturas no formato desejado. Body da requisição especificados na tabela abaixo:
-
-==============================  ======================================================================
+==============================  ================================================================
 **Request body**                **Valor**
-------------------------------  ----------------------------------------------------------------------  
+------------------------------  ----------------------------------------------------------------
 **signature_files[]**           Array de arquivos de assinatura 
 **detached_files[]**            Array de arquivos assinados - Somente para assinatura detached!  
 **verify_incremental_updates**  true ou false. Para atualizações incrementais para arquivos PDF
-==============================  ======================================================================
+==============================  ================================================================
 
 **Observação**: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
 
