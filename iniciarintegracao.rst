@@ -175,37 +175,17 @@ Esta API contém dois serviços que utilizam o cabeçalho Content-Type: multipar
 **Content-Type**    multipart/form-data       
 ==================  ======================================================================
 
-* Requisição POST https://verificador.staging.iti.br/inicio 
-
-Realiza uma análise preliminar sobre os artefatos de assinatura digital identificando se o arquivo contém pelo menos uma assinatura e se a assinatura é destacada. Body da requisição especificados na tabela abaixo:
-
-=====================  ======================================================================
-**Request body**       **Valor**
----------------------  ----------------------------------------------------------------------
-**signature_files[]**  Array de arquivos de assinatura  
-**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!
-=====================  ======================================================================
-         
-Exemplo de requisição:
-
-.. code-block:: console
-
-		POST 'https://verificador.staging.iti.br/inicio' \
-		--header 'Content-Type: multipart/form-data' \
-		--form 'signature_files[]=@"/path/to/file/response.p7s"' \
-		--form 'detached_files[]=""'
-
 * Requisição POST https://verificador.staging.iti.br/report 
 
 Realiza a verificação de assinaturas digitais em arquivos retornando o relatório de verificação de assinaturas no formato desejado. Body da requisição especificados na tabela abaixo:
 
-=====================  ======================================================================
-**Request body**       **Valor**
----------------------  ----------------------------------------------------------------------
-**report_type**        Formato desejado do relatório de saída (json/xml/pdf)  
-**signature_files[]**  Array de arquivos de assinatura 
-**detached_files[]**   Array de arquivos assinados - Somente para assinatura detached!  
-=====================  ======================================================================
+==============================  ======================================================================
+**Request body**                **Valor**
+------------------------------  ----------------------------------------------------------------------  
+**signature_files[]**           Array de arquivos de assinatura 
+**detached_files[]**            Array de arquivos assinados - Somente para assinatura detached!  
+**verify_incremental_updates**  true ou false. Para atualizações incrementais para arquivos PDF
+==============================  ======================================================================
 
 **Observação**: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
 
@@ -217,7 +197,8 @@ Exemplo de requisição:
 		--header 'Content-Type: multipart/form-data' \
 		--form 'report_type="json"' \
 		--form 'signature_files[]=@"/path/to/file/response.p7s"' \
-		--form 'detached_files[]=""'
+		--form 'detached_files[]=""'\
+		--form 'verify_incremental_updates="true"'
 
 
 Assinaturas PKCS#7 e PDF
