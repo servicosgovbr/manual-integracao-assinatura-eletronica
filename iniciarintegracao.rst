@@ -9,7 +9,7 @@ Solicitação de Configuração
 Para consumir os serviços da API de assinatura digital gov.br, há necessidade da liberação de credencial do ambiente de homologação. Esta liberação ocorre por meio de envio das informações da aplicação cliente listadas abaixo: 
 
 1. **URL de retorno para cadastro da aplicação cliente**
-2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro. 
+2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
 3. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não prejudicar as demais aplicações habilitadas.
 4. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
 5. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
