@@ -17,13 +17,8 @@ Para receber as credencias de homologação, um representante legal do órgão d
 com as seguintes informações:
 
 1. **URL de retorno da aplicação cliente**
-2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, 
-criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último 
-tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
-3. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das 
-APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento 
-representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não 
-prejudicar as demais aplicações habilitadas.
+2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
+3. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não prejudicar as demais aplicações habilitadas.
 4. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
 5. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
 
@@ -40,7 +35,7 @@ De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da pl
 
 Para realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20conta%20prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta teste para qualquer CPF. 
 
-.. note::
+.. important::
    Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.gov.br
    Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br 
 
@@ -82,7 +77,7 @@ A URL usada para redirecionar o usuário para o formulário de autorização, co
 
 Neste endereço, o servidor OAuth faz a autenticação e pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
-.. note::
+.. Attention::
   No ambiente de homologação, não será enviado SMS, deve-se utilizar o código **12345**. 
   
 
