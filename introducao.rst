@@ -17,4 +17,4 @@ os procedimentos para permitir a conectividade entre os ambientes de implantaç�
 
 .. _`Lei Nº 14.063, de 23 de setembro de 2020`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
 
-.. _`Portal de assinatura GOV.BR`: https://gov.br/assina
+.. _`Portal de Assinatura gov.br`: http://gov.br/assina

@@ -10,16 +10,11 @@ Roteiro de Integração da API de Assinatura Eletrônica GOV.BR
    :maxdepth: 3
    :caption: Legislação e Conceitos
 
-   contexto
    introducao
 
-   escopoatributos
-   catalogoconfiabilidades
-   
 .. toctree::
    :maxdepth: 3
    :caption: Informações Técnicas para Integração
 
    iniciarintegracao
-   exemplointegracao
-   execucaoexemplo
+   
