@@ -1,7 +1,7 @@
-﻿Iniciando a Integração
+﻿Passo a passo
 ================================
 
-Solicitação de Acesso 
+Solicitação de acesso 
 +++++++++++++++++++++++++++
 
 A assinatura eletrônica GOV.BR está disponível apenas para os órgãos da administração pública federal, estadual e municipal. Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há necessidade  que a aplicação esteja previamente integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado e permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
@@ -42,7 +42,7 @@ A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e o protoc
 
 2. Acesso ao serviço de assinatura
 
-Geração do Access Token
+Geração do access token
 +++++++++++++++++++++++
 
 Para geração do Access Token é necessário redirecionar o navegador do usuário para o endereço de autorização do servidor OAuth, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor OAuth. As seguintes credencias podem ser usadas para testes:
@@ -164,7 +164,7 @@ Response: **403**
 
 **Assinatura em Lote**: Para gerar múltiplos pacotes PKCS#7, cada qual correspondente a assinatura digital de um HASH SHA-256 distinto (correspondentes a diferentes documentos), deve-se seguir as orientações do tópico **Geração do Access Token** para solicitação do token que permita esta operação (scope signature_session). Após a obtenção deste token, deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 para cada hash a ser assinado, enviando os mesmo parâmetros informados acima. No código de **Exemplo de aplicação** pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 correspondente a cada hash enviado na requisição ao serviço.
 
-API de Verificação de Conformidade do Padrão de Assinaturas Digitais
+API de verificação de conformidade do Padrão de Assinaturas Digitais
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado.Se destinam à comunidade e organizações públicas e privadas que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
@@ -224,7 +224,7 @@ A assinatura envelopada, por sua vez, inclui dentro do próprio arquivo PDF o pa
 
 O detalhamento de como preparar o documento, calcular os *bytes-ranges* utilizados no computo do hash e como embutir o arquivo PKCS7 no arquivo previamente preparado podem ser encontrados na especificação ISO 32000-1:2008. Existem bibliotecas que automatizam esse procedimento de acordo com o padrão (ex: PDFBox para Java e iText para C#).
 
-Recomendações para Assinaturas Digitais em PDF
+Recomendações para assinaturas digitais em PDF
 ++++++++++++++++++++++++++++++++++++++++++++++
 
 O PDF foi especificado e desenvolvido pela empresa Adobe System. A partir da versão PDF 1.6, a Adobe utiliza o padrão ISO 32000-1 em sua especificação. Este padrão define a especificação do formato digital para representação de um documento PDF de forma que permita aos usuários trocar e visualizar documentos independente do ambiente que eles foram criados. Resumidamente, a especificação define a estrutura do conteúdo do arquivo PDF, como este conteúdo pode ser interpretado, acessado, atualizado e armazenado dentro do arquivo.

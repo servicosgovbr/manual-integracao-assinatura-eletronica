@@ -3,18 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Roteiro de Integração da API de Assinatura Eletrônica GOV.BR
+Roteiro de integração da API de Assinatura Eletrônica GOV.BR
 =============================================================
 
 .. toctree::
    :maxdepth: 3
-   :caption: Legislação e Conceitos
+   :caption: Legislação e conceitos
 
    introducao
 
 .. toctree::
    :maxdepth: 3
-   :caption: Informações Técnicas para Integração
+   :caption: Informações técnicas para integração
 
    iniciarintegracao
    
