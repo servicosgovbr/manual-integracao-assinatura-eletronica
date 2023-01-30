@@ -1,23 +1,39 @@
 ﻿Iniciando a Integração
 ================================
 
-Solicitação de Configuração
-++++++++++++++++++++++++++++++++
+Solicitação de Acesso 
++++++++++++++++++++++++++++
 
-É premissa de toda aplicação, que irá consumir os serviços da API de assinatura avançada, estar integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+A assinatura eletrônica GOV.BR está disponível apenas para os órgãos da administração pública federal, estadual e 
+municipal. Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há necessidade  
+que a aplicação esteja previamente integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_.
+Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do 
+usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar
+digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização 
+OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado e 
+permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
-Para consumir os serviços da API de assinatura digital gov.br, há necessidade da liberação de credencial do ambiente de homologação. Esta liberação ocorre por meio de envio das informações da aplicação cliente listadas abaixo: 
+Para receber as credencias de homologação, um representante legal do órgão deverá enviar e-mail para **int-assinatura-govbr@economia.gov.br** 
+com as seguintes informações:
 
-1. **URL de retorno para cadastro da aplicação cliente**
-2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
-3. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não prejudicar as demais aplicações habilitadas.
+1. **URL de retorno da aplicação cliente**
+2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, 
+criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último 
+tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
+3. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das 
+APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento 
+representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não 
+prejudicar as demais aplicações habilitadas.
 4. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
 5. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
 
-Essas informações deverão ser encaminhadas para o e-mail **int-assinatura-govbr@economia.gov.br** da Secretaria de Governança Digital (SGD) do Ministério da Economia (ME), por e-mail de um representante legal do órgão ou entidade responsável pelo serviço a ser integrado. A liberação das credenciais de produção ocorrerá somente após a homologação final validada com os integrantes da SGD/ME. 
+.. note::
 
-Orientações para testes em ambiente de homologação 
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+  A liberação das credenciais de produção ocorrerá somente após o envio do arquivo de teste assinado e a homologação 
+  final validada com os integrantes do Departamento de Identidade Digital - DEPID da Secretaria de Governo Digital.
+
+Orientações para testes  
+++++++++++++++++++++++++++
 
 De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso o usuário não possua este nível de identidade, a aplicação cliente deverá emitir mensagem informando ao usuário. Segue um exemplo de mensagem:                             
 "É necessário possuir conta gov.br nível ouro ou prata para utilizar a assinatura eletrônica digital. Clique aqui para aumentar o nível da sua conta." A aplicação cliente deve direcionar o usuário para o serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
@@ -28,8 +44,8 @@ Para realizar testes, no ambiente de homologação, o testador deve criar uma co
    Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.gov.br
    Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br 
 
-API de assinatura digital gov.br
-++++++++++++++++++++++++++++++++
+API de assinatura eletrônica gov.br
++++++++++++++++++++++++++++++++++++++
 
 A partir de agora, será feita uma revisão sobre a arquitetura de serviço, alguns conceitos utilizados pela plataforma e os detalhes da estrutura da API REST para assinatura digital utilizando certificados avançados gov.br.
 
