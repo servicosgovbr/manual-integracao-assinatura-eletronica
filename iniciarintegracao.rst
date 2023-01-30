@@ -4,17 +4,9 @@
 Solicitação de Acesso 
 +++++++++++++++++++++++++++
 
-A assinatura eletrônica GOV.BR está disponível apenas para os órgãos da administração pública federal, estadual e 
-municipal. Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há necessidade  
-que a aplicação esteja previamente integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_.
-Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do 
-usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar
-digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização 
-OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado e 
-permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+A assinatura eletrônica GOV.BR está disponível apenas para os órgãos da administração pública federal, estadual e municipal. Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há necessidade  que a aplicação esteja previamente integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado e permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
 
-Para receber as credencias de homologação, um representante legal do órgão deverá enviar e-mail para **int-assinatura-govbr@economia.gov.br** 
-com as seguintes informações:
+Para receber as credencias de homologação, um representante legal do órgão deverá enviar e-mail para **int-assinatura-govbr@economia.gov.br**  com as seguintes informações:
 
 1. **URL de retorno da aplicação cliente**
 2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
