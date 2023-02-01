@@ -36,6 +36,8 @@ Criar uma conta gov.br em homologação
 
 .. image:: images/conta1.png
 
+.. image:: images/conta2.png
+
 API de assinatura eletrônica gov.br
 +++++++++++++++++++++++++++++++++++++
 
