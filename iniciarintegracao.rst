@@ -25,11 +25,16 @@ Orientações para testes
 De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso o usuário não possua este nível de identidade, a aplicação cliente deverá emitir mensagem informando ao usuário. Segue um exemplo de mensagem:                             
 "É necessário possuir conta gov.br nível ouro ou prata para utilizar a assinatura eletrônica digital. Clique aqui para aumentar o nível da sua conta." A aplicação cliente deve direcionar o usuário para o serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
-Para realizar testes, no ambiente de homologação, o testador deve criar uma conta seguindo os passos deste `Tutorial conta ID prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial%20conta%20prata.pdf>`_. Obs.: No ambiente de testes é possível criar conta teste para qualquer CPF. 
-
 .. important::
    Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.gov.br
    Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br 
+
+Criar uma conta gov.br em homologação  
++++++++++++++++++++++++++++++++++++++++
+
+1. Acesse https://sso.staging.acesso.gov.br/ e siga passos abaixo:
+
+.. image:: images/conta1.png
 
 API de assinatura eletrônica gov.br
 +++++++++++++++++++++++++++++++++++++
