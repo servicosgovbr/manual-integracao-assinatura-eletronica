@@ -38,6 +38,10 @@ Criar uma conta gov.br em homologação
 
 .. image:: images/conta2.png
 
+.. image:: images/conta3.png
+
+`Tutorial conta prata`_
+
 API de assinatura eletrônica gov.br
 +++++++++++++++++++++++++++++++++++++
 
@@ -398,7 +402,7 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
-.. _`Plano de Integração`: arquivos/Modelo_PlanodeIntegracao_LOGINUNICO_final.doc
+.. _`Tutorial conta prata`: arquivos/Tutorial conta prata2.pdf
 .. _`OpenID Connect`: https://openid.net/specs/openid-connect-core-1_0.html#TokenResponse
 .. _`auth 2.0 Redirection Endpoint`: https://tools.ietf.org/html/rfc6749#section-3.1.2
 .. _`Exemplos de Integração`: exemplointegracao.html
