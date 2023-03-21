@@ -26,7 +26,7 @@ De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da pl
 "É necessário possuir conta gov.br nível ouro ou prata para utilizar a assinatura eletrônica digital. Clique aqui para aumentar o nível da sua conta." A aplicação cliente deve direcionar o usuário para o serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
 .. important::
-   Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no Verificador de Conformidade do ITI https://verificador.iti.gov.br
+   Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
    Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br 
 
 Criar uma conta gov.br em homologação  
