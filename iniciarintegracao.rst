@@ -4,20 +4,16 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-A assinatura eletrônica GOV.BR está disponível apenas para os órgãos da administração pública federal, estadual e municipal. Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há necessidade  que a aplicação esteja previamente integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. Por esse motivo que a liberação de acesso para emissão do certificado e permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
-
-Para receber as credencias de homologação, um representante legal do órgão deverá enviar e-mail para **int-assinatura-govbr@economia.gov.br**  com as seguintes informações:
-
-1. **URL de retorno da aplicação cliente**
-2. **Chave PGP** - A chave PGP é solicitada para envio das credenciais de autenticação de forma segura, isto é, criptografada. Informações sobre como gerar chaves PGP e envio da chave pública, podem ser verificadas no último tópico deste roteiro. A credencial somente será enviada para o e-mail cadastrado na chave.
-3. **Volumetria anual estimada da quantidade de documentos que serão assinados**. O órgão ou entidade consumidora das APIs de assinaturas avançadas deve informar antecipadamente, sempre que tiver informação prévia, acerca de aumento representativo da demanda informada quando da habilitação inicial, sob pena de ter o acesso desabilitado para não prejudicar as demais aplicações habilitadas.
-4. **Sazonalidade de uso da aplicação cliente. Informar o período de aumento da demanda, caso ocorrer**.
-5. **Estimativa da quantidade de usuários únicos da aplicação cliente**.
+Para dúvidas e informações sobre acesso aos serviços da API de assinatura para integração, o Gestor do serviço público deve entrar em contato com equipe do DEPID/SGD (int-assinatura-govbr@economia.gov.br).
 
 .. note::
-
-  A liberação das credenciais de produção ocorrerá somente após o envio do arquivo de teste assinado e a homologação 
-  final validada com os integrantes do Departamento de Identidade Digital - DEPID da Secretaria de Governo Digital.
+	A assinatura digital GOV.BR está disponível **somente** para os órgãos da administração pública federal, estadual e municipal. 
+	Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há **obrigatoriedade**  que essa aplicação esteja previamente 
+	integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
+	é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura 
+	API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. 
+	Por esse motivo que a liberação de acesso para emissão do certificado e permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+   
 
 Orientações para testes  
 ++++++++++++++++++++++++++
@@ -26,8 +22,8 @@ De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da pl
 "É necessário possuir conta gov.br nível ouro ou prata para utilizar a assinatura eletrônica digital. Clique aqui para aumentar o nível da sua conta." A aplicação cliente deve direcionar o usuário para o serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
 .. important::
-   Somente os documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
-   Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** podem ser verificados em: https://verificador.staging.iti.br 
+   Documentos assinados digitalmente em ambiente de **HOMOLOGAÇÃO** são validados em: https://verificador.staging.iti.br 
+   Documentos assinados em ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
 
 Criar uma conta gov.br em homologação  
 +++++++++++++++++++++++++++++++++++++++
@@ -42,10 +38,11 @@ Criar uma conta gov.br em homologação
 
 `Tutorial conta prata`_
 
-API de assinatura eletrônica gov.br
+API de assinatura digital gov.br
 +++++++++++++++++++++++++++++++++++++
 
-A API utiliza API REST para assinatura digital utilizando certificados avançados gov.br. Para acesso a esses serviços a API adota o uso do protocolo OAuth 2.0, que é um padrão aberto de delegação de autorização. Deste modo, o uso da API envolve duas etapas:
+Esta API de assinatura segue os princípios do estilo de arquitetura REST e fornece serviços web baseados em HTTP que implementam a assinatura digital utilizando certificados avançados gov.br. 
+Para acesso a esses serviços a API adota o uso do protocolo OAuth 2.0, que é um padrão aberto de delegação de autorização. Deste modo, o uso da API envolve duas etapas:
 
 1. Geração do token de acesso (Access Token)
 
@@ -72,6 +69,7 @@ A a aplicação cliente deve redirecionar o navegador do usuário para o endere�
 	Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
 
 A URL usada para redirecionar o usuário para o formulário de autorização é a seguinte:
+
 .. code-block:: console
 
 	https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
@@ -84,7 +82,7 @@ Neste endereço, o serviço pede a autorização expressa do usuário para acess
 
 Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retona, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
 
-**Passo 1: Solicitar Access Token**
+**Passo 2: Solicitar Access Token**
 
 Realizar a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as informações abaixo:
 
