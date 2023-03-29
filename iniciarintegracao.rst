@@ -47,53 +47,57 @@ API de assinatura eletrônica gov.br
 
 A partir de agora, será feita uma revisão sobre a arquitetura de serviço, alguns conceitos utilizados pela plataforma e os detalhes da estrutura da API REST para assinatura digital utilizando certificados avançados gov.br.
 
-A API adota o uso do protocolo OAuth 2.0 para autorização de acesso e o protocolo HTTP para acesso aos endpoints. Deste modo, o uso da API envolve duas etapas:
+A API adota o uso do protocolo OAuth 2.0, que é um padrão aberto de delegação de autorização, para autorização de acesso e o protocolo HTTP para acesso aos endpoints. Deste modo, o uso da API envolve duas etapas:
 
-1. Geração do token de acesso OAuth (Access Token)
+1. Geração do token de acesso (Access Token)
 
 2. Acesso ao serviço de assinatura
 
 Geração do access token
 +++++++++++++++++++++++
 
-Para geração do Access Token é necessário redirecionar o navegador do usuário para o endereço de autorização do servidor OAuth, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor OAuth. As seguintes credencias podem ser usadas para testes:
+**Passo 1: Gerar code**
 
-==================  ======================================================================
+Para geração do Access Token é necessário redirecionar o navegador do usuário para o endereço do servidor de autorização da API, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:  :
+
+==================  ==================================================================================================
 **Parâmetro**  	    **Valor**
-------------------  ----------------------------------------------------------------------
-**Servidor OAuth**  https://cas.staging.iti.br/oauth2.0
-**client_id**       devLocal
+------------------  --------------------------------------------------------------------------------------------------
+**Endereço**        https://cas.staging.iti.br/oauth2.0
+**client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **scope**           sign ou signature_session
-**redirect_uri**    http://127.0.0.1:x/xx
-==================  ======================================================================
+**redirect_uri**    URI de retorno cadastrada para a aplicação cliente. Não necessita utilizar o o formato URL Encode.
+==================  ==================================================================================================
 
-As credenciais para o client_id “devLocal” estão configuradas no servidor OAuth para aceitar qualquer aplicação executando localmente (host 127.0.0.1, qualquer porta, qualquer caminho). Aplicações remotas não poderão usar essas credenciais de teste.
+.. important::
+	Deve-se utilizar o parâmetro **scope** com valor **sign** para gerar um token que permite a assinatura de um único hash. Este token gerado só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. 
+	Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
 
-**Parâmetro scope**: Deve-se utilizar o valor **sign** para gerar um token que permite a assinatura de um único hash. Importante destacar que o token gerado, neste caso, só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. 
-Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
-
-A URL usada para redirecionar o usuário para o formulário de autorização, conforme a especificação do OAuth 2.0, é a seguinte:
-
+A URL usada para redirecionar o usuário para o formulário de autorização é a seguinte:
 .. code-block:: console
 
 	https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
 
-Neste endereço, o servidor OAuth faz a autenticação e pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
+Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
 .. Attention::
-  No ambiente de homologação, não será enviado SMS, deve-se utilizar o código **12345**. 
+  No ambiente de homologação, é enviado o SMS, mas também pode ser utilizado o código **12345**. 
   
 
-Após a autorização, o servidor OAuth redireciona o usuário para o endereço <URI de redirecionamento> especificado e passa, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor OAuth, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser usado na fase seguinte do protocolo OAuth, pela aplicação, para pedir um Access Token ao servidor OAuth, com a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as seguintes informações:
+Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retona, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
+
+**Passo 1: Solicitar Access Token**
+
+Realizar a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as informações abaixo:
 
 ==================  ======================================================================
 **Parâmetros**  	**Valor**
 ------------------  ----------------------------------------------------------------------
-**code**            Código de autenticação gerado pelo provedor. Será utilizado para obtenção do Token de Resposta. Possui tempo de expiração e só pode ser utilizado uma única vez.
-**client_id**       devLocal
+**code**            Código de autorização gerado pelo provedor. Será utilizado para obtenção do Token de Resposta. Possui tempo de expiração e só pode ser utilizado uma única vez.
+**client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **grant_type**      authorization_code
-**client_secret**	younIrtyij3
-**redirect_uri**    http://127.0.0.1:x/xx
+**client_secret**	chave secreta conhecida apenas pela aplicação cliente e servidor de autorização.
+**redirect_uri**    URI de retorno cadastrada para a aplicação cliente.
 ==================  ======================================================================
 
 .. code-block:: console
