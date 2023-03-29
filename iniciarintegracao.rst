@@ -4,8 +4,7 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para solicitar integração a API de assinatura, o Gestor do serviço público deve entrar em contato através do e-mail: integracaoid@economia.gov.br.
-Para dúvidas técnicas entrar em contato pelo e-mail: int-assinatura-govbr@economia.gov.br.
+Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura, o Gestor do serviço público deve entrar em contato através do e-mail: integracaoid@economia.gov.br. Caso já tenha formalizado o processo de integração, o contato para dúvidas técnicas é: int-assinatura-govbr@economia.gov.br.
 
 .. note::
 	A assinatura digital GOV.BR está disponível **somente** para os órgãos da administração pública federal, estadual e municipal. 
