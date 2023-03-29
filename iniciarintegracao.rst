@@ -4,7 +4,8 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para dúvidas e informações sobre acesso aos serviços da API de assinatura para integração, o Gestor do serviço público deve entrar em contato com a equipe do DEPID/SGD (int-assinatura-govbr@economia.gov.br).
+Para solicitar integração a API de assinatura, o Gestor do serviço público deve entrar em contato através do e-mail: integracaoid@economia.gov.br.
+Para dúvidas técnicas entrar em contato pelo e-mail: int-assinatura-govbr@economia.gov.br.
 
 .. note::
 	A assinatura digital GOV.BR está disponível **somente** para os órgãos da administração pública federal, estadual e municipal. 
