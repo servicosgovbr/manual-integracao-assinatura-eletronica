@@ -45,20 +45,18 @@ Criar uma conta gov.br em homologação
 API de assinatura eletrônica gov.br
 +++++++++++++++++++++++++++++++++++++
 
-A partir de agora, será feita uma revisão sobre a arquitetura de serviço, alguns conceitos utilizados pela plataforma e os detalhes da estrutura da API REST para assinatura digital utilizando certificados avançados gov.br.
-
-A API adota o uso do protocolo OAuth 2.0, que é um padrão aberto de delegação de autorização, para autorização de acesso e o protocolo HTTP para acesso aos endpoints. Deste modo, o uso da API envolve duas etapas:
+A API utiliza API REST para assinatura digital utilizando certificados avançados gov.br. Para acesso a esses serviços a API adota o uso do protocolo OAuth 2.0, que é um padrão aberto de delegação de autorização. Deste modo, o uso da API envolve duas etapas:
 
 1. Geração do token de acesso (Access Token)
 
-2. Acesso ao serviço de assinatura
+2. Consumo dos serviços de assinatura da API
 
 Geração do access token
 +++++++++++++++++++++++
 
 **Passo 1: Gerar code**
 
-Para geração do Access Token é necessário redirecionar o navegador do usuário para o endereço do servidor de autorização da API, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:  :
+A a aplicação cliente deve redirecionar o navegador do usuário para o endereço do servidor de autorização da API, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:
 
 ==================  ==================================================================================================
 **Parâmetro**  	    **Valor**
