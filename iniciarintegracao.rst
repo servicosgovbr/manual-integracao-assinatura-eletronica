@@ -4,7 +4,7 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para dúvidas e informações sobre acesso aos serviços da API de assinatura para integração, o Gestor do serviço público deve entrar em contato com equipe do DEPID/SGD (int-assinatura-govbr@economia.gov.br).
+Para dúvidas e informações sobre acesso aos serviços da API de assinatura para integração, o Gestor do serviço público deve entrar em contato com a equipe do DEPID/SGD (int-assinatura-govbr@economia.gov.br).
 
 .. note::
 	A assinatura digital GOV.BR está disponível **somente** para os órgãos da administração pública federal, estadual e municipal. 
@@ -53,7 +53,7 @@ Geração do access token
 
 **Passo 1: Gerar code**
 
-A a aplicação cliente deve redirecionar o navegador do usuário para o endereço do servidor de autorização da API, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:
+A aplicação cliente deve redirecionar o navegador do usuário para o endereço do servidor de autorização da API, a fim de obter seu consentimento para o uso de seu certificado para assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:
 
 ==================  ==================================================================================================
 **Parâmetro**  	    **Valor**
