@@ -128,11 +128,12 @@ Exemplo de requisição:
 
 Será retornado o certificado digital em formato PEM na resposta.
 
- .. Attention::
+.. Attention::
 	Para emissão do certificado é realizada, previamente, a validação da situação cadastral do CPF e do nível identidade da conta gov.br do usuário.
 
 **Nível de identidade bronze**
 Se usuário possui nível identidade bronze a API impede a emissão de certificado e retorna código e mensagem abaixo:
+
 Response: **403**
 
 .. code-block:: console
@@ -146,6 +147,7 @@ Se CPF de usuário com as seguintes situações:
 3. Nula - quando constatada a fraude.
 4. Cancelada de Ofício - ato de ofício, no interesse da administração tributária ou determinação judicial.
 A API impede a emissão de certificado e retorna código e mensagem abaixo:
+
 Response: **403**
 
 .. code-block:: console
@@ -183,11 +185,13 @@ Exemplo de requisição:
 		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
+
 .. Attention::
 	Do mesmo modo do serviço para obtenção do certificado, para gerar uma ou mais assinaturas é realizada, previamente, a validação da situação cadastral do CPF e do nível identidade da conta gov.br do usuário.
 
 **Nível de identidade bronze**
 Se usuário possui nível identidade bronze a API impede a assinatura e retorna código e mensagem abaixo:
+
 Response: **403**
 
 .. code-block:: console
@@ -201,6 +205,7 @@ Se CPF de usuário com as seguintes situações:
 3. Nula - quando constatada a fraude.
 4. Cancelada de Ofício - ato de ofício, no interesse da administração tributária ou determinação judicial.
 A API impede a assinatura e retorna código e mensagem abaixo:
+
 Response: **403**
 
 .. code-block:: console
