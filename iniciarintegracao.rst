@@ -7,12 +7,11 @@ Solicitação de acesso
 Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura, o Gestor do serviço público deve entrar em contato através do e-mail: integracaoid@economia.gov.br. Caso já tenha formalizado o processo de integração, o contato para dúvidas técnicas é: int-assinatura-govbr@economia.gov.br.
 
 .. note::
-	A assinatura digital GOV.BR está disponível **somente** para os órgãos da administração pública federal, estadual e municipal. 
-	Para que a aplicação cliente do órgão possa consumir os serviços da API de assinatura, há **obrigatoriedade**  que essa aplicação esteja previamente 
-	integrada a Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
+	Para consumir os serviços da API de assinatura, há **obrigatoriedade**  que a aplicação do órgão esteja previamente 
+	integrada à Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
 	é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura 
 	API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. 
-	Por esse motivo que a liberação de acesso para emissão do certificado e permitir a a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+	Por esse motivo que a liberação de acesso para emissão do certificado e permitir a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
    
 
 Orientações para testes  
@@ -61,14 +60,14 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 **Endereço**        https://cas.staging.iti.br/oauth2.0
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **scope**           sign ou signature_session
-**redirect_uri**    URI de retorno cadastrada para a aplicação cliente. Não necessita utilizar o o formato URL Encode.
+**redirect_uri**    URI de retorno cadastrada para a aplicação cliente. Não necessita utilizar o formato URL Encode.
 ==================  ==================================================================================================
 
 .. important::
 	Deve-se utilizar o parâmetro **scope** com valor **sign** para gerar um token que permite a assinatura de um único hash. Este token gerado só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. 
 	Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
 
-A URL usada para redirecionar o usuário para o formulário de autorização é a seguinte:
+A URL utilizada para redirecionar o usuário para o formulário de autorização é a seguinte:
 
 .. code-block:: console
 
@@ -127,12 +126,31 @@ Exemplo de requisição:
 		Host: assinatura-api.staging.iti.br 
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
-Será retornado o certificado digital em formato PEM na resposta. Se usuário não possuir nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
+Será retornado o certificado digital em formato PEM na resposta.
+
+ .. Attention::
+	Para emissão do certificado é realizada, previamente, a validação da situação cadastral do CPF e do nível identidade da conta gov.br do usuário.
+
+**Nível de identidade bronze**
+Se usuário possui nível identidade bronze a API impede a emissão de certificado e retorna código e mensagem abaixo:
 Response: **403**
 
 .. code-block:: console
 
 		Cidadão não possui a identidade (Prata ou Ouro) necessária para uso da assinatura eletrônica digital.
+
+**CPF situação cancelada, nula, falecido**
+Se CPF de usuário com as seguintes situações:
+1. Titular Falecido - quando há data de óbito vinculada ao CPF;
+2. Cancelada por Multiplicidade - quando há mais de uma inscrição no CPF para a mesma pessoa; nesse caso, elege-se um para permanecer ativo e os demais são vinculados a ele;
+3. Nula - quando constatada a fraude.
+4. Cancelada de Ofício - ato de ofício, no interesse da administração tributária ou determinação judicial.
+A API impede a emissão de certificado e retorna código e mensagem abaixo:
+Response: **403**
+
+.. code-block:: console
+
+		CPF com situação cancelada, nula ou falecido na Receita Federal não permite uso da assinatura eletrônica digital.
 
 
 Realização da assinatura digital de um HASH SHA-256 em PKCS#7
@@ -165,13 +183,29 @@ Exemplo de requisição:
 		{"hashBase64":"kmm8XNQNIzSHTKAC2W0G2fFbxGy24kniLuUAZjZbFb0="}
 
 Será retornado um arquivo contendo o pacote PKCS#7 com a assinatura digital do hash SHA256-RSA e com o certificado público do usuário. O arquivo retornado pode ser validado em https://verificador.staging.iti.br/.
-Do mesmo modo do serviço para obtenção do certificado, caso o usuário não tenha nível de identidade prata ou ouro, o serviço retornará a mensagem abaixo:
+.. Attention::
+	Do mesmo modo do serviço para obtenção do certificado, para gerar uma ou mais assinaturas é realizada, previamente, a validação da situação cadastral do CPF e do nível identidade da conta gov.br do usuário.
+
+**Nível de identidade bronze**
+Se usuário possui nível identidade bronze a API impede a assinatura e retorna código e mensagem abaixo:
 Response: **403**
 
 .. code-block:: console
 
 		Cidadão não possui a identidade (Prata ou Ouro) necessária para uso da assinatura eletrônica digital.
 
+**CPF situação cancelada, nula, falecido**
+Se CPF de usuário com as seguintes situações:
+1. Titular Falecido - quando há data de óbito vinculada ao CPF;
+2. Cancelada por Multiplicidade - quando há mais de uma inscrição no CPF para a mesma pessoa; nesse caso, elege-se um para permanecer ativo e os demais são vinculados a ele;
+3. Nula - quando constatada a fraude.
+4. Cancelada de Ofício - ato de ofício, no interesse da administração tributária ou determinação judicial.
+A API impede a assinatura e retorna código e mensagem abaixo:
+Response: **403**
+
+.. code-block:: console
+
+		CPF com situação cancelada, nula ou falecido na Receita Federal não permite uso da assinatura eletrônica digital.
 
 **Assinatura em Lote**: Para gerar múltiplos pacotes PKCS#7, cada qual correspondente a assinatura digital de um HASH SHA-256 distinto (correspondentes a diferentes documentos), deve-se seguir as orientações do tópico **Geração do Access Token** para solicitação do token que permita esta operação (scope signature_session). Após a obtenção deste token, deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 para cada hash a ser assinado, enviando os mesmo parâmetros informados acima. No código de **Exemplo de aplicação** pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 correspondente a cada hash enviado na requisição ao serviço.
 
