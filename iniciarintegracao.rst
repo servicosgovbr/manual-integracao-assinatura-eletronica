@@ -99,19 +99,19 @@ Realizar a seguinte requisição HTTP com método POST para o endereço https://
 
 	https://cas.staging.iti.br/oauth2.0/token?code=<code>&client_id=<clientId>&grant_type=authorization_code&client_secret=<secret>&redirect_uri=<URI de redirecionamento>
 
-O parâmetro <redirect_uri> deve ter exatamente o mesmo valor passado na requisição “authorize” anterior. Sendo feita corretamente as duas requisições, o servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
+O parâmetro <redirect_uri> deve ter exatamente o mesmo valor informado no passo 1. Sendo feita corretamente as duas requisições, o servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
 
 **Exemplo de código HTTP de sucesso:**
 
 Retorno **200**: sucesso
 
-.. code-block:: json
+.. code-block:: JSON
 
-	{
-    	"access_token": "AT-104-1zJeYZGuEUHkF4ovJGONi0U-jB342xH0",
-    	"token_type": "bearer",
-    	"expires_in": 360
-	}
+		{
+    		"access_token": "AT-104-1zJeYZGuEUHkF4ovJGONi0U-jB342xH0",
+    		"token_type": "bearer",
+    		"expires_in": 360
+		}
 
 **Exemplos de códigos HTTP de erro:**
 
@@ -119,13 +119,13 @@ Retorno **401**: Algum valor do parâmetro informado incorretamente. Exemplo:
 
 .. code-block:: JSON
 
-	{
-   		"timestamp": 1688566398186,
-    	"status": 401,
-    	"error": "Unauthorized",
-    	"message": "No message available",
-    	"path": "/oauth2.0/token"
-	}
+	{ 
+		"timestamp": 1688566398186,
+		"status": 401,
+		"error": "Unauthorized",
+		"message": "No message available",
+		"path": "/oauth2.0/token"
+	} 
 
 Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
 
