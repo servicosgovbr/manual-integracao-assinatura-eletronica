@@ -107,11 +107,11 @@ Retorno **200**: sucesso
 
 .. code-block:: JSON
 
-		{
-    		"access_token": "AT-104-1zJeYZGuEUHkF4ovJGONi0U-jB342xH0",
-    		"token_type": "bearer",
-    		"expires_in": 360
-		}
+	{
+    	"access_token": "AT-104-1zJeYZGuEUHkF4ovJGONi0U-jB342xH0",
+    	"token_type": "bearer",
+    	"expires_in": 360
+	}
 
 **Exemplos de códigos HTTP de erro:**
 
@@ -356,13 +356,19 @@ Recomenda-se fortemente que a **primeira assinatura realizada** em um documento 
 		/V /1.2
 		>>
 
-**Importante**: Não é recomendado o uso do dicionário */Perms* com entrada */DocMDP* por questões de compatibilidade com o Adobe. Ao configurar a primeira assinatura desta forma apenas serão permitidas as seguintes alterações: **Preenchimento de formulários, templates e inclusão de novas assinaturas**.
+.. important::
+	 Não é recomendado o uso do dicionário */Perms* com entrada */DocMDP* por questões de compatibilidade com o Adobe. 
+	 Ao configurar a primeira assinatura desta forma apenas serão permitidas as seguintes alterações: **Preenchimento de formulários, templates e inclusão de novas assinaturas**.
 
 Outros valores de *P* possíveis de serem usados: 
 
 * **P = 1** -> Nenhuma alteração é admitida; 
 * **P = 2** -> Alterações permitidas em formulários, templates e inclusão de novas assinaturas; e
 * **P = 3** -> Além das permissões admitidas para P = 2, admite-se também anotações, deleções e modificações.
+
+.. note::
+	A utilização da logo gov.br é permitida nas assinaturas que adicionam imagem ao PDF. A orientações quanto a aplicação da logo podem ser verificadas 
+	em Manual de uso da marca `Link manual`_
 
 Exemplo de aplicação
 ++++++++++++++++++++
@@ -485,3 +491,4 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 .. _`Login Único`: https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/index.html
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
 .. _`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
+.. _`Link manual`: https://www.gov.br/ds/assets/govbr-ds-dev-core/downloads/GovbrManualMarca.pdf
