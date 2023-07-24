@@ -247,43 +247,6 @@ Response: **403**
 
 **Assinatura em Lote**: Para gerar múltiplos pacotes PKCS#7, cada qual correspondente a assinatura digital de um HASH SHA-256 distinto (correspondentes a diferentes documentos), deve-se seguir as orientações do tópico **Geração do Access Token** para solicitação do token que permita esta operação (scope signature_session). Após a obtenção deste token, deve ser feita uma requisição para o endereço https://assinatura-api.staging.iti.br/externo/v2/assinarPKCS7 para cada hash a ser assinado, enviando os mesmo parâmetros informados acima. No código de **Exemplo de aplicação** pode-se verificar no arquivo assinar.php um exemplo de implementação da chamada ao serviço para uma assinatura em lote. O retorno desta operação será um arquivo contendo o pacote PKCS#7 correspondente a cada hash enviado na requisição ao serviço.
 
-API de verificação de conformidade do Padrão de Assinaturas Digitais
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Os serviços de verificação de Conformidade do Padrão de Assinatura Digital objetivam aferir a conformidade de assinaturas digitais existentes em um arquivo assinado.Se destinam à comunidade e organizações públicas e privadas que desenvolvem aplicativos geradores de assinatura digital para auxiliar na verificação da conformidade de arquivos assinados, resultantes de seus códigos, em conformidade com as especificações. 
- 
-* Requisição POST https://verificador.staging.iti.br/report 
-
-Realiza a verificação de assinaturas digitais em arquivos retornando o relatório de verificação de assinaturas no formato desejado. Body e header da requisição especificados na tabela abaixo:
-
-==================  ======================================================================
-**Cabeçalho**       **Valor**
-------------------  ----------------------------------------------------------------------
-**Content-Type**    multipart/form-data       
-==================  ======================================================================
-
-==============================  ================================================================
-**Request body**                **Valor**
-------------------------------  ----------------------------------------------------------------
-**signature_files[]**           Array de arquivos de assinatura 
-**detached_files[]**            Array de arquivos assinados - Somente para assinatura detached!  
-**verify_incremental_updates**  true ou false. Para atualizações incrementais para arquivos PDF
-==============================  ================================================================
-
-**Observação**: O valor de detached_files[] é respectivamente correspondentes às assinaturas em signature_files[]. Utilize apenas se todas as assinaturas em signature_files[] forem destacadas!
-
-Exemplo de requisição:
-
-.. code-block:: console
-
-		POST 'https://verificador.staging.iti.br/report' \
-		--header 'Content-Type: multipart/form-data' \
-		--form 'report_type="json"' \
-		--form 'signature_files[]=@"/path/to/file/response.p7s"' \
-		--form 'detached_files[]=""'\
-		--form 'verify_incremental_updates="true"'
-
-
 Assinaturas PKCS#7 e PDF
 +++++++++++++++++++++++++
 
