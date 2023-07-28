@@ -60,7 +60,7 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 **Endereço**        https://cas.staging.iti.br/oauth2.0
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **scope**           sign ou signature_session
-**redirect_uri**    URI de retorno cadastrada para a aplicação cliente. Não necessita utilizar o formato URL Encode.
+**redirect_uri**    URL de retorno cadastrada para a aplicação cliente. Não necessita utilizar o formato URL Encode.
 ==================  ==================================================================================================
 
 .. important::
@@ -73,10 +73,13 @@ A URL utilizada para redirecionar o usuário para o formulário de autorização
 
 	https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
 
+.. note::
+	A URL de retorno deve ter o domínio do órgão. Por exemplo: https://www.nomeorgao.gov.br/assinar. Cada órgão e ou serviço que será integrado a API de assinatura deve solicitar credenciais separadas.
+   
 Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
 .. Attention::
-  No ambiente de homologação, é enviado o SMS, mas também pode ser utilizado o código **12345**. 
+  No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. 
   
 
 Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retona, como um parâmetro de query, o atributo Code. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
