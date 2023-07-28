@@ -11,7 +11,7 @@ Para informações sobre processo de formalização da integração e solicitaç
 	integrada à Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
 	é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura 
 	API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. 
-	Por esse motivo que a liberação de acesso para emissão do certificado e permitir a assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
+	Por esse motivo que a liberação de acesso para emissão do certificado e a permissão da assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
    
 
 Orientações para testes  
@@ -162,7 +162,7 @@ Exemplo de requisição:
 		Host: assinatura-api.staging.iti.br 
 		Authorization: Bearer AT-183-eRE7ot2y3FpEOTCIo1gwnZ81LMmT5I8c
 
-Será retornado o certificado digital em formato PEM na resposta.
+Será retornado o certificado digital com formato PEM na resposta.
 
 .. Attention::
 	Para emissão do certificado é realizada, previamente, a validação da situação cadastral do CPF e do nível identidade da conta gov.br do usuário.
