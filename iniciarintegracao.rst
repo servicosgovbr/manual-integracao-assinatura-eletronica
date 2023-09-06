@@ -90,7 +90,7 @@ Após a autorização, o usuário é redirecionado para o endereço <URI de redi
 Realizar a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as informações abaixo:
 
 ==================  ==============================================================================================================================================================
-**Parâmetro**  	**Valor**
+**Parâmetro**  	    **Valor**
 ------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------
 **code**            Código de autorização gerado pelo provedor. Será utilizado para obtenção do Token de Resposta. Possui tempo de expiração e só pode ser utilizado uma única vez.
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
