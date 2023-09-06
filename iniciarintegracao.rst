@@ -71,18 +71,8 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 ==================  ==================================================================================================
 
 .. important::
-	Deve-se utilizar o parâmetro **scope** com valor **sign** para gerar um token que permite a assinatura de um único hash. Este token gerado só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. 
-	Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
+  Deve-se utilizar o parâmetro **scope** com valor **sign** para gerar um token que permite a assinatura de um único hash. Este token gerado só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
 
-A URL utilizada para redirecionar o usuário para o formulário de autorização é a seguinte:
-
-.. code-block:: console
-
-	https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
-
-.. note::
-	A URL de retorno deve pertencer ao domínio do órgão. Por exemplo: https://www.nomeorgao.gov.br/assinar. Cada órgão e ou serviço que será integrado a API de assinatura deve solicitar credenciais separadas.
-   
 Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
 .. Attention::
@@ -91,23 +81,23 @@ Neste endereço, o serviço pede a autorização expressa do usuário para acess
 
 Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retorna, como um parâmetro de query, o atributo **code** e o atributo **state**. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
 
+.. note::
+	A URL de retorno deve pertencer ao domínio do órgão. Por exemplo: https://www.nomeorgao.gov.br/assinar. Cada órgão e ou serviço que será integrado a API de assinatura deve solicitar credenciais separadas.
+
+
 **Passo 2: Solicitar Access Token**
 
 Realizar a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as informações abaixo:
 
-==================  ======================================================================
+==================  ==============================================================================================================================================================
 **Parâmetro**  	**Valor**
-------------------  ----------------------------------------------------------------------
+------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------
 **code**            Código de autorização gerado pelo provedor. Será utilizado para obtenção do Token de Resposta. Possui tempo de expiração e só pode ser utilizado uma única vez.
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **grant_type**      authorization_code
 **client_secret**	chave secreta conhecida apenas pela aplicação cliente e servidor de autorização.
 **redirect_uri**    URI de retorno cadastrada para a aplicação cliente.
-==================  ======================================================================
-
-.. code-block:: console
-
-	https://cas.staging.iti.br/oauth2.0/token?code=<code>&client_id=<clientId>&grant_type=authorization_code&client_secret=<secret>&redirect_uri=<URI de redirecionamento>
+==================  ===============================================================================================================================================================
 
 O parâmetro <redirect_uri> deve ter exatamente o mesmo valor informado no passo 1. Sendo feita corretamente as duas requisições, o servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
 
