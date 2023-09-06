@@ -53,6 +53,7 @@ Geração do access token
 **Passo 1: Gerar code**
 
 **Endereço servidor autorização:** 
+
 .. code-block:: console
 
 	https://cas.staging.iti.br/oauth2.0
