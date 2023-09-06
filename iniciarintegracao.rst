@@ -51,7 +51,7 @@ Geração do access token
 +++++++++++++++++++++++
 
 **Passo 1: Gerar code**
-**Endereço servidor autorização: ** https://cas.staging.iti.br/oauth2.0
+**Endereço servidor autorização:** https://cas.staging.iti.br/oauth2.0
 
 A aplicação cliente deve redirecionar o navegador do usuário para o endereço do servidor de autorização para de obter seu consentimento para o uso de seu certificado para a assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:
 
@@ -84,7 +84,7 @@ Neste endereço, o serviço pede a autorização expressa do usuário para acess
   No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. No ambiente de **Produção** o SMS é enviado por notificação do aplicativo gov.br ou por SMS se usuário não possuir aplicativo gov.br instalado.
   
 
-Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retonar, como um parâmetro de query, o atributo **code**. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
+Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retorna, como um parâmetro de query, o atributo **code** e o atributo **state**. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
 
 **Passo 2: Solicitar Access Token**
 
