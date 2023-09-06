@@ -67,7 +67,7 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 **scope**           sign ou signature_session
 **redirect_uri**    URL de retorno cadastrada para a aplicação cliente. Não necessita utilizar o formato URL Encode.
 **state**           Valor usado para manter o estado entre a solicitação e o retorno de chamada.
-**nonce**           Sequência de caracteres usado para associar uma sessão do serviço consumidor ao token
+**nonce**           Sequência de caracteres usado para associar uma sessão do serviço consumidor ao token.
 ==================  ==================================================================================================
 
 .. important::
@@ -89,15 +89,15 @@ Após a autorização, o usuário é redirecionado para o endereço <URI de redi
 
 Realizar a seguinte requisição HTTP com método POST para o endereço https://cas.staging.iti.br/oauth2.0/token? passando as informações abaixo:
 
-==================  ==============================================================================================================================================================
+==================  ==================================================================================================
 **Parâmetro**  	    **Valor**
-------------------  --------------------------------------------------------------------------------------------------------------------------------------------------------------
-**code**            Código de autorização gerado pelo provedor. Será utilizado para obtenção do Token de Resposta. Possui tempo de expiração e só pode ser utilizado uma única vez.
+------------------  --------------------------------------------------------------------------------------------------
+**code**            Código de autorização gerado pelo servidor.
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **grant_type**      authorization_code
-**client_secret**	chave secreta conhecida apenas pela aplicação cliente e servidor de autorização.
-**redirect_uri**    URI de retorno cadastrada para a aplicação cliente.
-==================  ===============================================================================================================================================================
+**client_secret**   Chave secreta conhecida apenas pela aplicação cliente e servidor de autorização.
+**redirect_uri**    URI de retorno cadastrada para a aplicação cliente. 
+==================  ==================================================================================================
 
 O parâmetro <redirect_uri> deve ter exatamente o mesmo valor informado no passo 1. Sendo feita corretamente as duas requisições, o servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
 
