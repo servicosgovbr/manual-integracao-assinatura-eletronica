@@ -51,7 +51,11 @@ Geração do access token
 +++++++++++++++++++++++
 
 **Passo 1: Gerar code**
-**Endereço servidor autorização:** https://cas.staging.iti.br/oauth2.0
+
+**Endereço servidor autorização:** 
+.. code-block:: console
+
+	https://cas.staging.iti.br/oauth2.0
 
 A aplicação cliente deve redirecionar o navegador do usuário para o endereço do servidor de autorização para de obter seu consentimento para o uso de seu certificado para a assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:
 
