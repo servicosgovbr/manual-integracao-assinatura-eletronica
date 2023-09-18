@@ -56,13 +56,14 @@ Geração do access token
 
 .. code-block:: console
 
-	https://cas.staging.iti.br/oauth2.0
+	https://cas.staging.iti.br/oauth2.0/authorize?
 
 A aplicação cliente deve redirecionar o navegador do usuário para o endereço do servidor de autorização para de obter seu consentimento para o uso de seu certificado para a assinatura. Nesse processo, a aplicação deve usar credenciais previamente autorizadas no servidor. Esta requisição possui os parâmetros abaixo:
 
 ==================  ==================================================================================================
 **Parâmetro**  	    **Valor**
 ------------------  --------------------------------------------------------------------------------------------------
+**response_type**	code
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
 **scope**           sign ou signature_session
 **redirect_uri**    URL de retorno cadastrada para a aplicação cliente. Não necessita utilizar o formato URL Encode.
@@ -72,6 +73,10 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 
 .. important::
   Deve-se utilizar o parâmetro **scope** com valor **sign** para gerar um token que permite a assinatura de um único hash. Este token gerado só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
+
+.. code-block:: console
+
+    https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id
 
 Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
