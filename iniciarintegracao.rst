@@ -4,7 +4,8 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve entrar em contato através do e-mail: integracaoid@economia.gov.br. Caso já tenha formalizado o processo de integração, o contato para dúvidas técnicas é: int-assinatura-govbr@economia.gov.br.
+Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve acessar a página `Solicitação integração`_ Caso já tenha formalizado o processo de integração, o contato para suporte técnico é: int-assinatura-govbr@economia.gov.br.
+
 
 .. note::
 	Para consumir os serviços da API de assinatura, há **obrigatoriedade**  que a aplicação do órgão esteja previamente 
@@ -24,18 +25,12 @@ De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da pl
    Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://verificador.staging.iti.br 
    Documentos assinados no ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
 
-Criar uma conta gov.br em homologação  
+Criar uma conta nível prata gov.br  
 +++++++++++++++++++++++++++++++++++++++
 
-1. Acesse https://sso.staging.acesso.gov.br/ e siga passos abaixo:
+1. Acesse https://sso.staging.acesso.gov.br/ e siga passos do tutorial abaixo:
 
-.. image:: images/conta1.png
-
-.. image:: images/conta2.png
-
-.. image:: images/conta3.png
-
-`Tutorial conta prata`_
+`Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial conta prata.pdf>`_
 
 API de assinatura digital gov.br
 +++++++++++++++++++++++++++++++++++++
@@ -448,7 +443,7 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
-.. _`Tutorial conta prata`: arquivos/Tutorial conta prata2.pdf
+.. _`Solicitação integração`: https://www.gov.br/pt-br/servicos/solicitar-integracao-aos-produtos-de-identidade-digital-gov-br-somente-para-gestores-publicos
 .. _`OpenID Connect`: https://openid.net/specs/openid-connect-core-1_0.html#TokenResponse
 .. _`auth 2.0 Redirection Endpoint`: https://tools.ietf.org/html/rfc6749#section-3.1.2
 .. _`Exemplos de Integração`: exemplointegracao.html
