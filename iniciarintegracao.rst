@@ -4,7 +4,7 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve acessar a página `Solicitação integração`_ Caso já tenha formalizado o processo de integração, o contato para suporte técnico é: int-assinatura-govbr@economia.gov.br.
+Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve acessar a página `solicitação integração`_. Caso já tenha formalizado o processo de integração, o contato para suporte técnico é: int-assinatura-govbr@economia.gov.br.
 
 
 .. note::
@@ -30,7 +30,7 @@ Criar uma conta nível prata gov.br
 
 1. Acesse https://sso.staging.acesso.gov.br/ e siga passos do tutorial abaixo:
 
-`Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial conta prata.pdf>`_
+`Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/tutorial.pdf>`_
 
 API de assinatura digital gov.br
 +++++++++++++++++++++++++++++++++++++
@@ -443,7 +443,7 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
-.. _`Solicitação integração`: https://www.gov.br/pt-br/servicos/solicitar-integracao-aos-produtos-de-identidade-digital-gov-br-somente-para-gestores-publicos
+.. _`solicitação integração`: https://www.gov.br/pt-br/servicos/solicitar-integracao-aos-produtos-de-identidade-digital-gov-br-somente-para-gestores-publicos
 .. _`OpenID Connect`: https://openid.net/specs/openid-connect-core-1_0.html#TokenResponse
 .. _`auth 2.0 Redirection Endpoint`: https://tools.ietf.org/html/rfc6749#section-3.1.2
 .. _`Exemplos de Integração`: exemplointegracao.html
