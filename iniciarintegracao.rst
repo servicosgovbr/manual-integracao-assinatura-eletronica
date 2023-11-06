@@ -443,7 +443,7 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
-.. _`solicitação integração`: https://www.gov.br/pt-br/servicos/solicitar-integracao-aos-produtos-de-identidade-digital-gov-br-somente-para-gestores-publicos
+.. _`solicitação integração`: https://www.gov.br/governodigital/pt-br/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br
 .. _`OpenID Connect`: https://openid.net/specs/openid-connect-core-1_0.html#TokenResponse
 .. _`auth 2.0 Redirection Endpoint`: https://tools.ietf.org/html/rfc6749#section-3.1.2
 .. _`Exemplos de Integração`: exemplointegracao.html
