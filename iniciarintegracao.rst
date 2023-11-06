@@ -30,7 +30,7 @@ Criar uma conta nível prata gov.br
 
 1. Acesse https://sso.staging.acesso.gov.br/ e siga passos do tutorial abaixo:
 
-`Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/tutorial.pdf>`_
+`Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial conta prata.pdf>`_
 
 API de assinatura digital gov.br
 +++++++++++++++++++++++++++++++++++++
