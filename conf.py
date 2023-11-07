@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Roteiro de Integracão API Assinaturas avançadas gov.br'
-copyright = '2021, Lívia'
-author = 'Lívia'
+project = 'Roteiro de Integracão API Assinatura avançada gov.br'
+copyright = '2021, Gov.br'
+author = 'Gov.br'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
