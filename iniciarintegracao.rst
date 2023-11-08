@@ -340,12 +340,12 @@ Logo abaixo, encontra-se um pequeno exemplo PHP para prova de conceito.
 
 `Download Exemplo PHP <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/downloadFiles/exemploApiPhp.zip>`_
 
-Este exemplo é composto por 3 arquivos:
+Este exemplo é composto por 4 arquivos:
 
 1. index.php -  Formulário para upload de um arquivo
 2. upload.php - Script para recepção de arquivo e cálculo de seu hash SHA256. O Resultado do SHA256 é armazenado na sessão do usuário.
 3. assinar.php - Implementação do handshake OAuth, assim como a utilização dos dois endpoints acima. Como resultado, uma página conforme a figura abaixo será apresentada, mostrando o certificado emitido para o usuário autenticado e a assinatura.
-
+3. config.php - Arquivo de configuração para executar o exemplo. Os valores $clientid e $secret precisam ser substituídos pelas credenciais de homologação cadastradas para a aplicação cliente.
 
 .. image:: images/image.png
 
