@@ -4,7 +4,7 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve acessar a página `Serviço de Integração aos Produtos de Identidade Digital GOV.BR `_. Caso já tenha formalizado o processo de integração, o contato para suporte técnico é: int-assinatura-govbr@economia.gov.br.
+Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve acessar a página https://www.gov.br/governodigital/integrarprodutoid Caso já tenha formalizado o processo de integração, o contato para suporte técnico é: int-assinatura-govbr@economia.gov.br.
 
 
 .. note::
@@ -345,7 +345,7 @@ Este exemplo é composto por 4 arquivos:
 * **index.php** Formulário para upload de um arquivo
 * **upload.php** Script para recepção de arquivo e cálculo de seu hash SHA256. O Resultado do SHA256 é armazenado na sessão do usuário.
 * **assinar.php** Implementação do handshake OAuth, assim como a utilização dos dois endpoints acima. Como resultado, uma página conforme a figura abaixo será apresentada, mostrando o certificado emitido para o usuário autenticado e a assinatura.
-* **config.php** Arquivo de configuração para executar o exemplo. Os valores $clientid e $secret precisam ser substituídos pelas credenciais de homologação cadastradas para a aplicação cliente.
+* **config.php** Arquivo de configuração para executar o exemplo. Os valores **$clientid** e **$secret** precisam ser substituídos pelas credenciais de homologação cadastradas para a aplicação cliente.
 
 .. image:: images/image.png
 
@@ -443,7 +443,6 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 
 .. |site externo| image:: images/site-ext.gif
 .. _`codificador para Base64`: https://www.base64decode.org/
-.. _`Serviço de Integração aos Produtos de Identidade Digital GOV.BR`: https://www.gov.br/governodigital/pt-br/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br
 .. _`OpenID Connect`: https://openid.net/specs/openid-connect-core-1_0.html#TokenResponse
 .. _`auth 2.0 Redirection Endpoint`: https://tools.ietf.org/html/rfc6749#section-3.1.2
 .. _`Exemplos de Integração`: exemplointegracao.html
