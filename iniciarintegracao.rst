@@ -4,8 +4,8 @@
 Solicitação de acesso 
 +++++++++++++++++++++++++++
 
-Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção), o Gestor do serviço público deve acessar a página https://www.gov.br/governodigital/integrarprodutoid Caso já tenha formalizado o processo de integração, o contato para suporte técnico é: int-assinatura-govbr@economia.gov.br.
-
+Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção) o Gestor do serviço público deve acessar a página https://www.gov.br/governodigital/integrarprodutoid.
+Contato para suporte técnico: int-assinatura-govbr@economia.gov.br
 
 .. note::
 	Para consumir os serviços da API de assinatura, há **obrigatoriedade**  que a aplicação do órgão esteja previamente 
