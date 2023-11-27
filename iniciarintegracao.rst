@@ -19,6 +19,7 @@ Orientações para testes
 ++++++++++++++++++++++++++
 
 De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. 
+
 .. important::
    Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://verificador.staging.iti.br 
    Documentos assinados no ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
