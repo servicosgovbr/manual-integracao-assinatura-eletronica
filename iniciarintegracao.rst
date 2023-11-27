@@ -18,9 +18,7 @@ Contato para suporte técnico: int-assinatura-govbr@economia.gov.br
 Orientações para testes  
 ++++++++++++++++++++++++++
 
-De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. Caso o usuário não possua este nível de identidade, a aplicação cliente deverá emitir mensagem informando ao usuário. Segue um exemplo de mensagem:                             
-"É necessário possuir conta gov.br nível ouro ou prata para utilizar a assinatura eletrônica digital. Clique aqui para aumentar o nível da sua conta." A aplicação cliente deve direcionar o usuário para o serviço de Catálogo de Confiabilidades. Os parâmetros para requisição deste serviço estão descritos no roteiro de integração do Login Único no link https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
-
+De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. 
 .. important::
    Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://verificador.staging.iti.br 
    Documentos assinados no ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
@@ -31,6 +29,19 @@ Criar uma conta nível prata gov.br
 1. Acesse https://sso.staging.acesso.gov.br/ e siga passos do tutorial abaixo:
 
 `Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial.pdf>`_
+
+Orientações para homologação do sistema integrado  
+++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando login para iniciar sua jornada na utilização do sistema. 
+
+2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão.   
+
+3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário conta nível bronze, apresentar mensagem orientando o usuário adquirir conta nível necessário para realizar assinatura. 
+
+4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. 
+
+As URL’s devem estar visíveis em toda jornada apresentada. Pode-se utilizar o serviço de compartilhamento de sua preferência para enviar o link de acesso ao video e arquivo assinado no ambiente de homologação para o e-mail: int-assinatura-govbr@economia.gov.br 
 
 API de assinatura digital gov.br
 +++++++++++++++++++++++++++++++++++++
