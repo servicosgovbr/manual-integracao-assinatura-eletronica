@@ -5,6 +5,7 @@ Solicitação de acesso
 +++++++++++++++++++++++++++
 
 Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção) o Gestor do serviço público deve acessar a página https://www.gov.br/governodigital/integrarprodutoid.
+
 Contato para suporte técnico: int-assinatura-govbr@economia.gov.br
 
 .. note::
@@ -33,6 +34,8 @@ Criar uma conta nível prata gov.br
 
 Orientações para homologação do sistema integrado  
 ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+A homologação poderá ser realizada através de um vídeo demonstrando os 4 fluxos abaixo:
  
 1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando login para iniciar sua jornada na utilização do sistema. 
 
