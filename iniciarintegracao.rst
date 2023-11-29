@@ -37,7 +37,7 @@ Orientações para homologação do sistema integrado
 
 A homologação poderá ser realizada através de um vídeo demonstrando os 4 fluxos abaixo:
  
-1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando login para iniciar sua jornada na utilização do sistema. 
+1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticção no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
 
 2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão.   
 
