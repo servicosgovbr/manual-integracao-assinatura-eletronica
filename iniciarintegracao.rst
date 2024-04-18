@@ -57,6 +57,14 @@ Para acesso a esses serviços a API adota o uso do protocolo OAuth 2.0, que é u
 
 2. Consumo dos serviços de assinatura da API
 
+Diagrama de sequência aplicação cliente e API
+++++++++++++++++++++++++++++++++++++++++++++++
+
+O diagrama abaixo apresenta o fluxo de interação entre a aplicação cliente e os serviços de autenticação do Login único e os serviços da API de assinatura.
+
+.. image:: images/diagrama_sequencia.png
+
+
 Geração do access token
 +++++++++++++++++++++++
 
