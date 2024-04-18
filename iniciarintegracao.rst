@@ -151,7 +151,7 @@ Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
 
-Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP GET para endereço https://assinatura-api.staging.iti.br/externo/v2/certificadoPublico enviando o cabeçalho Authorization com o tipo de autorização Bearer e o access token obtido anteriormente. Segue abaixo o parâmetro do Header para requisição:
+Para obtenção do certificado do usuário deve-se fazer uma requisição HTTP GET para endereço https://assinatura-api.staging.iti.br/externo/v2/certificadoPublico enviando o cabeçalho Authorization com o tipo de autorização Bearer e o access token obtido anteriormente. Segue abaixo o parâmetros para requisição:
 
 ==================  ======================================================================
 **Parâmetro**  		**Valor**
