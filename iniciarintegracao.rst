@@ -352,6 +352,8 @@ A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio 
 
 3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link:  https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-11
 
+4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. 
+
 Exemplo de aplicação
 ++++++++++++++++++++
 
