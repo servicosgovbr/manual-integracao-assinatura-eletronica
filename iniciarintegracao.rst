@@ -344,7 +344,7 @@ Outros valores de *P* possíveis de serem usados:
 Orientações para homologação do sistema integrado  
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio de vídeo demonstrando os 4 fluxos abaixo:
+A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio de vídeo da aplicação demonstrando os 4 fluxos abaixo:
  
 1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticação no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
 
