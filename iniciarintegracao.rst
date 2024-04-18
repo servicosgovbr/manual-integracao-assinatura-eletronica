@@ -344,15 +344,13 @@ Outros valores de *P* possíveis de serem usados:
 Orientações para homologação do sistema integrado  
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-A homologação poderá ser realizada por reunião ou por envio de um vídeo que demonstre os 4 fluxos abaixo:
+A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio de vídeo demonstrando os 4 fluxos abaixo:
  
 1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticação no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
 
 2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão.   
 
-3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link:  https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
-
-4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. 
+3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link:  https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-11
 
 Exemplo de aplicação
 ++++++++++++++++++++
@@ -471,7 +469,7 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 .. _`Resultado Esperado do Acesso ao Serviço de Confiabilidade Cadastral (Selos)`: iniciarintegracao.html#resultado-esperado-do-acesso-ao-servico-de-confiabilidade-cadastral-selos
 .. _`Resultado Esperado do Acesso ao Serviço de Confiabilidade Cadastral (Categorias)` : iniciarintegracao.html#resultado-esperado-do-acesso-ao-servico-de-confiabilidade-cadastral-categorias
 .. _`Documento verificar Código de Compensação dos Bancos` : arquivos/TabelaBacen.pdf
-.. _`Login Único`: https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/index.html
+.. _`Login Único`: https://acesso.gov.br/roteiro-tecnico/index.html
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
 .. _`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
 .. _`Link manual`: https://www.gov.br/secom/pt-br/central-de-conteudo/manuais
