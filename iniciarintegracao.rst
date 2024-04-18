@@ -32,21 +32,6 @@ Criar uma conta nível prata gov.br
 
 `Tutorial conta prata <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Tutorial.pdf>`_
 
-Orientações para homologação do sistema integrado  
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-A homologação poderá ser realizada através de um vídeo demonstrando os 4 fluxos abaixo:
- 
-1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticação no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
-
-2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão.   
-
-3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link:  https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
-
-4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. 
-
-As URL’s devem estar visíveis em toda jornada apresentada. Pode-se utilizar o serviço de compartilhamento de sua preferência para enviar o link de acesso ao video e arquivo assinado no ambiente de homologação para o e-mail: int-assinatura-govbr@economia.gov.br 
-
 API de assinatura digital gov.br
 +++++++++++++++++++++++++++++++++++++
 
@@ -355,6 +340,19 @@ Outros valores de *P* possíveis de serem usados:
 .. note::
 	A utilização da logo gov.br é permitida nas assinaturas que adicionam imagem ao PDF. A orientações quanto a aplicação da logo podem ser verificadas 
 	em Manual de uso da marca `Link manual`_
+
+Orientações para homologação do sistema integrado  
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+A homologação poderá ser realizada por reunião ou por envio de um vídeo que demonstre os 4 fluxos abaixo:
+ 
+1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticação no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
+
+2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão.   
+
+3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link:  https://manual-roteiro-integracao-login-unico.servicos.gov.br/pt/stable/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
+
+4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. 
 
 Exemplo de aplicação
 ++++++++++++++++++++
