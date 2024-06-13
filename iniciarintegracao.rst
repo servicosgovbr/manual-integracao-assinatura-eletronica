@@ -143,7 +143,7 @@ Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
 
 
 .. note::
-  O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
+  O servidor OAuths de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
 
 
 **Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias** assinaturas eletrônicas avançadas durante o prazo de validade do token.
