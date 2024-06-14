@@ -47,7 +47,7 @@ Diagrama de sequência aplicação cliente e API
 
 O diagrama abaixo apresenta o fluxo de interação entre a aplicação cliente e os serviços de autenticação do Login único e os serviços da API de assinatura.
 
-.. image:: images/diagrama_sequencia.png
+.. image:: images/diagrama_sequencia2.png
 
 
 Geração do access token
