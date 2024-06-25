@@ -474,4 +474,4 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 .. _`Login Único`: https://acesso.gov.br/roteiro-tecnico/index.html
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
 .. _`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
-.. _`Link manual`: https://www.gov.br/secom/pt-br/central-de-conteudo/manuais
+.. _`Link manual`: https://www.gov.br/ds/downloads/manuais-orientadores
