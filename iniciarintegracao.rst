@@ -276,7 +276,7 @@ A assinatura envelopada, por sua vez, inclui dentro do próprio arquivo PDF o pa
 4. Submeter o hash SHA256 à operação **assinarPKCS7** desta API.
 5. O resultado da operação **assinarPKCS7** deve ser codificado em hexadecimal e embutido no espaço que foi previamente alocado no documento no passo 1.
 
-O detalhamento de como preparar o documento, calcular os *bytes-ranges* utilizados no computo do hash e como embutir o arquivo PKCS7 no arquivo previamente preparado podem ser encontrados na especificação ISO 32000-1:2008. Existem bibliotecas que automatizam esse procedimento de acordo com o padrão (ex: PDFBox para Java e iText para C#).
+O detalhamento de como preparar o documento, calcular os *bytes-ranges* utilizados no computo do hash e como embutir o arquivo PKCS7 no arquivo PDF previamente preparado podem ser encontrados na especificação ISO 32000-1:2008 (`Link`_). Existem bibliotecas que automatizam esse procedimento de acordo com o padrão (ex: PDFBox para Java e iText para C# e Java `Exemplos iText`_).
 
 Recomendações para assinaturas digitais em PDF
 ++++++++++++++++++++++++++++++++++++++++++++++
@@ -475,3 +475,5 @@ O próximo passo é o envio do arquivo com a chave pública para a pessoa e ent�
 .. _`Lei n° 14.063`: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/L14063.htm
 .. _`SEDGGME Nº 2.154/2021`: https://www.in.gov.br/web/dou/-/portaria-sedggme-n-2.154-de-23-de-fevereiro-de-2021-304916270
 .. _`Link manual`: https://www.gov.br/ds/downloads/manuais-orientadores
+.. _`Link`: https://opensource.adobe.com/dc-acrobat-sdk-docs/standards/pdfstandards/pdf/PDF32000_2008.pdf
+.. _`Exemplos iText`: https://kb.itextpdf.com/itext/examples
