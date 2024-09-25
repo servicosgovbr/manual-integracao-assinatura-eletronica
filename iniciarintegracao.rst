@@ -8,6 +8,13 @@ Para informações sobre processo de formalização da integração e solicitaç
 
 Contato para suporte técnico: int-assinatura-govbr@economia.gov.br
 
+Prazo para liberação das credenciais  
+++++++++++++++++++++++++++++++++++++
+
+Após recebimento e análise da solicitação, caso não exista ajuste negocial ou técnico a ser realizado, os prazos estimados para envio das credenciais da API de Assinatura Eletrônica Avançada serão os informados abaixo: 
+* Ambiente de Homologação: 3 dias úteis
+* Ambiente de Produção: 5 dias úteis
+
 .. note::
 	Para consumir os serviços da API de assinatura, há **obrigatoriedade**  que a aplicação do órgão esteja previamente 
 	integrada à Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
