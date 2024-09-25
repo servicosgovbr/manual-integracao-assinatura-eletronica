@@ -27,7 +27,7 @@ As demais informações constantes no arquivo são de preenchimento interno.
 
 **Regras para o envio:**
 
-* O arquivo deverá ser enviado mensalmente, até o dia 05 de cada mês; 
+* O arquivo deverá ser enviado mensalmente até o dia 05 de cada mês com as integrações do mês anterior; 
 
 * Após o envio do primeiro arquivo, os posteriores deverão conter apenas informações incrementais, ou seja, novas integrações ou novas adesões; 
 
