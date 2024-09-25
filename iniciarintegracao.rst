@@ -19,7 +19,7 @@ Após recebimento e análise da solicitação, caso não exista ajuste negocial 
 Integrações de sistemas que atendam a diversos órgãos  
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para integrações de sistemas que atenderão a diversos órgãos, será necessário o envio pelo órgão gestor do sistema, do arquivo em excel, Plug-in_Estados_e_Municipios <linkar o template no nome do arquivo> preenchido com as seguintes informações: 
+Para integrações de sistemas que atenderão a diversos órgãos, será necessário o envio pelo órgão gestor do sistema, do arquivo em excel, Plug-in_Estados_e_Municipios `Template Planilha Plug-in_Estados_e_Municipios <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Template_Plug-in_Estados_e_Municipios_Atual(Plug-in Estados e Municípios).csv>`_ preenchido com as seguintes informações: 
 
 CNPJ, Origem, Orgao, Nome_do_Municipio, Servico_Produto, Objetivo_da_Integracao, Esfera, Poder, Estado, Codigo_Municipio, Data_de_inicio_Projeto, Data_de_Finalizar_Entrega, Volumetria_Anual. 
 
@@ -31,14 +31,13 @@ As demais informações constantes no arquivo são de preenchimento interno.
 
 * Após o envio do primeiro arquivo, os posteriores deverão conter apenas informações incrementais, ou seja, novas integrações ou novas adesões; 
 
-* O arquivo deverá ser enviado em formato xlsx ou csv; 
-
-* O arquivo deverá ser enviado para o e-mail **integracaoid@economia.gov.br**; 
+* O arquivo deverá ser enviado em formato xlsx ou csv para o e-mail **integracaoid@economia.gov.br**;   
 
 * Caso não ocorra novas integrações essa situação deverá ser informada pelo e-mail acima, na frequência já estabelecida; 
 
 * O assunto do e-mail deverá ser: Relatório Plug-in <Nome do órgão>. Para fins de controle, solicitamos que mantenham o envio mensal no mesmo histórico de e-mail. 
 
+Para dirimir dúvidas sobre este procedimento, utilize o canal de comunicação via e-mail **integracaoid@economia.gov.br**. 
 
 
 .. note::
