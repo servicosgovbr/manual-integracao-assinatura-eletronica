@@ -16,6 +16,31 @@ Após recebimento e análise da solicitação, caso não exista ajuste negocial 
 * Ambiente de Homologação: 3 dias úteis
 * Ambiente de Produção: 5 dias úteis
 
+Integrações de sistemas que atendam a diversos órgãos  
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Para integrações de sistemas que atenderão a diversos órgãos, será necessário o envio pelo órgão gestor do sistema, do arquivo em excel, Plug-in_Estados_e_Municipios <linkar o template no nome do arquivo> preenchido com as seguintes informações: 
+
+CNPJ, Origem, Orgao, Nome_do_Municipio, Servico_Produto, Objetivo_da_Integracao, Esfera, Poder, Estado, Codigo_Municipio, Data_de_inicio_Projeto, Data_de_Finalizar_Entrega, Volumetria_Anual. 
+
+As demais informações constantes no arquivo são de preenchimento interno. 
+
+**Regras para o envio:**
+
+* O arquivo deverá ser enviado mensalmente, até o dia 05 de cada mês; 
+
+* Após o envio do primeiro arquivo, os posteriores deverão conter apenas informações incrementais, ou seja, novas integrações ou novas adesões; 
+
+* O arquivo deverá ser enviado em formato xlsx ou csv; 
+
+* O arquivo deverá ser enviado para o e-mail **integracaoid@economia.gov.br**; 
+
+* Caso não ocorra novas integrações essa situação deverá ser informada pelo e-mail acima, na frequência já estabelecida; 
+
+* O assunto do e-mail deverá ser: Relatório Plug-in <Nome do órgão>. Para fins de controle, solicitamos que mantenham o envio mensal no mesmo histórico de e-mail. 
+
+
+
 .. note::
 	Para consumir os serviços da API de assinatura, há **obrigatoriedade**  que a aplicação do órgão esteja previamente 
 	integrada à Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
