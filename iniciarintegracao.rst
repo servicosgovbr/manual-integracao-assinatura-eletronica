@@ -386,7 +386,7 @@ Orientações para homologação do sistema integrado
 
 4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. O usuário deve ser redirecionado para a tela inicial do sistema. O logout da aplicação cliente é implementação obrigatória da integração com Login único. Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out.
 
-4. **Demonstrar orientação ao usuário para assinaturas destacadas:** Aplicações clientes que optarem pela utilização da assinatura destacada, assinatura com 2 arquivos .p7s e arquivo assinado, deve apresentar no video como usuário é orientado para fazer o download dos 2 arquivos para validação.
+5. **Demonstrar orientação ao usuário para assinaturas destacadas:** Aplicações clientes que optarem pela utilização da assinatura destacada, assinatura com 2 arquivos .p7s e arquivo assinado, deve apresentar no video como usuário é orientado para fazer o download dos 2 arquivos para validação.
 
 Exemplo de aplicação
 ++++++++++++++++++++
