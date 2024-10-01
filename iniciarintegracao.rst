@@ -178,7 +178,7 @@ Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
   O servidor OAuths de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
 
 
-**Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias** assinaturas eletrônicas avançadas durante o prazo de validade do token.
+**Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias**(até 100 arquivos) assinaturas eletrônicas avançadas durante o prazo de validade do token.
 
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
@@ -384,7 +384,7 @@ A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio 
 
 3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link: https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
-4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. 
+4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. O usuário deve ser redirecionado para a tela inicial do sistema. O logout da aplicação cliente é implementação obrigatória da integração com Login único. Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out.
 
 Exemplo de aplicação
 ++++++++++++++++++++
