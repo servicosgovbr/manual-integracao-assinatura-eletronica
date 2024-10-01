@@ -178,7 +178,7 @@ Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
   O servidor OAuths de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
 
 
-**Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias**(até 100 arquivos) assinaturas eletrônicas avançadas durante o prazo de validade do token.
+**Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias** (até 100 arquivos) assinaturas eletrônicas avançadas durante o prazo de validade do token.
 
 Obtenção do certificado do usuário
 ++++++++++++++++++++++++++++++++++
@@ -376,15 +376,17 @@ Outros valores de *P* possíveis de serem usados:
 Orientações para homologação do sistema integrado  
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio de vídeo da aplicação demonstrando os 4 fluxos abaixo:
+(Atualizado em: 01/10/2024)A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio de vídeo da aplicação demonstrando os 4 fluxos abaixo:
  
 1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticação no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
 
-2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão.   
+2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão. O video deve apresentar, quando couber, como usuário realiza a assinatura e como usuário faz a visualização/download do arquivo assinado para a validação.  
 
 3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link: https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
 
 4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. O usuário deve ser redirecionado para a tela inicial do sistema. O logout da aplicação cliente é implementação obrigatória da integração com Login único. Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out.
+
+4. **Demonstrar orientação ao usuário para assinaturas destacadas:** Aplicações clientes que optarem pela utilização da assinatura destacada, assinatura com 2 arquivos .p7s e arquivo assinado, deve apresentar no video como usuário é orientado para fazer o download dos 2 arquivos para validação.
 
 Exemplo de aplicação
 ++++++++++++++++++++
