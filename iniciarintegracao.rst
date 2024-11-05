@@ -137,6 +137,7 @@ Realizar a seguinte requisição HTTP com método POST para o endereço https://
 **grant_type**      authorization_code
 **client_secret**   Chave secreta conhecida apenas pela aplicação cliente e servidor de autorização.
 **redirect_uri**    URI de retorno cadastrada para a aplicação cliente. 
+**Content-Type**	application/json
 ==================  ==================================================================================================
 
 O parâmetro <redirect_uri> deve ter exatamente o mesmo valor informado no passo 1. Sendo feita corretamente as duas requisições, o servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
@@ -148,9 +149,17 @@ Retorno **200**: sucesso
 .. code-block:: JSON
 
 	{
-    	"access_token": "AT-104-1zJeYZGuEUHkF4ovJGONi0U-jB342xH0",
+    	"access_token": "eyJhbGciOiJIUzI1NiJ9.
+			ZXlKNmFYQWlPaUpFUlVZaUxDSmxibU1pT2lKQk1USTRRMEpETFVoVE1qVTJJaXdpWVd4bklqb2laR2x5SW4wLi5HRWxyUDlFTWJUZTgtc
+			2g1ZU5LWWNRLjBUU2o5dnpfZGdyLTMxTEdhamxHbGFza1NzQTU0RFhOVlREWUZFUVF6TWdoeTNsSFc3U0NsSlFqUDJER3BPdHM0M1N1W
+			GhwdFBDQmlUN3ZfMmNScWR5cjFhRm5CUk9PRU9aN2hrVHUyTTBrTlprWld0UzEyVUljMllZVnNlMjB1eUhnWTF2Y0pkS3JZWi1Lc
+			Wt0d1JuU01KbENhdjZfZV9qaEtKbkUycW10X3Z2Rm5WSldiVWgzaXQ4LXpydEtQVkktdndWVTRfUUhaaGpWb0dUVWF5c2xVRWtVeVBw
+			X3RNUjdySV9pcC1NVHp0SnJ0QS1rajB0WUZRWjlBTE1VSGxCaGJZVTBja0FEMWxTREtoVDhER0FyOWxOSVZCQmUxUlU0ZW81OUxkV
+			lZCX1VHTVNKMzE3U2FjdmFoeE91cEo5VjFxRU96SlJnQzJ3eEY0blI2Nml1U3ZWeVVLcTFuNUhHZ0dxUFNNZnhwdjBHUmFPNjhDSTVfdW
+			lldXdYcncwejRtTndpM19MWFFnNnZ3WGhOTmRCdVluNkh1c0E2eUgtNmV0ZXF0QTY4NkkuVWU3eHNQcWxUZWFtSDJkQUxLVTJKdw.DwbD
+			PSdZsRYvyfH-sKx7lanle219DQvt65kRzqsGxyZ",
     	"token_type": "bearer",
-    	"expires_in": 360
+    	"expires_in": 600
 	}
 
 **Exemplos de códigos HTTP de erro:**
