@@ -137,7 +137,7 @@ Realizar a seguinte requisição HTTP com método POST para o endereço https://
 **grant_type**      authorization_code
 **client_secret**   Chave secreta conhecida apenas pela aplicação cliente e servidor de autorização.
 **redirect_uri**    URI de retorno cadastrada para a aplicação cliente. 
-**Content-Type**	application/json
+**Content-Type**	application/x-www-form-urlencoded
 ==================  ==================================================================================================
 
 O parâmetro <redirect_uri> deve ter exatamente o mesmo valor informado no passo 1. Sendo feita corretamente as duas requisições, o servidor OAuth retornará um objeto JSON contendo o Access Token, que deve ser usado nas requisições subsequentes aos endpoints do serviço.
@@ -330,7 +330,7 @@ A possibilidade de alteração visual em documentos previamente assinados pode c
 
 Recomenda-se fortemente que a **primeira assinatura realizada** em um documento PDF seja configurada da seguinte forma:
 
-1. Incluir entrada *Reference*, com uma referência indireta a um Dicionário *“Signature Reference”*. Exemplo:
+1. Incluir entrada *Reference*, com uma referência indireta a um Dicionário *“Signature Reference”*. Suprimir a entrada */M* (Time of Signing - ISO32000/2008 - 12.8.1 - Tabela 252) no dicionário de assinatura (Signature Dictionary). Exemplo:
 
 .. code-block:: console
 
@@ -339,7 +339,7 @@ Recomenda-se fortemente que a **primeira assinatura realizada** em um documento 
 		/Type /Sig
 		/Filter /Adobe.PPKLite
 		/SubFilter /adbe.pkcs7.detached
-		/M (D:20220705145549-03'00')
+		/M 
 		/Reference [168 0 R]
 		/Contents <24730....>
 		/ByteRange [0 36705 55651 8985] 
