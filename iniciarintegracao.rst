@@ -397,6 +397,9 @@ A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio 
 
 5. **Demonstrar orientação ao usuário para assinaturas destacadas:** Aplicações clientes que optarem pela utilização da assinatura destacada, assinatura com 2 arquivos .p7s e arquivo assinado, deve apresentar no video como usuário é orientado para fazer o download dos 2 arquivos para validação.
 
+.. Attention::
+	O video deverá mostrar no navegador a url da aplicação em todas as etapas da demonstração da jornada.
+
 Exemplo de aplicação
 ++++++++++++++++++++
 
