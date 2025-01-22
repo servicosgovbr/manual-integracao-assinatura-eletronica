@@ -14,7 +14,7 @@ Prazo para liberação das credenciais
 Após recebimento e análise da solicitação, caso não exista ajuste negocial ou técnico a ser realizado, os prazos estimados para envio das credenciais da API de Assinatura Eletrônica Avançada serão os informados abaixo: 
 
 * Ambiente de Homologação: 3 dias úteis
-* Ambiente de Produção: 5 dias úteis
+* Ambiente de Produção: 6 dias úteis
 
 Integrações de sistemas que atendam a diversos órgãos  
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
