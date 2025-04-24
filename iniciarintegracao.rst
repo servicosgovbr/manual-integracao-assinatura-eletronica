@@ -19,7 +19,7 @@ Após recebimento e análise da solicitação, caso não exista ajuste negocial 
 Integrações de sistemas que atendam a diversos órgãos  
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Para integrações de sistemas que atenderão a diversos órgãos, será necessário o envio pelo órgão gestor do sistema, do arquivo em excel, Plug-in_Estados_e_Municipios `Template Planilha Plug-in_Estados_e_Municipios <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Template_Plug-in_Estados_e_Municipios_Atual.csv>`_ preenchido com as seguintes informações: 
+Para integrações de sistemas que atenderão a diversos órgãos, será necessário o envio pelo órgão gestor do sistema, do arquivo em excel, Plug-in_Estados_e_Municipios `Template Planilha Plug-in_Estados_e_Municipios <https://github.com/servicosgovbr/manual-integracao-assinatura-eletronica/raw/main/arquivos/Template_Plug-in_Estados_e_Municipios_Atual.xlsx>`_ preenchido com as seguintes informações: 
 
 CNPJ, Origem, Orgao, Nome_do_Municipio, Servico_Produto, Objetivo_da_Integracao, Esfera, Poder, Estado, Codigo_Municipio, Data_de_inicio_Projeto, Data_de_Finalizar_Entrega, Volumetria_Anual. 
 
