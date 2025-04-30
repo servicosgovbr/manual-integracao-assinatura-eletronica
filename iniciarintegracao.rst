@@ -406,6 +406,7 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 - É **obrigatório**, independente do usuário ter acesso ou não ao sistema, apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
 	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
 	- Exemplo: 
+
 	.. code-block:: console
 		
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
@@ -468,6 +469,7 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 - É **obrigatório** apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
 	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
 	- Exemplo: 
+
 	.. code-block:: console
 		
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
@@ -536,7 +538,7 @@ e acessar o endereço http://127.0.0.1:8080
 Chave PGP: Envio das credenciais 
 ++++++++++++++++++++++++++++++++
 
-Nas respectivas etapas de validação das informações pelo órgão responsável para geração e entrega das **credencias**, sejam credenciais de homologação ou produção, estas serão **enviadas para o email associado à chave PGP**. Por isso é importante garantir que o email associado seja um email válido, caso contrário não será possível o envio das credenciais. 
+Nas respectivas etapas de validação das informações pelo órgão responsável para geração e entrega das **credencias**, sejam credenciais de homologação ou produção, estas serão **enviadas para o email associado à chave PGP**. Por isso é importante garantir que o email associado seja um **email válido**, caso contrário não será possível o envio das credenciais. 
 
 .. Attention::
 	Caso seja constatado email inválido no envio das credenciais, será necessário anexar nova chave PGP ao processo com um novo email associado, para o reenvio das mesmas. 
