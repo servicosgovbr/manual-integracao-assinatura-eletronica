@@ -116,7 +116,7 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
 .. Attention::
-  No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. No ambiente de **Produção** o SMS é enviado por notificação do aplicativo gov.br ou por SMS se usuário não possuir aplicativo gov.br instalado.
+  No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. No ambiente de **Produção** o código de autenticação é enviado por notificação do aplicativo gov.br ou por SMS se usuário não possuir aplicativo gov.br instalado.
   
 
 Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retorna, como um parâmetro de query, o atributo **code** e o atributo **state**. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
@@ -184,7 +184,7 @@ Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
 
 
 .. note::
-  O servidor OAuths de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
+  O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
 
 
 **Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias** (até 100 arquivos) assinaturas eletrônicas avançadas durante o prazo de validade do token.
@@ -385,17 +385,126 @@ Outros valores de *P* possíveis de serem usados:
 Orientações para homologação do sistema integrado  
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-A homologação poderá ser realizada em reunião pelo Microsoft Teams ou envio de vídeo da aplicação demonstrando os 4 fluxos abaixo:
+A homologação será realizada através da demonstração por video anexado ao processo, demonstrando os fluxos abaixo:
  
-1. **Demonstrar usuário realizando login no sistema:** Apresentar a tela inicial e usuário realizando sua autenticação no Login Único para iniciar sua jornada na utilização do sistema. Caso o sistema ainda tenha disponibilizado a autenticação por outro cliente de login, deverá constar no video o fluxo do sistema por este outro tipo de autenticação.
+1. Fluxo via Login Único GovBR
+------------------------------
 
-2. **Demonstrar usuário realizando assinatura:** Apresentar a jornada do usuário até chegar à etapa de realizar a assinatura. Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão. O video deve apresentar, quando couber, como usuário realiza a assinatura e como usuário faz a visualização/download do arquivo assinado para a validação.  
+Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, quanto para contas **Prata/Ouro**, conforme descrito a seguir.
 
-3. **Demonstrar teste com usuário conta bronze:** Caso sistema permita o login de usuário com a conta nível bronze, apresentar mensagem orientando o usuário adquirir conta com nível necessário para realizar assinatura. Exemplo de mensagem: "É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura". A aplicação cliente deve direcionar o usuário para adquirir nível necessário, verificar serviço de confiabilidades no link: https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-catalogo-de-confiabilidades-selos
+### 1.1 Conta Bronze
 
-4. **Demonstrar usuário fazendo logout:** Apresentar como usuário realiza logout do sistema. O usuário deve ser redirecionado para a tela inicial do sistema. O logout da aplicação cliente é implementação obrigatória da integração com Login único. Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out.
+**Passo 1: Login no sistema**
 
-5. **Demonstrar orientação ao usuário para assinaturas destacadas:** Aplicações clientes que optarem pela utilização da assinatura destacada, assinatura com 2 arquivos .p7s e arquivo assinado, deve apresentar no video como usuário é orientado para fazer o download dos 2 arquivos para validação.
+- Apresentar a tela inicial.
+- Demonstrar o usuário realizando sua autenticação via Login Único GovBR.
+
+**Passo 2: Assinatura não permitida**
+
+- Caso o sistema permita login com conta nível Bronze, a funcionalidade de assinatura deve estar **bloqueada ou indisponível**.
+- **Não se deve permitir** que o usuário chegue à **tela de Autorização**.
+- É **obrigatório**, independente do usuário ter acesso ou não ao sistema, apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
+	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
+	- Exemplo: 
+
+	.. code-block:: console
+		
+			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
+
+**Passo 3: Logout do sistema**
+
+- Demonstrar o usuário realizando o logout.
+- O usuário deve ser redirecionado para a **tela inicial** do sistema.
+- O logout é **obrigatório** para a integração com Login Único. 
+	- Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
+
+### 1.2 Conta Prata/Ouro
+
+**Passo 1: Login no sistema**
+
+- Apresentar a tela inicial.
+- Demonstrar o usuário realizando sua autenticação via Login Único GovBR.
+
+**Passo 2: Realização da assinatura**
+
+- Apresentar como o usuário realiza a assinatura.
+- Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão. 
+
+**Passo 3: Download do arquivo assinado**
+
+- Apresentar como usuário faz a visualização/download do arquivo assinado para a validação. 
+- Caso a aplicação utilize **assinatura destacada** (gerando dois arquivos: `.p7s` e o `arquivo original`), o vídeo deve mostrar como o usuário é orientado a fazer o **download de ambos os arquivos**.
+
+**Passo 4: Logout do sistema**
+
+- Demonstrar o usuário realizando o logout.
+- O usuário deve ser redirecionado para a **tela inicial** do sistema.
+- O logout é **obrigatório** para a integração com Login Único. 
+	- Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
+
+2. Fluxo via Login Alternativo
+------------------------------
+
+Nos sistemas que oferecem **login alternativo** (diferente do Login Único GovBR), deve-se mostrar o fluxo completo de assinatura, também considerando os diferentes níveis de conta.
+
+.. note::
+   Caso o login alternativo **não tenha acesso à área de assinatura**, o vídeo deve evidenciar este comportamento.
+
+### 2.1 Conta Bronze
+
+**Passo 1: Login via login alternativo**
+
+- Apresentar a tela inicial.
+- Demonstrar o usuário realizando sua autenticação via login alternativo.
+
+**Passo 2: Solicitação de login GovBR ao tentar assinar**
+
+- Ao clicar em "Assinar", deve-se solicitar login via Login Único GovBR.
+
+**Passo 3: Assinatura não permitida após login GovBR**
+
+Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar a assinatura 
+
+- **Não se deve permitir** que o usuário chegue à **tela de Autorização**.
+- É **obrigatório** apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
+	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
+	- Exemplo: 
+
+	.. code-block:: console
+		
+			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
+
+**Passo 4: Logout do sistema**
+
+- Demonstrar o usuário realizando o logout.
+- O usuário deve ser redirecionado para a **tela inicial** do sistema.
+
+### 2.2 Conta Prata/Ouro
+
+**Passo 1: Login via login alternativo**
+
+- Apresentar a tela inicial.
+- Demonstrar o usuário realizando sua autenticação via login alternativo.
+
+**Passo 2: Solicitação de login GovBR ao tentar assinar**
+
+- Ao clicar em "Assinar", deve-se solicitar login via Login Único GovBR.
+
+**Passo 3: Realização da assinatura**
+
+- Apresentar como o usuário realiza a assinatura.
+- Este processo poderá incluir a assinatura de um arquivo gerado pelo próprio sistema ou a assinatura de um arquivo que usuário tenha que anexar ao sistema, isso depende do fluxo de funcionamento do sistema do órgão. 
+
+**Passo 4: Download do arquivo assinado**
+
+- Apresentar como usuário faz a visualização/download do arquivo assinado para a validação. 
+- Caso a aplicação utilize **assinatura destacada** (gerando dois arquivos: `.p7s` e o `arquivo original`), o vídeo deve mostrar como o usuário é orientado a fazer o **download de ambos os arquivos**.
+
+**Passo 5: Logout do sistema**
+
+- Demonstrar o usuário realizando o logout.
+- O usuário deve ser redirecionado para a **tela inicial** do sistema.
+
 
 .. Attention::
 	O video deverá mostrar no navegador a url da aplicação em todas as etapas da demonstração da jornada.
@@ -424,6 +533,26 @@ Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
 		docker-compose up -d
 
 e acessar o endereço http://127.0.0.1:8080
+
+
+Chave PGP: Envio das credenciais 
+++++++++++++++++++++++++++++++++
+
+Nas respectivas etapas de validação das informações pelo órgão responsável para geração e entrega das **credencias**, sejam credenciais de homologação ou produção, estas serão **enviadas para o email associado à chave PGP**. Por isso é importante garantir que o email associado seja um **email válido**, caso contrário não será possível o envio das credenciais. 
+
+.. Attention::
+	Caso seja constatado email inválido no envio das credenciais, será necessário anexar nova chave PGP ao processo com um novo email associado, para o reenvio das mesmas. 
+
+Chave PGP: Validação dos dados
+++++++++++++++++++++++++++++++
+Ao anexar as credenciais ao processo, certifique-se de que: 
+
+ - A chave esteja dentro da validade (não expirada) 
+
+ - O email associado à chave seja um email: 
+	- Existente 
+	- Válido (deve ter seu domínio associado ao órgão solicitante) 
+
 
 Como criar um par de chaves PGP
 +++++++++++++++++++++++++++++++
