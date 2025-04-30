@@ -404,10 +404,12 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 - Caso o sistema permita login com conta nível Bronze, a funcionalidade de assinatura deve estar **bloqueada ou indisponível**.
 - **Não se deve permitir** que o usuário chegue à **tela de Autorização**.
 - É **obrigatório**, independente do usuário ter acesso ou não ao sistema, apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
+
 	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
+
 	- Exemplo: 
 
-	.. code-block:: console
+	.. code-block:: none
 		
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
 
@@ -416,7 +418,8 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 - Demonstrar o usuário realizando o logout.
 - O usuário deve ser redirecionado para a **tela inicial** do sistema.
 - O logout é **obrigatório** para a integração com Login Único. 
-	- Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
+
+	- Orientações no link: `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out>`_. 
 
 ### 1.2 Conta Prata/Ouro
 
@@ -440,7 +443,8 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 - Demonstrar o usuário realizando o logout.
 - O usuário deve ser redirecionado para a **tela inicial** do sistema.
 - O logout é **obrigatório** para a integração com Login Único. 
-	- Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
+
+	- Orientações no link: `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out>`_. 
 
 2. Fluxo via Login Alternativo
 ------------------------------
@@ -467,10 +471,12 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 
 - **Não se deve permitir** que o usuário chegue à **tela de Autorização**.
 - É **obrigatório** apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
+
 	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
+
 	- Exemplo: 
 
-	.. code-block:: console
+	.. code-block:: none
 		
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
 
@@ -550,7 +556,9 @@ Ao anexar as credenciais ao processo, certifique-se de que:
  - A chave esteja dentro da validade (não expirada) 
 
  - O email associado à chave seja um email: 
+
 	- Existente 
+
 	- Válido (deve ter seu domínio associado ao órgão solicitante) 
 
 
