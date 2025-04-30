@@ -404,14 +404,18 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 - Caso o sistema permita login com conta nível Bronze, a funcionalidade de assinatura deve estar **bloqueada ou indisponível**.
 - **Não se deve permitir** que o usuário chegue à **tela de Autorização**.
 - É **obrigatório**, independente do usuário ter acesso ou não ao sistema, apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
-	- Link qeu deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
-	- Exemplo: É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
+	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
+	- Exemplo: 
+	.. code-block:: console
+		
+			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
 
 **Passo 3: Logout do sistema**
 
 - Demonstrar o usuário realizando o logout.
 - O usuário deve ser redirecionado para a **tela inicial** do sistema.
-- O logout é **obrigatório** para a integração com Login Único. Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
+- O logout é **obrigatório** para a integração com Login Único. 
+	- Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
 
 ### 1.2 Conta Prata/Ouro
 
@@ -434,7 +438,8 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 
 - Demonstrar o usuário realizando o logout.
 - O usuário deve ser redirecionado para a **tela inicial** do sistema.
-- O logout é **obrigatório** para a integração com Login Único. Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
+- O logout é **obrigatório** para a integração com Login Único. 
+	- Orientações no link https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#acesso-ao-servico-de-log-out. 
 
 2. Fluxo via Login Alternativo
 ------------------------------
@@ -461,8 +466,11 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 
 - **Não se deve permitir** que o usuário chegue à **tela de Autorização**.
 - É **obrigatório** apresentar uma **mensagem informando a impossibilidade de assinatura** por ser usuário Bronze. Deve-se também disponibilizar um link para **realizar o upgrade da conta**.
-	- Link qeu deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
-	- Exemplo: É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
+	- Link que deve ser utilizado na mensagem para upgrade da conta: https://confiabilidades.acesso.gov.br/
+	- Exemplo: 
+	.. code-block:: console
+		
+			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
 
 **Passo 4: Logout do sistema**
 
@@ -530,7 +538,8 @@ Chave PGP: Envio das credenciais
 
 Nas respectivas etapas de validação das informações pelo órgão responsável para geração e entrega das **credencias**, sejam credenciais de homologação ou produção, estas serão **enviadas para o email associado à chave PGP**. Por isso é importante garantir que o email associado seja um email válido, caso contrário não será possível o envio das credenciais. 
 
-PS: Caso seja constatado email inválido no envio das credenciais, será necessário anexar nova chave PGP ao processo com um novo email associado, para o reenvio das mesmas. 
+.. Attention::
+	Caso seja constatado email inválido no envio das credenciais, será necessário anexar nova chave PGP ao processo com um novo email associado, para o reenvio das mesmas. 
 
 Chave PGP: Validação dos dados
 ++++++++++++++++++++++++++++++
