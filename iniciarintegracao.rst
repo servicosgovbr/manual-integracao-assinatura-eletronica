@@ -116,7 +116,7 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
 .. Attention::
-  No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. No ambiente de **Produção** o SMS é enviado por notificação do aplicativo gov.br ou por SMS se usuário não possuir aplicativo gov.br instalado.
+  No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. No ambiente de **Produção** o código de autenticação é enviado por notificação do aplicativo gov.br ou por SMS se usuário não possuir aplicativo gov.br instalado.
   
 
 Após a autorização, o usuário é redirecionado para o endereço <URI de redirecionamento> enviado no **redirect_uri** e retorna, como um parâmetro de query, o atributo **code** e o atributo **state**. O <URI de redirecionamento> deve ser um endpoint da aplicação correspondente ao padrão autorizado no servidor de autorização, e capaz de receber e tratar o parâmetro “code”. Este atributo deve ser utilizado na fase seguinte para solicitar um Access Token ao servidor de autorização. 
@@ -184,7 +184,7 @@ Retorno **400**: Parâmetro <code> utilizado por mais de uma vez ou inválido.
 
 
 .. note::
-  O servidor OAuths de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
+  O servidor OAuth de homologação está delegando a autenticação ao ambiente de **staging** do gov.br.
 
 
 **Importante**: Para valor do parâmetro **scope** igual a **sign**, o access token gerado autoriza o uso da chave privada do usuário para a confecção de uma **única** assinatura eletrônica avançada. O token deve ser usado em até 10 minutos. O tempo de validade do token poderá ser modificado no futuro à discrição do ITI. No caso do valor do parâmetro **scope** igual a **signature_session** (assinatura em lote), o access token gerado autoriza o uso da chave privada do usuário para a confecção de **várias** (até 100 arquivos) assinaturas eletrônicas avançadas durante o prazo de validade do token.
