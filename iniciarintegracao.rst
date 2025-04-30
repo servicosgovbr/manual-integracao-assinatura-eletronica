@@ -409,7 +409,7 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 
 	.. code-block:: console
 		
-			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
+			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
 
 **Passo 3: Logout do sistema**
 
@@ -452,14 +452,14 @@ Nos sistemas que oferecem **login alternativo** (diferente do Login Único GovBR
 
 ### 2.1 Conta Bronze
 
-**Passo 1: Login via login alternativo**
+**Passo 1: Autenticação via login alternativo**
 
 - Apresentar a tela inicial.
 - Demonstrar o usuário realizando sua autenticação via login alternativo.
 
 **Passo 2: Solicitação de login GovBR ao tentar assinar**
 
-- Ao clicar em "Assinar", deve-se solicitar login via Login Único GovBR.
+- Ao clicar em "Assinar", deve-se solicitar autenticação via Login Único GovBR.
 
 **Passo 3: Assinatura não permitida após login GovBR**
 
@@ -472,7 +472,7 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 
 	.. code-block:: console
 		
-			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>`_ para realizar o upgrade da conta.
+			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
 
 **Passo 4: Logout do sistema**
 
@@ -481,14 +481,14 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 
 ### 2.2 Conta Prata/Ouro
 
-**Passo 1: Login via login alternativo**
+**Passo 1: Autenticação via login alternativo**
 
 - Apresentar a tela inicial.
 - Demonstrar o usuário realizando sua autenticação via login alternativo.
 
 **Passo 2: Solicitação de login GovBR ao tentar assinar**
 
-- Ao clicar em "Assinar", deve-se solicitar login via Login Único GovBR.
+- Ao clicar em "Assinar", deve-se solicitar autenticação via Login Único GovBR.
 
 **Passo 3: Realização da assinatura**
 
