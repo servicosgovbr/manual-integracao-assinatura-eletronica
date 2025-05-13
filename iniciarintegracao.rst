@@ -81,6 +81,10 @@ O diagrama abaixo apresenta o fluxo de interação entre a aplicação cliente e
 
 .. image:: images/diagrama_sequencia2.png
 
+Requisitar Autenticação e Verificar nível conta
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Para as 2 etapas iniciais ("Requisitar Autenticação" e "Verificar nível conta") acesse `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_.
 
 Geração do access token
 +++++++++++++++++++++++
