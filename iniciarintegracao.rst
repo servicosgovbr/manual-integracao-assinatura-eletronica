@@ -115,7 +115,7 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 
 .. code-block:: console
 
-    https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id
+    https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
 
 Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
@@ -128,6 +128,11 @@ Após a autorização, o usuário é redirecionado para o endereço <URI de redi
 .. note::
 	A URL de retorno deve pertencer ao domínio do órgão. Por exemplo: https://www.nomeorgao.gov.br/assinar. Cada órgão e ou serviço que será integrado a API de assinatura deve solicitar credenciais separadas.
 
+**Troubleshoot:**
+
+Retorno **401**: Unauthorized/Acesso não Autorizado
+
+Um dos motivos pode ser que a URL de retorno cadastrada não é exatamente igual à que está sendo utilizada no parâmetro **redirect_uri**. Neste caso, deve-se solicitar o ajuste da informação no processo aberto.
 
 **Passo 2: Solicitar Access Token**
 
