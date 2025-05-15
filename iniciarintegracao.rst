@@ -84,7 +84,7 @@ O diagrama abaixo apresenta o fluxo de interação entre a aplicação cliente e
 Requisitar Autenticação e Verificar nível conta
 +++++++++++++++++++++++++++++++++++++++++++++++
 
-Para as 2 etapas iniciais ("Requisitar Autenticação" e "Verificar nível conta") acesse `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_.
+Para as 2 etapas iniciais ("Requisitar Autenticação" e "Verificar nível conta"), acesse `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_.
 
 **Troubleshoot:**
 
@@ -92,7 +92,7 @@ Para as 2 etapas iniciais ("Requisitar Autenticação" e "Verificar nível conta
 
 Provavelmente o problema estará na implementação do manual de integração Login Único GovBR 
 
-Sugestão, na requisição https://sso.staging.acesso.gov.br/authorize (https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-3) verifique se está preenchendo os parâmetros corretamente, principalmente o parâmetro **scope**
+Sugestão: na requisição https://sso.staging.acesso.gov.br/authorize (https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-3) verifique se está preenchendo os parâmetros corretamente, principalmente o parâmetro **scope**
 
 Geração do access token
 +++++++++++++++++++++++
