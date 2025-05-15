@@ -86,6 +86,14 @@ Requisitar Autenticação e Verificar nível conta
 
 Para as 2 etapas iniciais ("Requisitar Autenticação" e "Verificar nível conta") acesse `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_.
 
+**Troubleshoot:**
+
+- Retorno **401**: ACCESSTOKEN_SCOPE_MUSTCONTAINSEXPECTEDSCOPE
+
+Provavelmente o problema estará na implementação do manual de integração Login Único GovBR 
+
+Sugestão, na requisição https://sso.staging.acesso.gov.br/authorize (https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-3) verifique se está preenchendo os parâmetros corretamente, principalmente o parâmetro **scope**
+
 Geração do access token
 +++++++++++++++++++++++
 
@@ -422,6 +430,10 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 		
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
 
+.. Attention::
+	Caso o usuário BRONZE esteja sendo redirecionado automaticamente para a  **tela de Autorização**, verifique se na url do browser o client_id é mesmo recebido. Caso não seja, provavelmente o erro estará na implementação das etapas iniciais "Requisitar Autenticação" e "Verificar nível conta" (`https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_).
+
+
 **Passo 3: Logout do sistema**
 
 - Demonstrar o usuário realizando o logout.
@@ -488,6 +500,10 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 	.. code-block:: none
 		
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
+
+.. Attention::
+	Caso o usuário BRONZE esteja sendo redirecionado automaticamente para a  **tela de Autorização**, verifique se na url do browser o client_id é mesmo recebido. Caso não seja, provavelmente o erro estará na implementação das etapas iniciais "Requisitar Autenticação" e "Verificar nível conta" (`https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_).
+
 
 **Passo 4: Logout do sistema**
 
