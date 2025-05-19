@@ -55,7 +55,18 @@ De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da pl
 
 .. important::
    Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://h-validar.iti.gov.br/index.html 
+
+.. important::
    Documentos assinados no ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
+
+
+**Troubleshoot:**
+
+- atributo *IdMessageDigest* inválido ❌
+ - Mensagem de alerta: Falha ao construir o atributo. Problemas ao obter o hash
+ - Corretude: Invalid
+
+O Hash do PDF foi calculado errado. Verifique a `Seção Assinaturas PKCs7 e PDF <https://manual-integracao-assinatura-eletronica.servicos.gov.br/pt-br/latest/iniciarintegracao.html#assinaturas-pkcs-7-e-pdf>`_.
 
 Criar uma conta nível prata gov.br  
 +++++++++++++++++++++++++++++++++++++++
