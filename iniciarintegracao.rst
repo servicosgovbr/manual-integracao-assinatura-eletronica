@@ -436,9 +436,11 @@ Deve-se apresentar o fluxo completo de assinatura, tanto para conta **Bronze**, 
 .. Attention::
 	Problema: Usuário conta BRONZE está sendo redirecionado automaticamente para a  **tela de Autorização**.
 	Verifique:
-		1. se na url do browser, o client_id está com o valor correto. Se não estiver, corrija e teste novamente.
+		1. Na url do browser, se o client_id está com o valor correto. Se não estiver, corrija e teste novamente.
 		2. Estando o item 1 correto, verifique se estão realizando as chamadas referentes às etapas iniciais "Requisitar Autenticação" e "Verificar nível conta" **ANTES** de chamar as requisições do contexto de assinatura. Se não estiverem, implemente as etapas faltantes e teste novamente.
+		
 		Deve-se realizar as chamadas referentes às etapas iniciais pois só assim terão as informações da conta, evitando as chamadas do contexto de assinatura caso o usuário seja conta bronze.
+		
 		Link para detalhamento da implementação das etapas "Requisitar Autenticação" e "Verificar nível conta": `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_
 
 
@@ -510,7 +512,14 @@ Ao realizar o login, demonstrar que o usuário está impossibilitado de realizar
 			É necessário possuir conta gov.br nível prata ou ouro para utilizar o serviço de assinatura. `Clique aqui <https://confiabilidades.acesso.gov.br/>` para realizar o upgrade da conta.
 
 .. Attention::
-	Caso o usuário BRONZE esteja sendo redirecionado automaticamente para a  **tela de Autorização**, verifique se na url do browser o client_id é mesmo recebido. Caso não seja, provavelmente o erro estará na implementação das etapas iniciais "Requisitar Autenticação" e "Verificar nível conta" (`https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_).
+	Problema: Usuário conta BRONZE está sendo redirecionado automaticamente para a  **tela de Autorização**.
+	Verifique:
+		1. Na url do browser, se o client_id está com o valor correto. Se não estiver, corrija e teste novamente.
+		2. Estando o item 1 correto, verifique se estão realizando as chamadas referentes às etapas iniciais "Requisitar Autenticação" e "Verificar nível conta" **ANTES** de chamar as requisições do contexto de assinatura. Se não estiverem, implemente as etapas faltantes e teste novamente.
+		
+		Deve-se realizar as chamadas referentes às etapas iniciais pois só assim terão as informações da conta, evitando as chamadas do contexto de assinatura caso o usuário seja conta bronze.
+		
+		Link para detalhamento da implementação das etapas "Requisitar Autenticação" e "Verificar nível conta": `https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar <https://acesso.gov.br/roteiro-tecnico/iniciarintegracao.html#passo-a-passo-para-integrar>`_
 
 
 **Passo 4: Logout do sistema**
