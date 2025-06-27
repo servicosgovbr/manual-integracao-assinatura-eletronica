@@ -583,25 +583,13 @@ Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
 e acessar o endereço http://127.0.0.1:8080
 
 
-Chave PGP: Envio das credenciais 
-++++++++++++++++++++++++++++++++
-
-Nas respectivas etapas de validação das informações pelo órgão responsável para geração e entrega das **credencias**, sejam credenciais de homologação ou produção, estas serão **enviadas para o email associado à chave PGP**. Por isso é importante garantir que o email associado seja um **email válido**, caso contrário não será possível o envio das credenciais. 
-
-.. Attention::
-	Caso seja constatado email inválido no envio das credenciais, será necessário anexar nova chave PGP ao processo com um novo email associado, para o reenvio das mesmas. 
-
 Chave PGP: Validação dos dados
 ++++++++++++++++++++++++++++++
 Ao anexar as credenciais ao processo, certifique-se de que: 
 
- - A chave esteja dentro da validade (não expirada) 
-
- - O email associado à chave seja um email: 
-
-	- Existente 
-
-	- Válido (deve ter seu domínio associado ao órgão solicitante) 
+ - A chave esteja dentro de uma data de validade (não será aceito chave sem data de expiração)
+ 
+ - A chave não esteja expirada
 
 
 Como criar um par de chaves PGP
