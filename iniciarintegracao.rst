@@ -5,11 +5,11 @@ Solicitação de credenciais
 +++++++++++++++++++++++++++
 
 As credenciais de acesso aos ambientes de homologação/teste e produção da API de Assinatura Eletrônica devem ser solicitadas por um **Gestor Público**,  por meio do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
-Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`
+Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
 
 Para iniciar a solicitação, clique no botão "Iniciar" e siga as instruções fornecidas pelo sistema.
 
-⚠️ **Importante**: A liberação das credenciais de produção está condicionada à integração prévia do sistema com o Login Único e à sua hospedagem em um domínio oficial do governo (ex.: gov.br, mil.br, edu.br, jus.br, leg.br, def.br, mp.br, tc.br, entre outros), conforme estabelecido nos artigos 3º e 5º da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`.
+⚠️ **Importante**: A liberação das credenciais de produção está condicionada à integração prévia do sistema com o Login Único e à sua hospedagem em um domínio oficial do governo (ex.: gov.br, mil.br, edu.br, jus.br, leg.br, def.br, mp.br, tc.br, entre outros), conforme estabelecido nos artigos 3º e 5º da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`_.
 
 **Suporte técnico:**
 int-assinatura-govbr@economia.gov.br
@@ -30,7 +30,7 @@ Para alterar a(s) URL(s) de retorno, siga as orientações abaixo:
 ### Integrações em andamento
 
 1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
-Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`
+Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
 
 2. Clique no botão “Acompanhamento”.
 
@@ -42,7 +42,7 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 
 ### Integrações concluídas
 
-1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`
+1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
 
 2. Clique no botão **“Iniciar”**.
 
@@ -52,12 +52,12 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 Integrações disponibilizadas para diversos outros órgãos ou entidades públicas
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-De acordo com o artigo 13 da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`, as informações sobre adesão às integrações disponibilizadas a diferentes órgãos ou entidades públicas devem ser enviadas à Secretaria de Governo Digital pelo órgão gestor da respectiva integração.
+De acordo com o artigo 13 da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`_, as informações sobre adesão às integrações disponibilizadas a diferentes órgãos ou entidades públicas devem ser enviadas à Secretaria de Governo Digital pelo órgão gestor da respectiva integração.
 
 ## Procedimento para o envio
 
 1. Acesse o Portal do Serviço de Pós-Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR.
-Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`
+Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
 
 2. Clique no botão **"Iniciar"**.
 
