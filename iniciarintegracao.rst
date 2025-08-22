@@ -32,9 +32,7 @@ Para alterar a(s) URL(s) de retorno, siga as orientações abaixo:
 1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
 Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
 
-
 2. Clique no botão “Acompanhamento”.
-
 
 3. Na aba “Enviar dados/dúvidas” do seu protocolo de solicitação, forneça as seguintes informações:
 
@@ -47,11 +45,31 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 
 1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
 
+2. Clique no botão **“Iniciar”**.
+
+3. Na aba “Dados da Solicitação” do seu protocolo, selecione o tipo de solicitação **“Atualização de URLs”** e preencha as informações necessárias.
+
+
+Dúvidas, Problemas, Alterações
++++++++++++++++++++++++++++++++
+
+**Integrações em andamento**
+
+1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
+Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
+
+2. Clique no botão “Acompanhamento”.
+
+3. Na aba “Enviar dados/dúvidas” do seu protocolo de solicitação, escreva sobre a solicitação.
+
+
+**Integrações concluídas**
+
+1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
 
 2. Clique no botão **“Iniciar”**.
 
-
-3. Na aba “Dados da Solicitação” do seu protocolo, selecione o tipo de solicitação **“Atualização de URLs”** e preencha as informações necessárias.
+3. Na aba “Dados da Solicitação” do seu protocolo, selecione o tipo de solicitação e preencha as informações necessárias.
 
 
 Integrações disponibilizadas para diversos outros órgãos ou entidades públicas
