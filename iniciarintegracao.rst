@@ -1,52 +1,72 @@
 ﻿Passo a passo
 ================================
 
-Solicitação de acesso 
+Solicitação de credenciais
 +++++++++++++++++++++++++++
 
-Para informações sobre processo de formalização da integração e solicitação de credenciais da API de assinatura (testes e produção) o Gestor do serviço público deve acessar a página https://www.gov.br/governodigital/integrarprodutoid.
+As credenciais de acesso aos ambientes de homologação/teste e produção da API de Assinatura Eletrônica devem ser solicitadas por um **Gestor Público**,  por meio do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
+Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`
 
-Contato para suporte técnico: int-assinatura-govbr@economia.gov.br
+Para iniciar a solicitação, clique no botão "Iniciar" e siga as instruções fornecidas pelo sistema.
+
+⚠️ **Importante**: A liberação das credenciais de produção está condicionada à integração prévia do sistema com o Login Único e à sua hospedagem em um domínio oficial do governo (ex.: gov.br, mil.br, edu.br, jus.br, leg.br, def.br, mp.br, tc.br, entre outros), conforme estabelecido nos artigos 3º e 5º da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`.
+
+**Suporte técnico:**
+int-assinatura-govbr@economia.gov.br
 
 Prazo para liberação das credenciais  
 ++++++++++++++++++++++++++++++++++++
 
-Após recebimento e análise da solicitação, caso não exista ajuste negocial ou técnico a ser realizado, os prazos estimados para envio das credenciais da API de Assinatura Eletrônica Avançada serão os informados abaixo: 
+Após o recebimento e a análise da solicitação, não havendo necessidade de ajustes negociais ou técnicos, os prazos estimados para o envio das credenciais da API de Assinatura Eletrônica Avançada são os seguintes:
 
-* Ambiente de Homologação: 3 dias úteis
-* Ambiente de Produção: 5 dias úteis
+* Ambiente de Homologação: até 3 dias úteis
+* Ambiente de Produção: até 5 dias úteis
 
-Integrações de sistemas que atendam a diversos órgãos  
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Alteração de URL(s)
+++++++++++++++++++++
 
-Para integrações de sistemas que atenderão a diversos órgãos, será necessário o envio pelo órgão gestor do sistema, do arquivo em excel, Plug-in_Estados_e_Municipios `Template Planilha Plug-in_Estados_e_Municipios <https://www.gov.br/governodigital/pt-br/arquivos/template_plug-in_estados_e_municipios_atual.xlsx/@@download/file>`_ preenchido com as seguintes informações: 
+Para alterar a(s) URL(s) de retorno, siga as orientações abaixo:
 
-CNPJ, Origem, Orgao, Nome_do_Municipio, Servico_Produto, Objetivo_da_Integracao, Esfera, Poder, Estado, Codigo_Municipio, Data_de_inicio_Projeto, Data_de_Finalizar_Entrega, Volumetria_Anual. 
+### Integrações em andamento
 
-As demais informações constantes no arquivo são de preenchimento interno. 
+1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
+Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`
 
-**Regras para o envio:**
+2. Clique no botão “Acompanhamento”.
 
-* O arquivo deverá ser enviado mensalmente até o dia 05 de cada mês com as integrações do mês anterior; 
+3. Na aba “Enviar dados/dúvidas” do seu protocolo de solicitação, forneça as seguintes informações:
 
-* Após o envio do primeiro arquivo, os posteriores deverão conter apenas informações incrementais, ou seja, novas integrações ou novas adesões; 
+	- client_id 
+	- ambiente (homologação ou produção)
+	- nova Url de Retorno
 
-* O arquivo deverá ser enviado em formato xlsx ou csv para o e-mail **integracaoid@economia.gov.br**;   
+### Integrações concluídas
 
-* Caso não ocorra novas integrações essa situação deverá ser informada pelo e-mail acima, na frequência já estabelecida; 
+1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`
 
-* O assunto do e-mail deverá ser: Relatório Plug-in <Nome do órgão>. Para fins de controle, solicitamos que mantenham o envio mensal no mesmo histórico de e-mail. 
+2. Clique no botão **“Iniciar”**.
 
-Para dirimir dúvidas sobre este procedimento, utilize o canal de comunicação via e-mail **integracaoid@economia.gov.br**. 
+3. Na aba “Dados da Solicitação” do seu protocolo, selecione o tipo de solicitação **“Atualização de URLs”** e preencha as informações necessárias.
 
 
-.. note::
-	Para consumir os serviços da API de assinatura, há **obrigatoriedade**  que a aplicação do órgão esteja previamente 
-	integrada à Plataforma de Autenticação Digital do Cidadão -  `Login Único`_. Ainda assim, a autorização de acesso utilizada pela assinatura 
-	é condicionada ao processo de autorização explícita do usuário, conforme `Lei n° 14.063`_ Art.4º. O usuário deve conceder a autorização para Assinatura 
-	API Service assinar digitalmente um documento em nome deste usuário e essa autorização é solicitada durante o fluxo de autorização OAuth da API de assinatura. 
-	Por esse motivo que a liberação de acesso para emissão do certificado e a permissão da assinatura implica a geração de uma requisição ao servidor OAuth que controla os recursos desta API. 
-   
+Integrações disponibilizadas para diversos outros órgãos ou entidades públicas
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+De acordo com o artigo 13 da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`, as informações sobre adesão às integrações disponibilizadas a diferentes órgãos ou entidades públicas devem ser enviadas à Secretaria de Governo Digital pelo órgão gestor da respectiva integração.
+
+## Procedimento para o envio
+
+1. Acesse o Portal do Serviço de Pós-Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR.
+Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`
+
+2. Clique no botão **"Iniciar"**.
+
+3. Na aba **"Dados da Solicitação"** do seu protocolo, selecione o tipo de solicitação **"Atualização de integrações disponibilizadas para diversos órgãos/entidades públicas"** e preencha os campos necessários.
+
+As informações devem ser enviadas **mensalmente até o dia 05 de cada mês**, contendo os dados referentes às integrações realizadas no mês anterior.
+
+Em caso de dúvidas sobre este procedimento, utilize o canal de comunicação oficial: integracaoid@economia.gov.br.
+
 
 Orientações para testes  
 ++++++++++++++++++++++++++
