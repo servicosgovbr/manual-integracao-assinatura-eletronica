@@ -11,9 +11,6 @@ Para iniciar a solicitação, clique no botão "Iniciar" e siga as instruções 
 
 ⚠️ **Importante**: A liberação das credenciais de produção está condicionada à integração prévia do sistema com o Login Único e à sua hospedagem em um domínio oficial do governo (ex.: gov.br, mil.br, edu.br, jus.br, leg.br, def.br, mp.br, tc.br, entre outros), conforme estabelecido nos artigos 3º e 5º da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 2024 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-7.076-de-2-de-outubro-de-2024-%2a-589504963>`_.
 
-**Suporte técnico:**
-int-assinatura-govbr@economia.gov.br
-
 Prazo para liberação das credenciais  
 ++++++++++++++++++++++++++++++++++++
 
@@ -69,7 +66,7 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 
 2. Clique no botão **“Iniciar”**.
 
-3. Na aba “Dados da Solicitação” do seu protocolo, selecione o tipo de solicitação e preencha as informações necessárias.
+3. Na aba “Dados da Solicitação” do seu protocolo, selecione o tipo de solicitação "Outras solicitações" e e preencha as informações necessárias.
 
 
 Integrações disponibilizadas para diversos outros órgãos ou entidades públicas
