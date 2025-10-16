@@ -40,7 +40,7 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 
 **Integrações concluídas**
 
-1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br>`_
+1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br>`_
 
 2. Clique no botão **“Iniciar”**.
 
