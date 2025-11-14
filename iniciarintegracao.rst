@@ -155,20 +155,48 @@ A aplicação cliente deve redirecionar o navegador do usuário para o endereço
 ------------------  --------------------------------------------------------------------------------------------------
 **response_type**	code
 **client_id**       Chave de acesso, que identifica o serviço consumidor da aplicação cadastrada.
-**scope**           sign ou signature_session
+**scope**           Valores possíveis: sign, signature_session, govbr, icp_brasil
 **redirect_uri**    URL de retorno cadastrada para a aplicação cliente. Não necessita utilizar o formato URL Encode.
 **state**           Valor usado para manter o estado entre a solicitação e o retorno de chamada.
 **nonce**           Sequência de caracteres usado para associar uma sessão do serviço consumidor ao token.
 ==================  ==================================================================================================
 
+O parâmetro **scope** aceita múltiplos valores separados por espaços, conforme RFC 6749.
+
 .. important::
-  Deve-se utilizar o parâmetro **scope** com valor **sign** para gerar um token que permite a assinatura de um único hash. Este token gerado só pode ser utilizado uma única vez. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado. Para gerar um token que permita a assinatura de mais de um hash (assinatura em lote), deve ser utilizado o valor **signature_session**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias assinaturas.
+  Os escopos **sign** e **signature_session** são mutuamente exclusivos, ou seja, apenas um deles deve ser preenchido em cada chamada.
+  
+  Deve-se incluir no parâmetro **scope** o valor **sign** para gerar um token que permite a assinatura de um único hash, de forma que o token gerado só pode ser utilizado **uma única vez**. Na tentativa de uma nova assinatura com esse mesmo token, um erro será retornado.
+  
+  Deve-se incluir no parâmetro **scope** o valor **signature_session** para gerar um token que permita a assinatura de vários hashes, de forma que o token gerado pode ser utilizado para **várias vezes**. Neste caso, durante a validade do token, este poderá ser utilizado para realizar várias **assinaturas em lote**.
 
 .. code-block:: console
 
     https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=sign&client_id=<client_id>
 
-Neste endereço, o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
+Se o órgão integrador desejar permitir que o cidadão utilize certificados em nuvem fornecidos pelos Prestadores de Serviço de Confiança (PSC) da ICP-Brasil para realizar assinaturas digitais qualificadas através da API de Assinatura, deve-se incluir o valor **icp_brasil** no parâmetro **scope**.
+
+Neste caso, será exibida uma tela com todos os PSCs da ICP-Brasil nos quais o cidadão possui certificados qualificados emitidos, para que ele escolha qual certificado utilizar.
+
+A seguir, as regras de combinação de escopos e o tipo de assinatura resultante:
+
+   - Se nem o escopo **icp_brasil** e nem o escopo **govbr** for utilizado, será realizada assinatura com **certificado GOV.BR** (assinatura avançada que é o comportamento padrão de versões anteriores da API).
+   - Se apenas o escopo **govbr** estiver presente, será realizada assinatura com **certificado GOV.BR** (assinatura avançada).
+   - Se apenas o escopo **icp_brasil** estiver presente, será realizada assinatura com **certificado ICP-Brasil** (assinatura qualificada).
+   - Se ambos os escopos **icp_brasil** e **govbr** estiverem presentes, o cidadão poderá optar por realizar sua assinatura com o **certificado ICP-Brasil** (assinatura qualificada) ou com o **certificado GOV.BR** (assinatura avançada).
+
+.. important::
+  O comportamento dos escopos **sign** e **signature_session** é o mesmo, independentemente de a assinatura ser GOV.BR ou ICP-Brasil.
+
+Exemplo de url permitindo assinaturas em lote tanto avançadas quanto qualificadas:
+
+.. code-block:: console
+
+    https://<Servidor OAuth>/authorize?response_type=code&redirect_uri=<URI de redirecionamento>&scope=signature_session+govbr+icp_brasil&client_id=<client_id>
+
+Caso o cidadão opte por utilizar o **certificado da ICP-Brasil** (assinatura avançada), ele será direcionado para o PSC da ICP-Brasil para realizar a liberação de acesso à sua chave privada.
+
+Caso o cidadão opte por utilizar o **certificado GOV.BR** (assinatura qualificada), o serviço pede a autorização expressa do usuário para acessar seu certificado para assinatura. Neste instante será pedido um código de autorização a ser enviado por SMS.
 
 .. Attention::
   No ambiente de homologação, o código de autorização é enviado por SMS e também pode ser utilizado o código **12345**. No ambiente de **Produção** o código de autenticação é enviado por notificação do aplicativo gov.br ou por SMS se usuário não possuir aplicativo gov.br instalado.
