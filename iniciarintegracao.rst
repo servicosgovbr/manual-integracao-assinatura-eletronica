@@ -4,7 +4,7 @@
 Solicitação de credenciais
 +++++++++++++++++++++++++++
 
-As credenciais de acesso aos ambientes de homologação/teste e produção da API de Assinatura Eletrônica devem ser solicitadas por um **Gestor Público**,  por meio do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
+As credenciais de acesso aos ambientes de homologação/teste e produção da API de Assinatura Eletrônica devem ser solicitadas por um **Gestor Público**,  por meio do Serviço de Integração aos Produtos do Ecossistema da Conta Digital GOV.BR. 
 Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
 
 Para iniciar a solicitação, clique no botão "Iniciar" e siga as instruções fornecidas pelo sistema.
@@ -26,7 +26,7 @@ Para alterar a(s) URL(s) de retorno, siga as orientações abaixo:
 
 **Integrações em andamento**
 
-1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
+1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Conta Digital GOV.BR. 
 Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
 
 2. Clique no botão “Acompanhamento”.
@@ -40,7 +40,7 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 
 **Integrações concluídas**
 
-1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br>`_
+1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Conta Digital GOV.BR. Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov.br>`_
 
 2. Clique no botão **“Iniciar”**.
 
@@ -52,7 +52,7 @@ Dúvidas, Problemas, Alterações
 
 **Integrações em andamento**
 
-1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR. 
+1. Acesse o Portal do Serviço de Integração aos Produtos do Ecossistema da Conta Digital GOV.BR. 
 Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br <https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/transformacao-digital/servico-de-integracao-aos-produtos-de-identidade-digital-gov.br>`_
 
 2. Clique no botão “Acompanhamento”.
@@ -62,7 +62,7 @@ Link para a página: `https://www.gov.br/governodigital/pt-br/estrategias-e-gove
 
 **Integrações concluídas**
 
-1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Identidade Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
+1. Acesse o Portal de Serviço de **Pós-Integração** aos Produtos do Ecossistema da Conta Digital GOV.BR. Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
 
 2. Clique no botão **“Iniciar”**.
 
@@ -76,7 +76,7 @@ De acordo com o artigo 13 da `Portaria SGD/MGI nº 7.076, de 2 de outubro de 202
 
 ## Procedimento para o envio
 
-1. Acesse o Portal do Serviço de Pós-Integração aos Produtos do Ecossistema da Identidade Digital GOV.BR.
+1. Acesse o Portal do Serviço de Pós-Integração aos Produtos do Ecossistema da Conta Digital GOV.BR.
 Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br <https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-integracao-aos-produtos-do-ecossistema-da-identidade-digital-gov-br>`_
 
 2. Clique no botão **"Iniciar"**.
@@ -91,7 +91,7 @@ Em caso de dúvidas sobre este procedimento, utilize o canal de comunicação of
 Orientações para testes  
 ++++++++++++++++++++++++++
 
-De Acordo com a portaria `SEDGGME Nº 2.154/2021`_ as identidades digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A identidade bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir identidade digital prata ou ouro. 
+De Acordo com a portaria `SGD/MGI 11230/2025 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-11.230-de-12-de-dezembro-de-2025-675511285>`_ as contas digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A conta digital bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir conta digital prata ou ouro.
 
 .. important::
    Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://h-validar.iti.gov.br/index.html 
