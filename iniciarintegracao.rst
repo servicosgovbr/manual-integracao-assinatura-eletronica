@@ -651,24 +651,25 @@ Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
 e acessar o endereço http://127.0.0.1:8080
 
 Erros Comuns
++++++++++++++++++++++++++++++++
 
 Erro 401 – Acesso não autorizado
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Este erro ocorre quando o cliente que está solicitando o credenciamento não utiliza corretamente os parâmetros da chamada de autorização.
 
-Solução
-=======
+ - Este erro ocorre quando o cliente que está solicitando o credenciamento não utiliza corretamente os parâmetros da chamada de autorização.
 
-- Verifique se as credenciais **client_id** e **redirect_uri** estão sendo corretamente utilizadas, pois esses dados devem ser exatamente os mesmos que foram cadastrados e encaminhados previamente no arquivo .txt.
+**Solução:**
 
-- Verifique se a URL de autorização está montada corretamente, garantindo que:
 
-  - O **redirect_uri** esteja idêntico ao cadastrado (incluindo protocolo http/https e caminho completo).
+ - Verifique se as credenciais **client_id** e **redirect_uri** estão sendo corretamente utilizadas, pois esses dados devem ser exatamente os mesmos que foram cadastrados e encaminhados previamente no  arquivo .txt.
 
-  - O **client_id** seja exatamente o fornecido no credenciamento.
+ - Verifique se a URL de autorização está montada corretamente, garantindo que:
 
-  - O **scope** esteja configurado corretamente (sign ou signature_session).
+ - O **redirect_uri** esteja idêntico ao cadastrado (incluindo protocolo http/https e caminho completo).
+
+ - O **client_id** seja exatamente o fornecido no credenciamento.
+
+ - O **scope** esteja configurado corretamente (sign ou signature_session).
 
 Exemplo de chamada correta
 ==========================
