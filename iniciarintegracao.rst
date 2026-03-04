@@ -651,24 +651,26 @@ Para executar o exemplo, é possível utilizar Docker com o comando abaixo:
 e acessar o endereço http://127.0.0.1:8080
 
 Erros Comuns
-++++++++++++++++++++
-Erro
-401 – Acesso não autorizado
 
- - Este erro ocorre quando o cliente que está solicitando o credenciamento não utiliza corretamente os parâmetros da chamada de autorização.
+### Erro 401 – Acesso não autorizado
 
-Solução:
+- Este erro ocorre quando o cliente que está solicitando o credenciamento não utiliza corretamente os parâmetros da chamada de autorização.
 
- - Verifique se as credenciais **client_id e redirect_uri** estão sendo corretamente utilizadas, pois esses dados devem ser exatamente os mesmos que foram cadastrados e encaminhados previamente no arquivo .txt.
+**Solução:**
 
- - Verifique se A URL de autorização está montada corretamente, garantindo que:
+- Verifique se as credenciais **client_id** e **redirect_uri** estão sendo corretamente utilizadas, pois esses dados devem ser exatamente os mesmos que foram cadastrados e encaminhados previamente no arquivo `.txt`.
 
- 	O redirect_uri esteja idêntico ao cadastrado (incluindo protocolo http/https e caminho completo);
- 	O client_id seja exatamente o fornecido no credenciamento;
-	O scope esteja configurado corretamente (sign ou signature_session).
+- Verifique se a URL de autorização está montada corretamente, garantindo que:
 
- - Exemplo de chamada correta:
- https://cas.staging.iti.br/oauth2.0/authorize?response_type=code&scope=signature_session&redirect_uri=<redirect_uri_cadastrado>&client_id=<client_id_cadastrado>
+  - O **redirect_uri** esteja idêntico ao cadastrado (incluindo protocolo `http/https` e caminho completo).
+  - O **client_id** seja exatamente o fornecido no credenciamento.
+  - O **scope** esteja configurado corretamente (`sign` ou `signature_session`).
+
+**Exemplo de chamada correta:**
+
+
+https://cas.staging.iti.br/oauth2.0/authorize?response_type=code&scope=signature_session&redirect_uri=
+<redirect_uri_cadastrado>&client_id=<client_id_cadastrado>
 
 Chave PGP: Validação dos dados
 ++++++++++++++++++++++++++++++
