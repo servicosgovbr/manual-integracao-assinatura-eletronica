@@ -653,7 +653,7 @@ e acessar o endereço http://127.0.0.1:8080
 Erros Comuns
 +++++++++++++++++++++++++++++++
 
-Erro 401 – Acesso não autorizado
+⚠️ Erro 401 – Acesso não autorizado
 
 
  - Este erro ocorre quando o cliente que está solicitando o credenciamento não utiliza corretamente os parâmetros da chamada de autorização.
@@ -671,8 +671,7 @@ Erro 401 – Acesso não autorizado
 
  - O **scope** esteja configurado corretamente (sign ou signature_session).
 
-Exemplo de chamada correta
-==========================
+**Exemplo de chamada correta:**
 
 ::
 
