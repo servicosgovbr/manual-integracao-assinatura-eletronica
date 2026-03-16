@@ -85,7 +85,7 @@ Link para a página: `https://www.gov.br/pt-br/servicos/ofertar-servicos-de-pos-
 
 As informações devem ser enviadas **mensalmente até o dia 05 de cada mês**, contendo os dados referentes às integrações realizadas no mês anterior.
 
-Em caso de dúvidas sobre este procedimento, utilize o canal de comunicação oficial: integracaoid@economia.gov.br.
+Em caso de dúvidas sobre este procedimento, utilize o canal de comunicação oficial: integracaoid@gestao.gov.br.
 
 
 Orientações para testes  
