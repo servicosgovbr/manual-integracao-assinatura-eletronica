@@ -94,7 +94,7 @@ Orientações para testes
 De Acordo com a portaria `SGD/MGI 11230/2025 <https://www.in.gov.br/en/web/dou/-/portaria-sgd/mgi-n-11.230-de-12-de-dezembro-de-2025-675511285>`_ as contas digitais da plataforma gov.br são classificadas em três tipos: Bronze, Prata e Ouro. A conta digital bronze permite ao usuário somente a realização de assinaturas simples. Nesta plataforma para realizar uma assinatura avançada, seja qual for o ambiente, o usuário deve possuir conta digital prata ou ouro.
 
 .. important::
-   Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://h-validar.iti.gov.br/index.html 
+   Documentos assinados digitalmente no ambiente de **HOMOLOGAÇÃO** são validados em: https://validar.staging.iti.br 
 
 .. important::
    Documentos assinados no ambiente de **PRODUÇÃO** podem ser validados no serviço de validação de assinaturas eletrônicas do ITI https://validar.iti.gov.br
